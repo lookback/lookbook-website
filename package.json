@@ -13,7 +13,7 @@
   },
   "author": "Johan Brook <johan@lookback.io>",
   "license": "SEE LICENSE IN LICENSE",
-  "homepage": "https://lookback.github.com/lookbook-website",
+  "homepage": "https://lookback.github.io/lookbook-website",
   "devDependencies": {
     "eslint": "^5.16",
     "stylelint": "^10.1",
