@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+npm run build && \
+  git add docs && \
+  git ci -m "Build site $(date)" && \
+  git push origin master
