@@ -5,7 +5,7 @@
   "scripts": {
     "test": "eslint . && stylelint src/**/*.css",
     "start": "eleventy --serve & postcss src/stylesheets/site.css --dir docs/assets --ext dist.css --watch --verbose",
-    "build": "eleventy && postcss src/stylesheets/site.css --dir docs/assets --ext dist.css"
+    "build": "postcss src/stylesheets/site.css --dir docs/assets --ext dist.css && eleventy"
   },
   "repository": {
     "type": "git",
