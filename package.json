@@ -1,0 +1,30 @@
+{
+  "name": "lookbook-site",
+  "version": "1.0.0",
+  "description": "The styleguide of Lookback",
+  "scripts": {
+    "test": "eslint . && stylelint src/**/*.css",
+    "start": "eleventy --serve & postcss src/stylesheets/site.css --dir docs/assets --ext dist.css --watch --verbose",
+    "build": "eleventy && postcss src/stylesheets/site.css --dir docs/assets --ext dist.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/lookback/lookbook-website.git"
+  },
+  "author": "Johan Brook <johan@lookback.io>",
+  "license": "SEE LICENSE IN LICENSE",
+  "homepage": "https://lookback.github.com/lookbook-website",
+  "devDependencies": {
+    "eslint": "^5.16",
+    "stylelint": "^10.1",
+    "stylelint-config-recommended": "^2.2"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^0.7.1",
+    "@11ty/eleventy-plugin-inclusive-language": "^1.0.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.1",
+    "dotenv": "^6.2.0",
+    "lookbook": "github:lookback/lookbook#master",
+    "postcss-cli": "^6.0.1"
+  }
+}

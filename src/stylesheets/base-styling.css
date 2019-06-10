@@ -1,0 +1,107 @@
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+}
+
+.lookback-logo {
+  fill: var(--red-50);
+}
+
+.sidebar {
+  @apply py-3 pl-3 pr-0 bg-white;
+  flex-basis: 300px;
+
+  h2 {
+    @apply text-grey-60 uppercase font-bold text-f6 tracking-wide mb-3;
+  }
+
+  nav {
+    position: sticky;
+    top: theme('margin.3');
+
+    ul {
+      @apply mb-4;
+      margin-left: -1.5rem;
+    }
+
+    a {
+      @apply px-3;
+      display: inline-block;
+      padding-top: 0.3em;
+      padding-bottom: 0.3em;
+    }
+
+    li.nav-active {
+      background-color: theme('colors.grey-20');
+
+      a {
+        color: theme('colors.blue-80');
+        font-weight: bold;
+
+        &,
+        &:hover {
+          cursor: default;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  code {
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
+main {
+  @apply p-3 pl-5 py-7;
+  flex: 1;
+
+  ul,
+  ol {
+    @apply pl-3 ml-3;
+  }
+
+  ul {
+    @apply list-disc;
+  }
+
+  ol {
+    @apply list-decimal;
+  }
+
+  p,
+  pre,
+  ul,
+  ol {
+    @apply mb-3;
+  }
+
+  > section {
+    max-width: 45em;
+
+    > h1 {
+      @apply mb-5 text-f0;
+    }
+
+    > h2 {
+      @apply mb-2 mt-4 pb-1 border-b;
+    }
+
+    > h3 {
+      @apply mb-2;
+    }
+  }
+}

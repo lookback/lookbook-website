@@ -1,0 +1,170 @@
+---
+layout: layout.njk
+---
+
+<section>
+  <h1>Buttons</h1>
+
+  <h2>Regular button</h2>
+
+  <p>Use the <code>.btn</code> class to create a button.</p>
+
+  <div class="preview-block">
+    <p class="mb-1">
+      <button class="btn">Button</button>
+      <button class="btn" disabled>Button</button><br>
+    </p>
+    <p class="mb-0">
+      <a href="#" class="btn">Button as anchor tag</a>
+      <a href="#" class="btn" disabled>Button as anchor tag</a>
+    </p>
+  </div>
+  {% highlight "html" %}
+<button class="btn">Button</button>
+
+<button class="btn" disabled>Button</button>
+
+<a href="#" class="btn">Button as anchor tag</a>
+
+<a href="#" class="btn" disabled>Button as anchor tag</a>
+  {% endhighlight %}
+
+  <h2>Primary button</h2>
+
+  <p>Primary actions.</p>
+
+  <div class="preview-block">
+    <p class="mb-1">
+      <button class="btn btn-primary">Button</button>
+      <button class="btn btn-primary" disabled>Button</button><br>
+    </p>
+    <p class="mb-0">
+      <a href="#" class="btn btn-primary">Button as anchor tag</a>
+      <a href="#" class="btn btn-primary" disabled>Button as anchor tag</a>
+    </p>
+  </div>
+  {% highlight "html" %}
+<button class="btn btn-primary">Button</button>
+
+<button class="btn btn-primary" disabled>Button</button>
+<a href="#" class="btn btn-primary">Button with anchor tag</a>
+  {% endhighlight %}
+
+  <h2>Secondary button</h2>
+
+  <p>Secondary actions.</p>
+
+  <div class="preview-block">
+    <p class="mb-1">
+      <button class="btn btn-secondary">Secondary button</button>
+      <button class="btn btn-secondary" disabled>Secondary button</button>
+    </p>
+    <p class="mb-0">
+      <a href="#" class="btn btn-secondary">Secondary button as anchor tag</a>
+      <a href="#" class="btn btn-secondary" disabled>Secondary button as anchor tag</a>
+    </p>
+  </div>
+  {% highlight "html" %}
+<button class="btn btn-secondary">Secondary button</button>
+
+<button class="btn btn-secondary" disabled>Secondary button</button>
+
+<a href="#" class="btn btn-secondary">Secondary button as anchor tag</a>
+
+<a href="#" class="btn btn-secondary" disabled>Secondary button as anchor tag</a>
+  {% endhighlight %}
+
+  <h2>Danger button</h2>
+
+  <p>For destructive actions.</p>
+
+  <div class="preview-block">
+    <p class="mb-1">
+      <button class="btn btn-danger">Danger button</button>
+      <button class="btn btn-danger" disabled>Danger button</button>
+    </p>
+    <p class="mb-0">
+      <a href="#" class="btn btn-danger">Danger button as anchor tag</a>
+      <a href="#" class="btn btn-danger" disabled>Danger button as anchor tag</a>
+    </p>
+  </div>
+  {% highlight "html" %}
+<button class="btn btn-danger">Danger button</button>
+
+<button class="btn btn-danger" disabled>Danger button</button>
+
+<a href="#" class="btn btn-danger">Danger button as anchor tag</a>
+
+<a href="#" class="btn btn-danger" disabled>Danger button as anchor tag</a>
+  {% endhighlight %}
+
+  <h2>Link button</h2>
+
+  <p>Link actions.</p>
+
+  <div class="preview-block">
+    <p class="mb-1">
+      <button class="btn btn-link">Link Button</button>
+      <button class="btn btn-link" disabled>Link Button</button>
+    </p>
+    <p class="mb-1">
+        <a href="#" class="btn btn-link">Link Button as anchor tag</a>
+        <a href="#" class="btn btn-link" disabled>Link Button as anchor tag</a>
+    </p>
+    <p class="mb-0">
+      <button class="btn btn-link btn-link--danger">Link Danger Button</button>
+      <button class="btn btn-link btn-link--danger" disabled>Link Danger Button</button>
+    </p>
+  </div>
+  {% highlight "html" %}
+<button class="btn btn-link">Link Button</button>
+
+<button class="btn btn-link" disabled>Link Button</button>
+
+<a href="#" class="btn btn-link">Link Button as anchor tag</a>
+
+<a href="#" class="btn btn-link" disabled>Link Button as anchor tag</a>
+
+<button class="btn btn-link btn-link--danger">Link Danger Button</button>
+
+<button class="btn btn-link btn-link--danger" disabled>Link Danger Button</button>
+  {% endhighlight %}
+
+  <h2>Modifiers</h2>
+
+  <p>
+    Use standard Tailwind modifiers to make them larger, rounded:
+  </p>
+
+  <div class="preview-block">
+    <button class="btn text-xs">Tiny</button>
+
+    <button class="btn text-f6">Smaller</button>
+
+    <button class="btn rounded-full">Rounded</button>
+
+    <button class="btn text-f5">Larger</button>
+
+    <button class="btn text-f3">Huge</button>
+  </div>
+
+  {% highlight "html" %}
+<button class="btn text-xs">Tiny</button>
+
+<button class="btn text-f6">Smaller</button>
+
+<button class="btn rounded-full">Rounded</button>
+
+<button class="btn text-f5">Larger</button>
+
+<button class="btn text-f3">Huge</button>
+  {% endhighlight %}
+
+  <aside class="callout">
+    <h3 class="callout__title">Read more</h3>
+    <ul>
+      <li><a href="https://tailwindcss.com/docs/text-sizing">Text sizing</a></li>
+      <li><a href="https://tailwindcss.com/docs/border-radius">Border radius</a></li>
+    </ul>
+  </aside>
+</section>

@@ -1,0 +1,18 @@
+---
+layout: layout.njk
+---
+
+<section>
+  <h1>Utilities</h1>
+
+  <h2>Break strings</h2>
+  
+  <p>Use this to break long strings of text. This is different from the <a href="https://tailwindcss.com/docs/whitespace-and-wrapping">word wrap and whitespace helpers</a> in Tailwind, since they only break on words – this utility break a single string.</p>
+
+  <div class="preview-block flex justify-center">
+    <p class="mb-0 break-text">Alongstringalongstringalongstringalongstringalongstringalongstringalongstringalongstringalongstringalongstringalongstringalongstringalongstringalongstringalongstring</p>
+  </div>
+  {% highlight "html" %}
+<p class="break-text">Alongstringalongstringalongstringalongstringalongstringalongstringalongstringalongstringalongstringalongstringalongstringalongstringalongstringalongstringalongstring</p>
+  {% endhighlight %}
+</section>
