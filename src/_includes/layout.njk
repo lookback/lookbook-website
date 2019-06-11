@@ -16,16 +16,22 @@
     />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <link
       href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i"
       rel="stylesheet"
     />
+
     <!-- Site CSS -->
     <link rel="stylesheet" href="{{ '/assets/site.dist.css' | url }}" />
     <link rel="shortcut icon" href="https://lookback.io/favicon.ico" />
   </head>
   <body>
-  <aside role="navigation" class="sidebar">
+    <p class="toggle-menu">
+      <a href="#" data-toggle-menu>Pages</a>
+    </p>
+
+    <aside role="navigation" class="sidebar">
       <a href="/" class="inline-block mb-6 opacity-80 hover:opacity-100">
         <svg
           class="lookback-logo"
@@ -43,7 +49,7 @@
 			l12.4-11.9l2.6,19.4l19.6,1.5L173,290z M232,306.2c-1.7,0-10.9-1-33.3-18.7c-4.4-3.5-8.6-7.2-12.1-10.4
 			c3.5-3.2,7.6-6.7,11.8-10.1c22.4-18,31.8-19,33.3-19c15.8,0,28.6,13.1,28.6,29.1C260.6,293.1,247.7,306.2,232,306.2z"
           />
-  </svg>
+        </svg>
       </a>
 
       <a
@@ -138,5 +144,54 @@
     <main role="main">
       {{ content | safe }}
     </main>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const SIDEBAR_VISIBLE_CLASS = 'visible';
+
+        const button = document.querySelector('[data-toggle-menu]');
+        const sidebar = document.querySelector('.sidebar');
+
+        const toggleSidebar = () => {
+          const isShown = sidebar.classList.toggle(SIDEBAR_VISIBLE_CLASS);
+          button.classList.toggle('active', isShown);
+
+          return isShown;
+        };
+
+        if (button && sidebar) {
+          const handleClickOutside = (evt) => {
+            if (
+              !sidebar.contains(evt.target) &&
+              sidebar.classList.contains(SIDEBAR_VISIBLE_CLASS)
+            ) {
+              toggleSidebar();
+              removeClickOutside();
+            }
+          };
+
+          const handleMenuToggle = (evt) => {
+            evt.preventDefault();
+            evt.stopPropagation();
+
+            toggleSidebar();
+            addClickOutside();
+          };
+
+          const addClickOutside = () => {
+            document.addEventListener('click', handleClickOutside);
+            document.addEventListener('touchstart', handleClickOutside);
+          };
+
+          const removeClickOutside = () => {
+            document.removeEventListener('click', handleClickOutside);
+            document.removeEventListener('touchstart', handleClickOutside);
+          };
+
+          button.addEventListener('click', handleMenuToggle);
+          button.addEventListener('touchstart', handleMenuToggle);
+        }
+      });
+    </script>
   </body>
 </html>

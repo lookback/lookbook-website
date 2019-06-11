@@ -1,10 +1,17 @@
+@custom-media --breakpoint-menu (max-width: 960px);
+
 html,
 body {
   min-height: 100vh;
 }
 
 body {
-  display: flex;
+  @apply flex;
+  position: relative;
+
+  @media (--breakpoint-menu) {
+    @apply flex-col overflow-y-auto;
+  }
 }
 
 .lookback-logo {
@@ -14,6 +21,23 @@ body {
 .sidebar {
   @apply py-3 pl-3 pr-0 bg-white;
   flex-basis: 300px;
+  transition: transform 0.1s ease-out;
+
+  &.visible {
+    transform: none;
+    width: 75%;
+    box-shadow: rgba(theme('colors.grey-50'), 0.6) 2px 0 30px;
+  }
+
+  @media (--breakpoint-menu) {
+    @apply fixed overflow-y-auto bottom-0 top-0 scrolling-touch;
+    transform: translate(-100%, 0);
+    z-index: 10;
+
+    nav {
+      @apply mb-5;
+    }
+  }
 
   h2 {
     @apply text-grey-60 uppercase font-bold text-f6 tracking-wide mb-3;
@@ -36,10 +60,10 @@ body {
     }
 
     li.nav-active {
-      background-color: theme('colors.grey-20');
+      background-color: var(--grey-20);
 
       a {
-        color: theme('colors.blue-80');
+        color: var(--blue-80);
         font-weight: bold;
 
         &,
@@ -94,6 +118,10 @@ main {
 
     > h1 {
       @apply mb-5 text-f0;
+
+      @media (--breakpoint-menu) {
+        @apply text-f1;
+      }
     }
 
     > h2 {
@@ -103,5 +131,41 @@ main {
     > h3 {
       @apply mb-2;
     }
+  }
+
+  @media (--breakpoint-menu) {
+    @apply py-2 px-3;
+
+    > section {
+      margin: 0 auto;
+    }
+  }
+}
+
+.toggle-menu {
+  @apply hidden pr-3 pt-3 text-right;
+
+  a {
+    @apply font-bold inline-block rounded-lg border px-2 py-1;
+    border-color: var(--grey-40);
+    color: var(--blue-70);
+    -webkit-tap-highlight-color: transparent;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+
+    &.active {
+      color: #fff;
+      background-color: var(--blue-70);
+      border-color: var(--blue-70);
+    }
+  }
+}
+
+@media (--breakpoint-menu) {
+  .toggle-menu {
+    @apply block;
   }
 }
