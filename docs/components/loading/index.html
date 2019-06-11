@@ -1,35 +1,61 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Lookbook</title>
+
+    <title>Lookbook by Lookback</title>
+    <meta name="author" content="Lookback" />
+    <meta
+      name="keywords"
+      content="styleguide, design system, brand, colors, css"
+    />
+    <meta
+      name="description"
+      content="The Lookbook is the main source of visual design language at Lookback. It includes the traditional color schemes we use in our products, as well as CSS resources for building scalable web frontends."
+    />
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <link
       href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i"
       rel="stylesheet"
     />
+
     <!-- Site CSS -->
-    <link rel="stylesheet" href="/assets/site.dist.css" />
+    <link rel="stylesheet" href="/lookbook-website/assets/site.dist.css" />
     <link rel="shortcut icon" href="https://lookback.io/favicon.ico" />
   </head>
   <body>
-  <aside role="navigation" class="sidebar">
+    <p class="toggle-menu">
+      <a href="#" data-toggle-menu>Pages</a>
+    </p>
+
+    <aside role="navigation" class="sidebar">
       <a href="/" class="inline-block mb-6 opacity-80 hover:opacity-100">
-        <svg class="lookback-logo" width="150" x="0px" y="0px"
-  	 viewBox="37.9 217.4 901.3 119.9">
-		<path d="M232,217.4c-13.8,0-30.8,8.4-52.3,25.7c-5.7,4.7-10.9,9.1-15.3,13.1c-4.2-3.9-9.4-8.4-15.3-13.1
+        <svg
+          class="lookback-logo"
+          width="150"
+          x="0px"
+          y="0px"
+          viewBox="37.9 217.4 901.3 119.9"
+        >
+          <path
+            d="M232,217.4c-13.8,0-30.8,8.4-52.3,25.7c-5.7,4.7-10.9,9.1-15.3,13.1c-4.2-3.9-9.4-8.4-15.3-13.1
 			c-21.2-17.3-38.5-25.7-52-25.7c-32.6,0-59.2,26.9-59.2,59.7c0,33.1,26.6,59.7,59.2,59.7c13.8,0,30.8-8.4,52.3-25.7
 			c5.7-4.7,10.9-9.1,15.3-13.1c4.2,3.9,9.4,8.4,15.3,13.1c21.5,17.3,38.5,25.7,52.3,25.7c32.6,0,59.2-26.9,59.2-59.7
 			C291.2,244.3,264.5,217.4,232,217.4z M130.3,287.4c-22.4,17.8-31.8,18.7-33.3,18.7c-15.8,0-28.6-13.1-28.6-29.1S81.3,248,97,248
 			c1.7,0,10.9,1,33.3,18.7c4.4,3.5,8.6,7.2,12.1,10.4C138.7,280.3,134.8,283.7,130.3,287.4z M173,290l-19.5-2.6l-1.5-19.4
 			l12.4-11.9l2.6,19.4l19.6,1.5L173,290z M232,306.2c-1.7,0-10.9-1-33.3-18.7c-4.4-3.5-8.6-7.2-12.1-10.4
-			c3.5-3.2,7.6-6.7,11.8-10.1c22.4-18,31.8-19,33.3-19c15.8,0,28.6,13.1,28.6,29.1C260.6,293.1,247.7,306.2,232,306.2z"/>
-  </svg>
-
+			c3.5-3.2,7.6-6.7,11.8-10.1c22.4-18,31.8-19,33.3-19c15.8,0,28.6,13.1,28.6,29.1C260.6,293.1,247.7,306.2,232,306.2z"
+          />
+        </svg>
       </a>
 
-      <a href="http://github.com/lookback/lookbook" class="flex items-center mb-6 hover:no-underline text-grey-60">
+      <a
+        href="http://github.com/lookback/lookbook"
+        class="flex items-center mb-6 hover:no-underline text-grey-60"
+      >
         <div class="mr-2">
           <svg
   width="30"
@@ -52,52 +78,60 @@
 
         <ul>
           <li class="">
-            <a href="/colors">Colors</a>
+            <a href="/lookbook-website/colors">Colors</a>
           </li>
           <li class="">
-            <a href="/brand">Logotype &amp; Brand</a>
+            <a href="/lookbook-website/brand">Logotype &amp; Brand</a>
           </li>
         </ul>
 
         <h2>Tech</h2>
         <ul>
           <li class="">
-            <a href="/tech/intro">Introduction</a>
+            <a href="/lookbook-website/tech/intro">Introduction</a>
           </li>
           <li class="">
-            <a href="/tech/css">Using the CSS</a>
+            <a href="/lookbook-website/tech/css">Using the CSS</a>
           </li>
           <li class="">
-            <a href="/tech/custom-build">Building custom CSS</a>
+            <a href="/lookbook-website/tech/custom-build">Building custom CSS</a>
+          </li>
+          <li
+            class=""
+          >
+            <a href="/lookbook-website/tech/versioning">Versioning</a>
           </li>
           <li class="">
-            <a href="/tech/versioning">Versioning</a>
+            <a href="/lookbook-website/tech/variables">Variables</a>
           </li>
           <li class="">
-            <a href="/tech/variables">Variables</a>
-          </li>
-          <li class="">
-            <a href="/tech/tips">Tips &amp; Tricks</a>
+            <a href="/lookbook-website/tech/tips">Tips &amp; Tricks</a>
           </li>
         </ul>
 
         <h2>Styling</h2>
 
         <ul>
-          <li class="">
-            <a href="/styling/typography">Typography</a>
+          <li
+            class=""
+          >
+            <a href="/lookbook-website/styling/typography">Typography</a>
           </li>
           <li class="">
-            <a href="/styling/forms">Forms</a>
+            <a href="/lookbook-website/styling/forms">Forms</a>
+          </li>
+          <li
+            class=""
+          >
+            <a href="/lookbook-website/styling/misc-elements"
+              >Miscellaneous Elements</a
+            >
           </li>
           <li class="">
-            <a href="/styling/misc-elements">Miscellaneous Elements</a>
+            <a href="/lookbook-website/styling/utilities">Utilities</a>
           </li>
           <li class="">
-            <a href="/styling/utilities">Utilities</a>
-          </li>
-          <li class="">
-            <a href="/styling/widths">Widths</a>
+            <a href="/lookbook-website/styling/widths">Widths</a>
           </li>
         </ul>
 
@@ -105,11 +139,11 @@
 
         <ul>
           <li class="">
-            <a href="/components/buttons">Buttons</a>
+            <a href="/lookbook-website/components/buttons">Buttons</a>
           </li>
 
           <li class="nav-active">
-            <a href="/components/loading">Loading indicators</a>
+            <a href="/lookbook-website/components/loading">Loading indicators</a>
           </li>
         </ul>
       </nav>
@@ -158,5 +192,54 @@
 </section>
 
     </main>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const SIDEBAR_VISIBLE_CLASS = 'visible';
+
+        const button = document.querySelector('[data-toggle-menu]');
+        const sidebar = document.querySelector('.sidebar');
+
+        const toggleSidebar = () => {
+          const isShown = sidebar.classList.toggle(SIDEBAR_VISIBLE_CLASS);
+          button.classList.toggle('active', isShown);
+
+          return isShown;
+        };
+
+        if (button && sidebar) {
+          const handleClickOutside = (evt) => {
+            if (
+              !sidebar.contains(evt.target) &&
+              sidebar.classList.contains(SIDEBAR_VISIBLE_CLASS)
+            ) {
+              toggleSidebar();
+              removeClickOutside();
+            }
+          };
+
+          const handleMenuToggle = (evt) => {
+            evt.preventDefault();
+            evt.stopPropagation();
+
+            toggleSidebar();
+            addClickOutside();
+          };
+
+          const addClickOutside = () => {
+            document.addEventListener('click', handleClickOutside);
+            document.addEventListener('touchstart', handleClickOutside);
+          };
+
+          const removeClickOutside = () => {
+            document.removeEventListener('click', handleClickOutside);
+            document.removeEventListener('touchstart', handleClickOutside);
+          };
+
+          button.addEventListener('click', handleMenuToggle);
+          button.addEventListener('touchstart', handleMenuToggle);
+        }
+      });
+    </script>
   </body>
 </html>
