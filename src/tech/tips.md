@@ -14,7 +14,7 @@ There's a super cool VS Code extension for Tailwind, which supports class name s
 
 ## Remove unused CSS
 
-The main criticism against Tailwind or CSS utility frameworks is the amount of CSS code ending up unused. You might generate 1000 classes but only use 10 of them. In Lookbook's case, the main distributable file on the CDN (see ["Using the CSS"](/tech/css)) is heavily cached, so users would only download it once. But if you embed the Lookbook in another project's CSS, you might wanna _purge_ the unused CSS classes before pushing to production.
+The main criticism against Tailwind or CSS utility frameworks is the amount of CSS code ending up unused. You might generate 1000 classes but only use 10 of them. In Lookbook's case, the main distributable file on the CDN (see ["Using the CSS"]({{ "/tech/css" | url }})) is heavily cached, so users would only download it once. But if you embed the Lookbook in another project's CSS, you might wanna _purge_ the unused CSS classes before pushing to production.
 
 Tailwind has a great section on this, in the page ["Controlling file size"](https://tailwindcss.com/docs/controlling-file-size#removing-unused-css).
 

@@ -12,7 +12,7 @@ Using the Lookbook CSS depends on what your needs are. There are mainly three us
 2. You'd like to use the Lookbook's config variables in your custom stylesheet.
 3. Both of 1) and 2).
 
-In this section, we'll treat the first case. For the custom use case, see ["Building Custom CSS"](/tech/custom-build).
+In this section, we'll treat the first case. For the custom use case, see ["Building Custom CSS"]({{ "/tech/custom-build" | url }}).
 
 ## Linking to the CSS
 
@@ -43,3 +43,5 @@ If you want to be on the bleeding edge, use `latest` as version:
 ```
 
 This one is always the latest version. It's not cached as hard as the versioned stylesheets above. Keep in mind that minor things might change under your feet in this stylesheet.
+
+</section>

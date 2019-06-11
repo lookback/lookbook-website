@@ -44,52 +44,60 @@
 
         <ul>
           <li class="{% if page.fileSlug == 'colors'%}nav-active{% endif %}">
-            <a href="/colors">Colors</a>
+            <a href="{{ '/colors' | url }}">Colors</a>
           </li>
           <li class="{% if page.fileSlug == 'brand'%}nav-active{% endif %}">
-            <a href="/brand">Logotype &amp; Brand</a>
+            <a href="{{ '/brand' | url }}">Logotype &amp; Brand</a>
           </li>
         </ul>
 
         <h2>Tech</h2>
         <ul>
           <li class="{% if page.fileSlug == 'intro'%}nav-active{% endif %}">
-            <a href="/tech/intro">Introduction</a>
+            <a href="{{ '/tech/intro' | url }}">Introduction</a>
           </li>
           <li class="{% if page.fileSlug == 'css'%}nav-active{% endif %}">
-            <a href="/tech/css">Using the CSS</a>
+            <a href="{{ '/tech/css' | url }}">Using the CSS</a>
           </li>
           <li class="{% if page.fileSlug == 'custom'%}nav-active{% endif %}">
-            <a href="/tech/custom-build">Building custom CSS</a>
+            <a href="{{ '/tech/custom-build' | url }}">Building custom CSS</a>
           </li>
-          <li class="{% if page.fileSlug == 'versioning'%}nav-active{% endif %}">
-            <a href="/tech/versioning">Versioning</a>
+          <li
+            class="{% if page.fileSlug == 'versioning'%}nav-active{% endif %}"
+          >
+            <a href="{{ '/tech/versioning' | url }}">Versioning</a>
           </li>
           <li class="{% if page.fileSlug == 'variables'%}nav-active{% endif %}">
-            <a href="/tech/variables">Variables</a>
+            <a href="{{ '/tech/variables' | url }}">Variables</a>
           </li>
           <li class="{% if page.fileSlug == 'tips'%}nav-active{% endif %}">
-            <a href="/tech/tips">Tips &amp; Tricks</a>
+            <a href="{{ '/tech/tips' | url }}">Tips &amp; Tricks</a>
           </li>
         </ul>
 
         <h2>Styling</h2>
 
         <ul>
-          <li class="{% if page.fileSlug == 'typography'%}nav-active{% endif %}">
-            <a href="/styling/typography">Typography</a>
+          <li
+            class="{% if page.fileSlug == 'typography'%}nav-active{% endif %}"
+          >
+            <a href="{{ '/styling/typography' | url }}">Typography</a>
           </li>
           <li class="{% if page.fileSlug == 'forms'%}nav-active{% endif %}">
-            <a href="/styling/forms">Forms</a>
+            <a href="{{ '/styling/forms' | url }}">Forms</a>
           </li>
-          <li class="{% if page.fileSlug == 'misc-elements'%}nav-active{% endif %}">
-            <a href="/styling/misc-elements">Miscellaneous Elements</a>
+          <li
+            class="{% if page.fileSlug == 'misc-elements'%}nav-active{% endif %}"
+          >
+            <a href="{{ '/styling/misc-elements' | url }}"
+              >Miscellaneous Elements</a
+            >
           </li>
           <li class="{% if page.fileSlug == 'utilities'%}nav-active{% endif %}">
-            <a href="/styling/utilities">Utilities</a>
+            <a href="{{ '/styling/utilities' | url }}">Utilities</a>
           </li>
           <li class="{% if page.fileSlug == 'widths'%}nav-active{% endif %}">
-            <a href="/styling/widths">Widths</a>
+            <a href="{{ '/styling/widths' | url }}">Widths</a>
           </li>
         </ul>
 
@@ -97,11 +105,11 @@
 
         <ul>
           <li class="{% if page.fileSlug == 'buttons'%}nav-active{% endif %}">
-            <a href="/components/buttons">Buttons</a>
+            <a href="{{ '/components/buttons' | url }}">Buttons</a>
           </li>
 
           <li class="{% if page.fileSlug == 'loading'%}nav-active{% endif %}">
-            <a href="/components/loading">Loading indicators</a>
+            <a href="{{ '/components/loading' | url }}">Loading indicators</a>
           </li>
         </ul>
       </nav>
