@@ -1,9 +1,9 @@
 .preview-block {
-  @apply border-t border-l border-r rounded-t p-3 bg-white;
+  @apply border-2 border-b-0 rounded-t-lg p-3 bg-white;
 
   & + pre {
     border-radius: 0;
-    @apply rounded-b mb-5;
+    @apply rounded-b-lg mb-5;
   }
 }
 

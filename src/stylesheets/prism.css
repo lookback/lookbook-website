@@ -73,7 +73,7 @@ pre[class*='language-'] {
 }
 
 .token.tag {
-  color: var(--grey-60);
+  color: var(--grey-40);
 }
 
 .token.string {
