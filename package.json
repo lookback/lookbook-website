@@ -23,6 +23,7 @@
     "@11ty/eleventy": "^0.7.1",
     "@11ty/eleventy-plugin-inclusive-language": "^1.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.1",
+    "cssnano": "^4.1.10",
     "dotenv": "^6.2.0",
     "lookbook": "github:lookback/lookbook#master",
     "postcss-cli": "^6.0.1",
