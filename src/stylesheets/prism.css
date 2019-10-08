@@ -7,24 +7,24 @@ Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/b
 
 code[class*='language-'],
 pre[class*='language-'] {
-    direction: ltr;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-    tab-size: 2;
-    hyphens: none;
-    color: var(--grey-30);
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  tab-size: 2;
+  hyphens: none;
+  color: var(--grey-30);
 }
 
 /* Code blocks */
 pre[class*='language-'] {
-    overflow: auto;
-    counter-reset: line;
+  overflow: auto;
+  counter-reset: line;
 }
 
 .highlight-line {
-    /* &::before {
+  /* &::before {
     min-width: 1.5em;
     text-align: right;
     counter-increment: line;
@@ -45,50 +45,50 @@ pre[class*='language-'] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-    color: var(--grey-50);
-    font-style: italic;
+  color: var(--grey-50);
+  font-style: italic;
 }
 
 .token.punctuation {
-    color: var(--grey-50);
+  color: var(--grey-50);
 }
 
 .token.namespace {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .token.operator,
 .token.boolean,
 .token.number {
-    color: var(--purple-40);
+  color: var(--purple-40);
 }
 
 .token.function,
 .token.attr-name {
-    color: var(--teal-40);
+  color: var(--teal-40);
 }
 
 .token.property {
-    color: var(--orange-40);
+  color: var(--orange-40);
 }
 
 .token.tag {
-    color: var(--grey-30);
+  color: var(--grey-30);
 }
 
 .token.string {
-    color: var(--green-40);
+  color: var(--green-40);
 }
 
 .token.selector {
-    color: var(--purple-40);
+  color: var(--purple-40);
 }
 
 .token.entity,
 .token.url,
 .language-css .token.string,
 .style .token.string {
-    color: var(--blue-40);
+  color: var(--blue-40);
 }
 
 .token.attr-value,
@@ -96,70 +96,70 @@ pre[class*='language-'] {
 .token.control,
 .token.directive,
 .token.unit {
-    color: var(--red-40);
+  color: var(--red-40);
 }
 
 .token.statement,
 .token.regex,
 .token.atrule {
-    color: #22a2c9;
+  color: #22a2c9;
 }
 
 .token.placeholder,
 .token.variable {
-    color: #3d8fd1;
+  color: #3d8fd1;
 }
 
 .token.deleted {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 .token.inserted {
-    border-bottom: 1px dotted #202746;
-    text-decoration: none;
+  border-bottom: 1px dotted #202746;
+  text-decoration: none;
 }
 
 .token.italic {
-    font-style: italic;
+  font-style: italic;
 }
 
 .token.important,
 .token.bold {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .token.important {
-    color: #c94922;
+  color: #c94922;
 }
 
 .token.entity {
-    cursor: help;
+  cursor: help;
 }
 
 pre > code.highlight {
-    outline: 0.4em solid #c94922;
-    outline-offset: 0.4em;
+  outline: 0.4em solid #c94922;
+  outline-offset: 0.4em;
 }
 
 /* overrides color-values for the Line Numbers plugin
  * http://prismjs.com/plugins/line-numbers/
  */
 .line-numbers .line-numbers-rows {
-    border-right-color: #dfe2f1;
+  border-right-color: #dfe2f1;
 }
 
 .line-numbers-rows > span:before {
-    color: #979db4;
+  color: #979db4;
 }
 
 /* overrides color-values for the Line Highlight plugin
  * http://prismjs.com/plugins/line-highlight/
  */
 .line-highlight {
-    background: rgba(107, 115, 148, 0.2);
-    background: linear-gradient(
-        to right,
-        rgba(107, 115, 148, 0.2) 70%,
-        rgba(107, 115, 148, 0)
-    );
+  background: rgba(107, 115, 148, 0.2);
+  background: linear-gradient(
+    to right,
+    rgba(107, 115, 148, 0.2) 70%,
+    rgba(107, 115, 148, 0)
+  );
 }
