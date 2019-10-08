@@ -13,7 +13,7 @@ layout: layout.njk
 
   <div class="color-grid">
     {% for name, code in lookbook.colors %}
-      <div class="color-grid__cell" title="{{ name }}" style="background-color: {{ code }}">{{ name }}</div>
+      <div class="color-grid__cell" title="{{ name }}" style="background-color: var(--{{ name }})">{{ name }}</div>
     {% else %}
       <p class="text-grey-60">No colors configured.</p>
     {% endfor %}
@@ -24,4 +24,10 @@ layout: layout.njk
   <p>It's not likely that you'll use all colors in a given scale however. These are recommended, safe colors, included in the Lookbook CSS:</p>
 
   <p>Also see <a href="{{ '/tech/variables' | url }}">"Variables"</a> if you'd like to use the colors as CSS Custom Properties.</p>
+
+  <h2>Wide gamut colors</h2>
+
+  <p>
+    We make use of wide gamut colors with the Display P3 color space on supported devices and browsers. These colours look more vibrant and saturated. All color variables in the CSS are automatically in the Display P3 space if the browser supports it.
+  </p>
 </section>
