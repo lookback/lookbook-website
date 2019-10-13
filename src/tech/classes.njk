@@ -1,0 +1,28 @@
+---
+layout: layout.njk
+---
+
+<section>
+  <h1>Classes</h1>
+
+  <p>We found {{ lookbook.classes.length }} classes in total.</p>
+
+  {% for group in lookbook.groupedClasses %}
+    <section class="mb-6">
+      <header class="flex items-center justify-between border-b-2 mb-3">
+        <h2>{{ group.title }}</h2>
+        {% if group.docsUrl %}
+          <a href="{{ group.docsUrl }}" class="btn btn-link" title="Link to docs on this section">Tailwind docs</a>
+        {% endif %}
+      </header>
+
+      <ul class="list-none pl-0 ml-0">
+        {% for klass in group.classes %}
+          <li>
+            <h3><code>.{{ klass }}</code></h3>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endfor %}
+</section>

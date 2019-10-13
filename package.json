@@ -26,6 +26,7 @@
     "cssnano": "^4.1.10",
     "dotenv": "^6.2.0",
     "lookbook": "github:lookback/lookbook#2.0.0-beta.7",
+    "postcss": "^7.0.18",
     "postcss-cli": "^6.0.1",
     "postcss-custom-media": "^7.0.8"
   }
