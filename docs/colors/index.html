@@ -17,11 +17,6 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i"
-      rel="stylesheet"
-    />
-
     <!-- Site CSS -->
     <link rel="stylesheet" href="/lookbook-website/assets/site.dist.css" />
     <link rel="shortcut icon" href="https://lookback.io/favicon.ico" />
@@ -54,7 +49,7 @@
 
       <a
         href="http://github.com/lookback/lookbook"
-        class="flex items-center mb-6 hover:no-underline text-grey-60"
+        class="flex items-center mb-3 hover:no-underline text-grey-60"
       >
         <div class="mr-2">
           <svg
@@ -72,6 +67,8 @@
           <small>2.0.0-beta.7</small>
         </div>
       </a>
+
+      <p class="mb-5 text-f6 text-grey-60">Site updated <strong title="Sun Oct 13 2019 19:09:38 GMT+0200 (CEST)">Oct 13, 2019</strong></p>
 
       <nav role="navigation">
         <h2>For everybody</h2>
@@ -100,6 +97,9 @@
             class=""
           >
             <a href="/lookbook-website/tech/versioning">Versioning</a>
+          </li>
+          <li class="">
+            <a href="/lookbook-website/tech/classes">Classes</a>
           </li>
           <li class="">
             <a href="/lookbook-website/tech/variables">Variables</a>
@@ -162,145 +162,145 @@
 
   <div class="color-grid">
     
-      <div class="color-grid__cell" title="orange-10" style="background-color: #fff9ef">orange-10</div>
+      <div class="color-grid__cell" title="orange-10" style="background-color: var(--orange-10)">orange-10</div>
     
-      <div class="color-grid__cell" title="orange-20" style="background-color: #f9f1dc">orange-20</div>
+      <div class="color-grid__cell" title="orange-20" style="background-color: var(--orange-20)">orange-20</div>
     
-      <div class="color-grid__cell" title="orange-30" style="background-color: #f6e1aa">orange-30</div>
+      <div class="color-grid__cell" title="orange-30" style="background-color: var(--orange-30)">orange-30</div>
     
-      <div class="color-grid__cell" title="orange-40" style="background-color: #fecf60">orange-40</div>
+      <div class="color-grid__cell" title="orange-40" style="background-color: var(--orange-40)">orange-40</div>
     
-      <div class="color-grid__cell" title="orange-50" style="background-color: #f1ae0e">orange-50</div>
+      <div class="color-grid__cell" title="orange-50" style="background-color: var(--orange-50)">orange-50</div>
     
-      <div class="color-grid__cell" title="orange-60" style="background-color: #a96500">orange-60</div>
+      <div class="color-grid__cell" title="orange-60" style="background-color: var(--orange-60)">orange-60</div>
     
-      <div class="color-grid__cell" title="orange-70" style="background-color: #804d00">orange-70</div>
+      <div class="color-grid__cell" title="orange-70" style="background-color: var(--orange-70)">orange-70</div>
     
-      <div class="color-grid__cell" title="orange-80" style="background-color: #55371b">orange-80</div>
+      <div class="color-grid__cell" title="orange-80" style="background-color: var(--orange-80)">orange-80</div>
     
-      <div class="color-grid__cell" title="orange-90" style="background-color: #241b04">orange-90</div>
+      <div class="color-grid__cell" title="orange-90" style="background-color: var(--orange-90)">orange-90</div>
     
-      <div class="color-grid__cell" title="orange-100" style="background-color: #1e1707">orange-100</div>
+      <div class="color-grid__cell" title="orange-100" style="background-color: var(--orange-100)">orange-100</div>
     
-      <div class="color-grid__cell" title="blue-10" style="background-color: #f6fbfd">blue-10</div>
+      <div class="color-grid__cell" title="blue-10" style="background-color: var(--blue-10)">blue-10</div>
     
-      <div class="color-grid__cell" title="blue-20" style="background-color: #e5f7ff">blue-20</div>
+      <div class="color-grid__cell" title="blue-20" style="background-color: var(--blue-20)">blue-20</div>
     
-      <div class="color-grid__cell" title="blue-30" style="background-color: #a4e3ff">blue-30</div>
+      <div class="color-grid__cell" title="blue-30" style="background-color: var(--blue-30)">blue-30</div>
     
-      <div class="color-grid__cell" title="blue-40" style="background-color: #60ceff">blue-40</div>
+      <div class="color-grid__cell" title="blue-40" style="background-color: var(--blue-40)">blue-40</div>
     
-      <div class="color-grid__cell" title="blue-50" style="background-color: #00a0e8">blue-50</div>
+      <div class="color-grid__cell" title="blue-50" style="background-color: var(--blue-50)">blue-50</div>
     
-      <div class="color-grid__cell" title="blue-60" style="background-color: #007ab1">blue-60</div>
+      <div class="color-grid__cell" title="blue-60" style="background-color: var(--blue-60)">blue-60</div>
     
-      <div class="color-grid__cell" title="blue-70" style="background-color: #05577b">blue-70</div>
+      <div class="color-grid__cell" title="blue-70" style="background-color: var(--blue-70)">blue-70</div>
     
-      <div class="color-grid__cell" title="blue-80" style="background-color: #0d4057">blue-80</div>
+      <div class="color-grid__cell" title="blue-80" style="background-color: var(--blue-80)">blue-80</div>
     
-      <div class="color-grid__cell" title="blue-90" style="background-color: #092d3d">blue-90</div>
+      <div class="color-grid__cell" title="blue-90" style="background-color: var(--blue-90)">blue-90</div>
     
-      <div class="color-grid__cell" title="blue-100" style="background-color: #041820">blue-100</div>
+      <div class="color-grid__cell" title="blue-100" style="background-color: var(--blue-100)">blue-100</div>
     
-      <div class="color-grid__cell" title="green-10" style="background-color: #f2fffa">green-10</div>
+      <div class="color-grid__cell" title="green-10" style="background-color: var(--green-10)">green-10</div>
     
-      <div class="color-grid__cell" title="green-20" style="background-color: #d7f8eb">green-20</div>
+      <div class="color-grid__cell" title="green-20" style="background-color: var(--green-20)">green-20</div>
     
-      <div class="color-grid__cell" title="green-30" style="background-color: #97e8c8">green-30</div>
+      <div class="color-grid__cell" title="green-30" style="background-color: var(--green-30)">green-30</div>
     
-      <div class="color-grid__cell" title="green-40" style="background-color: #52dfa7">green-40</div>
+      <div class="color-grid__cell" title="green-40" style="background-color: var(--green-40)">green-40</div>
     
-      <div class="color-grid__cell" title="green-50" style="background-color: #1ab577">green-50</div>
+      <div class="color-grid__cell" title="green-50" style="background-color: var(--green-50)">green-50</div>
     
-      <div class="color-grid__cell" title="green-60" style="background-color: #188359">green-60</div>
+      <div class="color-grid__cell" title="green-60" style="background-color: var(--green-60)">green-60</div>
     
-      <div class="color-grid__cell" title="green-70" style="background-color: #0f6543">green-70</div>
+      <div class="color-grid__cell" title="green-70" style="background-color: var(--green-70)">green-70</div>
     
-      <div class="color-grid__cell" title="green-80" style="background-color: #0f432f">green-80</div>
+      <div class="color-grid__cell" title="green-80" style="background-color: var(--green-80)">green-80</div>
     
-      <div class="color-grid__cell" title="green-90" style="background-color: #0a281d">green-90</div>
+      <div class="color-grid__cell" title="green-90" style="background-color: var(--green-90)">green-90</div>
     
-      <div class="color-grid__cell" title="green-100" style="background-color: #0b1a14">green-100</div>
+      <div class="color-grid__cell" title="green-100" style="background-color: var(--green-100)">green-100</div>
     
-      <div class="color-grid__cell" title="grey-10" style="background-color: #f7fafd">grey-10</div>
+      <div class="color-grid__cell" title="grey-10" style="background-color: var(--grey-10)">grey-10</div>
     
-      <div class="color-grid__cell" title="grey-20" style="background-color: #ecf2f6">grey-20</div>
+      <div class="color-grid__cell" title="grey-20" style="background-color: var(--grey-20)">grey-20</div>
     
-      <div class="color-grid__cell" title="grey-30" style="background-color: #dce4e9">grey-30</div>
+      <div class="color-grid__cell" title="grey-30" style="background-color: var(--grey-30)">grey-30</div>
     
-      <div class="color-grid__cell" title="grey-40" style="background-color: #bacad4">grey-40</div>
+      <div class="color-grid__cell" title="grey-40" style="background-color: var(--grey-40)">grey-40</div>
     
-      <div class="color-grid__cell" title="grey-50" style="background-color: #7994a5">grey-50</div>
+      <div class="color-grid__cell" title="grey-50" style="background-color: var(--grey-50)">grey-50</div>
     
-      <div class="color-grid__cell" title="grey-60" style="background-color: #466a83">grey-60</div>
+      <div class="color-grid__cell" title="grey-60" style="background-color: var(--grey-60)">grey-60</div>
     
-      <div class="color-grid__cell" title="grey-70" style="background-color: #3b5366">grey-70</div>
+      <div class="color-grid__cell" title="grey-70" style="background-color: var(--grey-70)">grey-70</div>
     
-      <div class="color-grid__cell" title="grey-80" style="background-color: #253f50">grey-80</div>
+      <div class="color-grid__cell" title="grey-80" style="background-color: var(--grey-80)">grey-80</div>
     
-      <div class="color-grid__cell" title="grey-90" style="background-color: #192d3a">grey-90</div>
+      <div class="color-grid__cell" title="grey-90" style="background-color: var(--grey-90)">grey-90</div>
     
-      <div class="color-grid__cell" title="grey-100" style="background-color: #0e1f29">grey-100</div>
+      <div class="color-grid__cell" title="grey-100" style="background-color: var(--grey-100)">grey-100</div>
     
-      <div class="color-grid__cell" title="red-10" style="background-color: #fff2f3">red-10</div>
+      <div class="color-grid__cell" title="red-10" style="background-color: var(--red-10)">red-10</div>
     
-      <div class="color-grid__cell" title="red-20" style="background-color: #ffebed">red-20</div>
+      <div class="color-grid__cell" title="red-20" style="background-color: var(--red-20)">red-20</div>
     
-      <div class="color-grid__cell" title="red-30" style="background-color: #ffc7cb">red-30</div>
+      <div class="color-grid__cell" title="red-30" style="background-color: var(--red-30)">red-30</div>
     
-      <div class="color-grid__cell" title="red-40" style="background-color: #ff8697">red-40</div>
+      <div class="color-grid__cell" title="red-40" style="background-color: var(--red-40)">red-40</div>
     
-      <div class="color-grid__cell" title="red-50" style="background-color: #e95267">red-50</div>
+      <div class="color-grid__cell" title="red-50" style="background-color: var(--red-50)">red-50</div>
     
-      <div class="color-grid__cell" title="red-60" style="background-color: #cf4356">red-60</div>
+      <div class="color-grid__cell" title="red-60" style="background-color: var(--red-60)">red-60</div>
     
-      <div class="color-grid__cell" title="red-70" style="background-color: #9c3140">red-70</div>
+      <div class="color-grid__cell" title="red-70" style="background-color: var(--red-70)">red-70</div>
     
-      <div class="color-grid__cell" title="red-80" style="background-color: #602b32">red-80</div>
+      <div class="color-grid__cell" title="red-80" style="background-color: var(--red-80)">red-80</div>
     
-      <div class="color-grid__cell" title="red-90" style="background-color: #2c1216">red-90</div>
+      <div class="color-grid__cell" title="red-90" style="background-color: var(--red-90)">red-90</div>
     
-      <div class="color-grid__cell" title="red-100" style="background-color: #1e0e10">red-100</div>
+      <div class="color-grid__cell" title="red-100" style="background-color: var(--red-100)">red-100</div>
     
-      <div class="color-grid__cell" title="purple-10" style="background-color: #f6f6ff">purple-10</div>
+      <div class="color-grid__cell" title="purple-10" style="background-color: var(--purple-10)">purple-10</div>
     
-      <div class="color-grid__cell" title="purple-20" style="background-color: #eff0ff">purple-20</div>
+      <div class="color-grid__cell" title="purple-20" style="background-color: var(--purple-20)">purple-20</div>
     
-      <div class="color-grid__cell" title="purple-30" style="background-color: #d7d9ff">purple-30</div>
+      <div class="color-grid__cell" title="purple-30" style="background-color: var(--purple-30)">purple-30</div>
     
-      <div class="color-grid__cell" title="purple-40" style="background-color: #b4b9ff">purple-40</div>
+      <div class="color-grid__cell" title="purple-40" style="background-color: var(--purple-40)">purple-40</div>
     
-      <div class="color-grid__cell" title="purple-50" style="background-color: #8188f1">purple-50</div>
+      <div class="color-grid__cell" title="purple-50" style="background-color: var(--purple-50)">purple-50</div>
     
-      <div class="color-grid__cell" title="purple-60" style="background-color: #676dcd">purple-60</div>
+      <div class="color-grid__cell" title="purple-60" style="background-color: var(--purple-60)">purple-60</div>
     
-      <div class="color-grid__cell" title="purple-70" style="background-color: #4b4f96">purple-70</div>
+      <div class="color-grid__cell" title="purple-70" style="background-color: var(--purple-70)">purple-70</div>
     
-      <div class="color-grid__cell" title="purple-80" style="background-color: #36365b">purple-80</div>
+      <div class="color-grid__cell" title="purple-80" style="background-color: var(--purple-80)">purple-80</div>
     
-      <div class="color-grid__cell" title="purple-90" style="background-color: #1a1c36">purple-90</div>
+      <div class="color-grid__cell" title="purple-90" style="background-color: var(--purple-90)">purple-90</div>
     
-      <div class="color-grid__cell" title="purple-100" style="background-color: #111220">purple-100</div>
+      <div class="color-grid__cell" title="purple-100" style="background-color: var(--purple-100)">purple-100</div>
     
-      <div class="color-grid__cell" title="teal-10" style="background-color: #f3fdff">teal-10</div>
+      <div class="color-grid__cell" title="teal-10" style="background-color: var(--teal-10)">teal-10</div>
     
-      <div class="color-grid__cell" title="teal-20" style="background-color: #e4f8fc">teal-20</div>
+      <div class="color-grid__cell" title="teal-20" style="background-color: var(--teal-20)">teal-20</div>
     
-      <div class="color-grid__cell" title="teal-30" style="background-color: #cdeff5">teal-30</div>
+      <div class="color-grid__cell" title="teal-30" style="background-color: var(--teal-30)">teal-30</div>
     
-      <div class="color-grid__cell" title="teal-40" style="background-color: #91d9e6">teal-40</div>
+      <div class="color-grid__cell" title="teal-40" style="background-color: var(--teal-40)">teal-40</div>
     
-      <div class="color-grid__cell" title="teal-50" style="background-color: #34a4b9">teal-50</div>
+      <div class="color-grid__cell" title="teal-50" style="background-color: var(--teal-50)">teal-50</div>
     
-      <div class="color-grid__cell" title="teal-60" style="background-color: #208092">teal-60</div>
+      <div class="color-grid__cell" title="teal-60" style="background-color: var(--teal-60)">teal-60</div>
     
-      <div class="color-grid__cell" title="teal-70" style="background-color: #326f7a">teal-70</div>
+      <div class="color-grid__cell" title="teal-70" style="background-color: var(--teal-70)">teal-70</div>
     
-      <div class="color-grid__cell" title="teal-80" style="background-color: #1a464e">teal-80</div>
+      <div class="color-grid__cell" title="teal-80" style="background-color: var(--teal-80)">teal-80</div>
     
-      <div class="color-grid__cell" title="teal-90" style="background-color: #102c32">teal-90</div>
+      <div class="color-grid__cell" title="teal-90" style="background-color: var(--teal-90)">teal-90</div>
     
-      <div class="color-grid__cell" title="teal-100" style="background-color: #0b1e21">teal-100</div>
+      <div class="color-grid__cell" title="teal-100" style="background-color: var(--teal-100)">teal-100</div>
     
   </div>
 
@@ -309,6 +309,12 @@
   <p>It's not likely that you'll use all colors in a given scale however. These are recommended, safe colors, included in the Lookbook CSS:</p>
 
   <p>Also see <a href="/lookbook-website/tech/variables">"Variables"</a> if you'd like to use the colors as CSS Custom Properties.</p>
+
+  <h2>Wide gamut colors</h2>
+
+  <p>
+    We make use of wide gamut colors with the Display P3 color space on supported devices and browsers. These colours look more vibrant and saturated. All color variables in the CSS are automatically in the Display P3 space if the browser supports it.
+  </p>
 </section>
 
     </main>
