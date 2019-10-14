@@ -28,6 +28,6 @@ jobs:
           # The branch the action should deploy to.
           BRANCH: gh-pages
           # The folder the action should deploy.
-          FOLDER: build
+          FOLDER: docs
           # The build script the action should run prior to deploying.
-          BUILD_SCRIPT: npm install --no-save && npm run build
+          BUILD_SCRIPT: npm install --no-save && npm run build -- --pathprefix=lookbook-website
