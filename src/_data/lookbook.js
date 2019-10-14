@@ -31,15 +31,19 @@ const CLASS_MAP = {
     },
     border: {
         title: 'Border',
-        docsUrl: mkTailwindDocsUrl('border'),
+        docsUrl: mkTailwindDocsUrl('border-color'),
     },
     w: {
         title: 'Width',
         docsUrl: mkTailwindDocsUrl('width'),
     },
-    mw: {
-        title: 'Max width',
+    maxWidth: {
+        title: 'Max-width',
         docsUrl: mkTailwindDocsUrl('max-width'),
+    },
+    minHeight: {
+        title: 'Min-height',
+        docsUrl: mkTailwindDocsUrl('min-height'),
     },
     rounded: {
         title: 'Border radius',
@@ -97,6 +101,42 @@ const CLASS_MAP = {
         title: 'Overflow',
         docsUrl: mkTailwindDocsUrl('overflow'),
     },
+    display: {
+        title: 'Display',
+        docsUrl: mkTailwindDocsUrl('display'),
+    },
+    position: {
+        title: 'Position',
+        docsUrl: mkTailwindDocsUrl('position'),
+    },
+    fill: {
+        title: 'Fill',
+        docsUrl: mkTailwindDocsUrl('fill'),
+    },
+    typography: {
+        title: 'Typography',
+        docsUrl: mkTailwindDocsUrl('fill'),
+    },
+    textBreaks: {
+        title: 'Word break',
+        docsUrl: mkTailwindDocsUrl('word-break'),
+    },
+    font: {
+        title: 'Fonts',
+        docsUrl: mkTailwindDocsUrl('font-family'),
+    },
+    shadow: {
+        title: 'Shadow',
+        docsUrl: mkTailwindDocsUrl('box-shadow'),
+    },
+    fontSmoothing: {
+        title: 'Font smoothing',
+        docsUrl: mkTailwindDocsUrl('font-smoothing'),
+    },
+    visibility: {
+        title: 'Visibility',
+        docsUrl: mkTailwindDocsUrl('visibility'),
+    },
     icon: {
         title: 'Icons',
     },
@@ -120,7 +160,8 @@ const GROUP_MAP = {
     '^m(y|x)?(r|l|t|b)?-(\\d|auto|px)': 'm',
     '^border(r|l|t|b)?(-\\d)?': 'border',
     '^w-(\\d|auto|px|full|screen)': 'w',
-    '^max-w-': 'w',
+    '^min-h-': 'minHeight',
+    '^max-w-': 'maxWidth',
     '^z-': 'z',
     '^rounded(r|l|t|b)?(-\\d)?': 'rounded',
     '^cursor-': 'cursor',
@@ -136,15 +177,23 @@ const GROUP_MAP = {
     '^overflow-': 'overflow',
     '^scrolling-': 'overflow',
     '^(top|bottom|right|left)-(\\d|auto)': 'positioning',
+    '^inset-(\\d|y|x)?(-auto|\\d)?': 'positioning',
     '^flex-?|items-|self-|justify-': 'flex',
+    '^block|inline-?|table-?|hidden': 'display',
+    '^static|fixed|absolute|sticky|relative': 'position',
+    '^fill': 'fill',
+    '^(not-)?italic|(upper|lower|normal-)case|capitalize|(no-)?underline|line-through': 'typography',
+    '^break-(normal|words|all)|truncate': 'textBreaks',
+    '^font-': 'font',
+    '^shadow-?': 'shadow',
+    '^(subpixel-)?antialiased': 'fontSmoothing',
+    '^(in)?visible': 'visibility',
 };
 
 const findGroupFromClass = (klass) => {
     const find = Object.entries(GROUP_MAP).find(([regex]) =>
         new RegExp(regex, 'g').test(klass)
     );
-
-    console.log(klass, find ? find[1] : null);
 
     return find ? find[1] : false;
 };

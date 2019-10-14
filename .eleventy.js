@@ -22,6 +22,8 @@ module.exports = (conf) => {
         return yearFormatter.format(date);
     });
 
+    conf.addFilter('slug', (str) => str.toLowerCase().replace(/\s/g, '-'));
+
     conf.addPlugin(inclusiveLangPlugin, {
         templateFormats: FORMATS,
     });
