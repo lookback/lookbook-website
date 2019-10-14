@@ -35,7 +35,7 @@ module.exports = (conf) => {
         htmlTemplateEngine: 'njk',
         dir: {
             input: 'src',
-            output: 'docs',
+            output: 'build',
         },
     };
 };
