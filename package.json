@@ -4,8 +4,8 @@
   "description": "The styleguide of Lookback",
   "scripts": {
     "test": "eslint . && stylelint src/**/*.css",
-    "start": "eleventy --serve & postcss src/stylesheets/site.css --dir build/assets --ext dist.css --watch --verbose",
-    "build": "postcss src/stylesheets/site.css --dir build/assets --ext dist.css && eleventy"
+    "start": "eleventy --serve & postcss src/stylesheets/site.css --dir build/assets --watch --verbose",
+    "build": "postcss src/stylesheets/site.css --dir build/assets && eleventy"
   },
   "repository": {
     "type": "git",
