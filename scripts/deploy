@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-NODE_ENV=production npm run build -- --pathprefix=lookbook-website && \
-  touch docs/.nojekyll && \
-  git add docs && \
-  git ci -m "Build site $(date)" && \
-  git push origin master

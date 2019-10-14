@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: '12.x'
 
-      - name: Build, Test and Deploy
+      - name: Build & Deploy
         uses: JamesIves/github-pages-deploy-action@master
         env:
           CI: true
