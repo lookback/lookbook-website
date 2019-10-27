@@ -1,4 +1,10 @@
 /* eslint no-useless-escape: 0 */
+
+/*
+    This script parses *all* classes in the Lookbook CSS and outputs
+    them to be rendered by the site.
+*/
+
 const { colors } = require('lookbook');
 const postcss = require('postcss');
 const path = require('path');
@@ -199,7 +205,7 @@ const findGroupFromClass = (klass) => {
 };
 
 /** Finds all classes in a .css file. */
-const getLookbookClasses = async (filePath) => {
+const getAllClasses = async (filePath) => {
     if (!filePath.endsWith('.css')) {
         throw new Error(`${filePath} must be a .css file!`);
     }
@@ -286,7 +292,7 @@ const groupClassesBySubject = (classes) => {
 };
 
 module.exports = async () => {
-    const classes = await getLookbookClasses(
+    const classes = await getAllClasses(
         './node_modules/lookbook/dist/lookbook.css'
     );
 
