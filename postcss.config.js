@@ -1,4 +1,4 @@
-const { defaultPostCssPlugins } = require('lookbook');
+const { defaultPostCssPlugins } = require('@lookback/lookbook');
 const postcssCustomMedia = require('postcss-custom-media');
 const minify = require('cssnano');
 

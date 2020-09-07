@@ -1,3 +1,3 @@
-const { tailwindConfig } = require('lookbook');
+const { tailwindConfig } = require('@lookback/lookbook');
 
 module.exports = tailwindConfig;

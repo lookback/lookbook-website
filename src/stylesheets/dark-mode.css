@@ -1,4 +1,4 @@
-@import 'lookbook/dist/lookbook-dark-mode.css';
+@import '@lookback/lookbook/dist/lookbook-dark-mode.css';
 
 @media (prefers-color-scheme: dark) {
   .lookback-logo {

@@ -21,6 +21,7 @@ jobs:
 
       - name: Install & Build
         run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
           npm install --no-save --no-audit
           npm run build -- --pathprefix=lookbook-website
 

@@ -5,12 +5,14 @@
     them to be rendered by the site.
 */
 
-const { colors } = require('lookbook');
+const { colors } = require('@lookback/lookbook');
 const postcss = require('postcss');
 const path = require('path');
 const fs = require('fs');
 const { promisify } = require('util');
-const { version } = require('../../node_modules/lookbook/package.json');
+const {
+    version,
+} = require('../../node_modules/@lookback/lookbook/package.json');
 
 const readFile = promisify(fs.readFile);
 
@@ -293,7 +295,7 @@ const groupClassesBySubject = (classes) => {
 
 module.exports = async () => {
     const classes = await getAllClasses(
-        './node_modules/lookbook/dist/lookbook.css'
+        './node_modules/@lookback/lookbook/dist/lookbook.css'
     );
 
     const groupedClasses = groupClassesBySubject(classes);
