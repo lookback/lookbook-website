@@ -1,6 +1,6 @@
 const { defaultPostCssPlugins } = require('@lookback/lookbook');
 const postcssCustomMedia = require('postcss-custom-media');
-const minify = require('cssnano');
+const minify = require('postcss-csso');
 
 module.exports = (ctx) => ({
     map: ctx.options.map, // Sourcemaps
@@ -9,10 +9,6 @@ module.exports = (ctx) => ({
         postcssCustomMedia({
             preserve: true,
         }),
-        ctx.env === 'production'
-            ? minify({
-                  preset: 'default',
-              })
-            : null,
+        ctx.env === 'production' ? minify : null,
     ],
 });
