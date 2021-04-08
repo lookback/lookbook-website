@@ -5,6 +5,11 @@
     border-radius: 0;
     @apply rounded-b-lg mb-5;
   }
+
+  &--dark {
+    background-color: var(--blue-100);
+    border-color: var(--blue-100);
+  }
 }
 
 .callout {

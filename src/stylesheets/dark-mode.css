@@ -12,6 +12,15 @@
     & + pre {
       @apply rounded-lg;
     }
+
+    &--dark {
+      background-color: var(--blue-100);
+      border-color: var(--blue-100);
+
+      & + pre {
+        @apply rounded-b-lg rounded-t-none;
+      }
+    }
   }
 
   .sidebar {
