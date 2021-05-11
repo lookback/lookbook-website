@@ -29,7 +29,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.1",
     "@lookback/lookbook": "^3.1.1",
     "dotenv": "^6.2.0",
-    "postcss": "^8.2.4",
+    "postcss": "^8.2.10",
     "postcss-cli": "^8.3.1",
     "postcss-csso": "^5.0.0",
     "postcss-custom-media": "^8.0.0"
