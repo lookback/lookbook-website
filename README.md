@@ -21,4 +21,4 @@ $ npm link ../lookbook # or whatever path to your local Lookbook folder
 
 ## Deploy
 
-Just git push to `master` and a [GitHub Action](https://github.com/lookback/lookbook-website/actions) will trigger and deploy the site from the `gh-pages` branch.
+Just git push to `main` and a [GitHub Action](https://github.com/lookback/lookbook-website/actions) will trigger and deploy the site from the `gh-pages` branch.

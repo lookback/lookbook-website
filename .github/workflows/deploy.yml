@@ -33,7 +33,7 @@ jobs:
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           # The branch the action should deploy from.
-          BASE_BRANCH: master
+          BASE_BRANCH: main
           # The branch the action should deploy to.
           BRANCH: gh-pages
           # The folder the action should deploy.
