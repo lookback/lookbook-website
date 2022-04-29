@@ -19,19 +19,19 @@
   "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://lookback.github.io/lookbook-website",
   "devDependencies": {
-    "eslint": "^5.16",
-    "stylelint": "^13.3.3",
-    "stylelint-config-recommended": "3.0.0"
+    "eslint": "^5",
+    "stylelint": "^13",
+    "stylelint-config-recommended": "3"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.7.1",
-    "@11ty/eleventy-plugin-inclusive-language": "^1.0.0",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.1",
+    "@11ty/eleventy-plugin-inclusive-language": "^1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^2",
     "@lookback/lookbook": "^4",
-    "dotenv": "^6.2.0",
-    "postcss": "^8.2.4",
-    "postcss-cli": "^9.1.0",
-    "postcss-csso": "^6.0.0",
-    "postcss-custom-media": "^8.0.0"
+    "dotenv": "^6",
+    "postcss": "^8",
+    "postcss-cli": "^9",
+    "postcss-csso": "^6",
+    "postcss-custom-media": "^8"
   }
 }
