@@ -60,22 +60,29 @@
 
 .layout-preview {
   &__block {
-    @apply rounded-sm mb-2 flex items-center relative;
-    height: 2em;
-    background-color: theme('colors.grey-40');
+    @apply p-2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2rem;
+    background-color: var(--blue-90);
 
     code {
-      @apply relative;
-      right: calc(-100% - 1em);
       white-space: nowrap;
-    }
-
-    &:last-child {
-      margin-bottom: 0;
     }
   }
 }
 
 .scrolling-touch {
   -webkit-overflow-scrolling: touch;
+}
+
+.grid-square {
+  --size: 200px;
+  grid-template-columns: repeat(3, var(--size));
+  grid-template-rows: repeat(3, var(--size));
+
+  &-2 {
+    grid-template-columns: repeat(2, 300px);
+  }
 }

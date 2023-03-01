@@ -1,0 +1,36 @@
+---
+layout: layout.njk
+---
+
+<section>
+  <h1>Widths</h1>
+
+  <p>Use the helpers to set widths and maximum widths.</p>
+
+  <h2>Width</h2>
+
+  <div class="layout-preview mb-5">
+    <div class="layout-preview__block mb-2 w-px"><code>.w-px</code></div>
+    {% for i in range(1, 16) %}
+      <div class="layout-preview__block mb-2 w-{{ i }}"><code>.w-{{ i }}</code></div>
+    {% endfor %}
+    <div class="layout-preview__block mb-2 w-full"><code>.w-full</code></div>
+    <div class="layout-preview__block mb-2 w-screen"><code>.w-screen</code></div>
+    <div class="layout-preview__block mb-2 w-auto"><code>.w-auto</code></div>
+    <div class="layout-preview__block mb-2 w-max-content"><code>.w-max-content</code></div>
+    <div class="layout-preview__block mb-2 w-min-content"><code>.w-min-content</code></div>
+  </div>
+
+  <h2>Max Width</h2>
+
+  <div class="layout-preview">
+    {% for i in range(1, 16) %}
+      <div class="layout-preview__block mb-2 max-w-{{ i }}"><code>.max-w-{{ i }}</code></div>
+    {% endfor %}
+    <div class="layout-preview__block mb-2 max-w-full"><code>.max-w-full</code></div>
+    <div class="layout-preview__block mb-2 max-w-screen"><code>.max-w-screen</code></div>
+    <div class="layout-preview__block mb-2 max-w-auto"><code>.max-w-auto</code></div>
+    <div class="layout-preview__block mb-2 max-w-max-content"><code>.max-w-max-content</code></div>
+    <div class="layout-preview__block mb-2 max-w-min-content"><code>.max-w-min-content</code></div>
+  </div>
+</section>

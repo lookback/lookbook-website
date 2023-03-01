@@ -4,7 +4,6 @@
   "description": "The styleguide of Lookback",
   "scripts": {
     "clean": "rm -rf build",
-    "test": "eslint . && stylelint src/**/*.css",
     "css": "postcss src/stylesheets/site.css --dir build/assets --verbose",
     "start": "eleventy --serve & npm run css -- --watch",
     "build": "npm run css && eleventy",
@@ -19,18 +18,15 @@
   "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://lookback.github.io/lookbook-website",
   "devDependencies": {
-    "eslint": "^5",
-    "stylelint": "^13",
-    "stylelint-config-recommended": "3"
+    "prettier": "=2.0.5"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.7.1",
-    "@11ty/eleventy-plugin-inclusive-language": "^1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^2",
-    "@lookback/lookbook": "^4",
+    "@lookback/lookbook": "^5",
     "dotenv": "^6",
     "postcss": "^8",
-    "postcss-cli": "^9",
+    "postcss-cli": "^10",
     "postcss-csso": "^6",
     "postcss-custom-media": "^8"
   }

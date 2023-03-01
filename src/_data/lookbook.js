@@ -1,5 +1,3 @@
-/* eslint no-useless-escape: 0 */
-
 /*
     This script parses *all* classes in the Lookbook CSS and outputs
     them to be rendered by the site.
@@ -18,7 +16,7 @@ const readFile = promisify(fs.readFile);
 
 const CLASS_REGEX = /\.([\w\d-]+)/;
 
-const mkTailwindDocsUrl = (slug) => `https://tailwindcss.com/docs/${slug}`;
+const mkTailwindDocsUrl = (slug) => `https://v2.tailwindcss.com/docs/${slug}`;
 
 const arrayMove = (arr, from, to) => arr.splice(to, 0, arr.splice(from, 1)[0]);
 

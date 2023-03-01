@@ -1,0 +1,21 @@
+---
+layout: layout.njk
+classes:
+  - shadow-none
+  - shadow-tiny
+  - shadow-small
+  - shadow
+  - shadow-large
+---
+
+<section>
+  <h1>Shadows</h1>
+
+  <div class="layout-preview grid grid-square grid-square-2 gap-5">
+    {% for cl in classes %}
+    <div class="layout-preview__block rounded {{ cl }}" style="background-color: white;">
+      <code>.{{ cl }}</code>
+    </div>
+    {% endfor %}
+  </div>
+</section>

@@ -5,7 +5,7 @@ layout: layout.njk
 <section>
   <h1>Forms</h1>
 
-  <form>
+  <form class="bg-white p-3 rounded-huge shadow-huge mb-4">
       <p>
         <label for="select" class="block">Product Delta team, January 2019</label>
     
@@ -25,6 +25,16 @@ layout: layout.njk
       <p>
         <label class="block" for="name">Name</label>
         <input id="name" type="text" placeholder="Placeholder" />
+      </p>
+
+      <p>
+        <label class="block" for="search">Search</label>
+        <input id="search" type="search" placeholder="Placeholder" />
+      </p>
+
+      <p>
+        <label class="block" for="email">Email</label>
+        <input id="email" type="email" placeholder="Email" required />
       </p>
     
       <p>
@@ -48,4 +58,16 @@ layout: layout.njk
       </p>
     </form>
 
-  </section>
+</section>
+
+<section>
+  <h1>Outline rings</h1>
+
+  <div class="flex items-center gap-4">
+    <button class="btn ring-2">Test</button>
+    <button class="btn ring-2 ring-blue-50">Test</button>
+
+    <button class="btn ring-2 ring-offset-2 ring-offset-bg">Test</button>
+    <button class="btn ring-2 ring-offset-2 ring-blue-50">Test</button>
+  </div>
+</section>
