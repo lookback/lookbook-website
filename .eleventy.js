@@ -1,4 +1,3 @@
-const inclusiveLangPlugin = require('@11ty/eleventy-plugin-inclusive-language');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 const FORMATS = ['md', 'html', 'njk'];
@@ -24,9 +23,6 @@ module.exports = (conf) => {
 
     conf.addFilter('slug', (str) => str.toLowerCase().replace(/\s/g, '-'));
 
-    conf.addPlugin(inclusiveLangPlugin, {
-        templateFormats: FORMATS,
-    });
     conf.addPlugin(syntaxHighlight);
 
     return {

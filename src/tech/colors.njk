@@ -13,7 +13,7 @@ layout: layout.njk
     {% for name, code in lookbook.colors %}
       <div class="color-grid__cell" title="--{{ name }}: {{ code }}" style="background-color: var(--{{ name }})">{{ name }}</div>
     {% else %}
-      <p class="text-grey-60">No colors configured.</p>
+      <p class="text-muted">No colors configured.</p>
     {% endfor %}
   </div>
 

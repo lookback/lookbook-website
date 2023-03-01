@@ -1,5 +1,3 @@
-@custom-media --breakpoint-menu (max-width: 960px);
-
 html,
 body {
   min-height: 100vh;
@@ -9,13 +7,9 @@ body {
   @apply flex;
   position: relative;
 
-  @media (--breakpoint-menu) {
+  @media (max-width: 960px) {
     @apply flex-col overflow-y-auto;
   }
-}
-
-.lookback-logo {
-  fill: var(--red-50);
 }
 
 .sidebar {
@@ -29,7 +23,7 @@ body {
     box-shadow: rgba(theme('colors.grey-50'), 0.6) 2px 0 30px;
   }
 
-  @media (--breakpoint-menu) {
+  @media (max-width: 960px) {
     @apply fixed overflow-y-auto bottom-0 top-0 scrolling-touch;
     transform: translate(-100%, 0);
     z-index: 10;
@@ -40,7 +34,7 @@ body {
   }
 
   h2 {
-    @apply text-grey-60 uppercase font-bold text-f6 tracking-wide mb-3;
+    @apply text-grey-80 uppercase font-bold text-f6 tracking-huge mb-3;
   }
 
   nav {
@@ -117,9 +111,9 @@ main {
     max-width: 45em;
 
     > h1 {
-      @apply mb-5 text-f0 font-bold;
+      @apply mb-4 text-f0;
 
-      @media (--breakpoint-menu) {
+      @media (max-width: 960px) {
         @apply text-f1;
       }
     }
@@ -133,7 +127,7 @@ main {
     }
   }
 
-  @media (--breakpoint-menu) {
+  @media (max-width: 960px) {
     @apply py-2 px-3;
 
     > section {
@@ -164,7 +158,7 @@ main {
   }
 }
 
-@media (--breakpoint-menu) {
+@media (max-width: 960px) {
   .toggle-menu {
     @apply block;
   }

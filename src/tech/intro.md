@@ -10,7 +10,7 @@ Welcome to the tech section of the Lookbook! In here, we go through some must-kn
 
 _tldr;_ please read the Tailwind docs before getting started with the Lookbook CSS:
 
-<a href="https://tailwindcss.com/docs/utility-first" class="btn text-f4">Tailwind docs →</a>
+<a href="https://v2.tailwindcss.com" class="btn text-f4">Tailwind docs →</a>
 
 ## Functional CSS
 
@@ -30,7 +30,7 @@ This is incredibly powerful. Tailwind will generate a bunch of utility classes �
 
 **If you're gonna work directly with the Lookbook CSS, please read the Tailwind docs!** We won't cover the nitty gritty of the utility classes on this site.
 
-<a href="https://tailwindcss.com/docs/utility-first" class="btn text-f4">Tailwind docs →</a>
+<a href="https://v2.tailwindcss.com/docs/utility-first" class="btn text-f4">Tailwind docs →</a>
 
 ## On this site
 

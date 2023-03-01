@@ -20,7 +20,17 @@ layout: layout.njk
 
 <h6>Level 6 heading</h6>
 
-<p class="mt-6">
+<h6 class="text-f7">Level 7 heading (with <code>.text-f7</code>)</h6>
+
+<hr class="my-4" />
+
+<h4 class="tracking-tight">Heading with <code>tracking-tight</code></h4>
+<h4 class="tracking">Heading with default tracking</h4>
+<h4 class="tracking-huge">Heading with <code>tracking-huge</code></h4>
+
+<hr class="my-4" />
+
+<p>
   Protecting your <a href="#">privacy</a> is really important to Lookback Group, Inc and our
   subsidiares (all U.S. subsidiaries using brand name Lookback). (“Lookback”,
   “we”, or “our”). With this in mind, we are providing this Privacy Policy to
@@ -118,11 +128,15 @@ layout: layout.njk
   Any information that is collected.
 </p>
 
-<details>
-  <summary>A summary</summary>
-  <p>Some details</p>
-</details>
+<section class="bg-white p-3 rounded-huge shadow-huge">
 
-<pre><code>const fn = (arg1: number) => arg1 * 2;
+  <details class="mb-3">
+    <summary>A summary</summary>
+    <p>Some details</p>
+  </details>
+
+  <pre><code>const fn = (arg1: number) => arg1 * 2;
 
 console.log(fn(2));</code></pre>
+
+</section>

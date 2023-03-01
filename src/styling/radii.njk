@@ -1,0 +1,22 @@
+---
+layout: layout.njk
+classes:
+  - rounded-none
+  - rounded-sm
+  - rounded
+  - rounded-lg
+  - rounded-huge
+  - rounded-full
+---
+
+<section>
+  <h1>Border radius</h1>
+
+  <div class="layout-preview grid grid-square gap-3">
+    {% for cl in classes %}
+    <div class="layout-preview__block {{ cl }}">
+      <code>.{{ cl }}</code>
+    </div>
+    {% endfor %}
+  </div>
+</section>
