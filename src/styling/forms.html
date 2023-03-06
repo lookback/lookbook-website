@@ -56,6 +56,21 @@ layout: layout.njk
         <label class="block" for="color">Color</label>
         <input id="color" type="color" />
       </p>
+
+      <div class="mb-3">
+        <label class="block" for="contentEditable">Content editable</label>
+        <div role="textbox" id="contentEditable" contenteditable="true"></div>
+      </div>
+
+      <div class="mb-3">
+        <label class="block" for="contentEditable2">Content editable with placeholder</label>
+        <div role="textbox" id="contentEditable2" contenteditable="true" aria-placeholder="Placeholder here"></div>
+      </div>
+
+      <div class="mb-3">
+        <label class="block" for="contentEditable3">Content editable disabled</label>
+        <div role="textbox" id="contentEditable3" contenteditable="true" aria-placeholder="Placeholder here" aria-disabled="true"></div>
+      </div>
     </form>
 
 </section>

@@ -2,7 +2,7 @@
 layout: layout.njk
 ---
 
-<section>
+<section class="max-w-none">
   <h1>Widths</h1>
 
   <p>Use the helpers to set widths and maximum widths.</p>
@@ -12,25 +12,77 @@ layout: layout.njk
   <div class="layout-preview mb-5">
     <div class="layout-preview__block mb-2 w-px"><code>.w-px</code></div>
     {% for i in range(1, 16) %}
-      <div class="layout-preview__block mb-2 w-{{ i }}"><code>.w-{{ i }}</code></div>
+    <div class="layout-preview__block mb-2 w-{{ i }}">
+      <code>.w-{{ i }}</code>
+    </div>
     {% endfor %}
     <div class="layout-preview__block mb-2 w-full"><code>.w-full</code></div>
-    <div class="layout-preview__block mb-2 w-screen"><code>.w-screen</code></div>
+    <div class="layout-preview__block mb-2 w-screen">
+      <code>.w-screen</code>
+    </div>
     <div class="layout-preview__block mb-2 w-auto"><code>.w-auto</code></div>
-    <div class="layout-preview__block mb-2 w-max-content"><code>.w-max-content</code></div>
-    <div class="layout-preview__block mb-2 w-min-content"><code>.w-min-content</code></div>
+    <div class="layout-preview__block mb-2 w-max-content">
+      <code>.w-max-content</code>
+    </div>
+    <div class="layout-preview__block mb-2 w-min-content">
+      <code>.w-min-content</code>
+    </div>
   </div>
 
   <h2>Max Width</h2>
 
   <div class="layout-preview">
     {% for i in range(1, 16) %}
-      <div class="layout-preview__block mb-2 max-w-{{ i }}"><code>.max-w-{{ i }}</code></div>
+    <div class="layout-preview__block mb-2 max-w-{{ i }}">
+      <code>.max-w-{{ i }}</code>
+    </div>
     {% endfor %}
-    <div class="layout-preview__block mb-2 max-w-full"><code>.max-w-full</code></div>
-    <div class="layout-preview__block mb-2 max-w-screen"><code>.max-w-screen</code></div>
-    <div class="layout-preview__block mb-2 max-w-auto"><code>.max-w-auto</code></div>
-    <div class="layout-preview__block mb-2 max-w-max-content"><code>.max-w-max-content</code></div>
-    <div class="layout-preview__block mb-2 max-w-min-content"><code>.max-w-min-content</code></div>
+    <div class="layout-preview__block mb-2 max-w-full">
+      <code>.max-w-full</code>
+    </div>
+    <div class="layout-preview__block mb-2 max-w-screen">
+      <code>.max-w-screen</code>
+    </div>
+    <div class="layout-preview__block mb-2 max-w-auto">
+      <code>.max-w-auto</code>
+    </div>
+    <div class="layout-preview__block mb-2 max-w-max-content">
+      <code>.max-w-max-content</code>
+    </div>
+    <div class="layout-preview__block mb-2 max-w-min-content">
+      <code>.max-w-min-content</code>
+    </div>
   </div>
+
+  <section>
+    <h1>Text measures samples</h1>
+
+    {% for i in range(1, 11) %}
+    <h2><code>.max-w-{{ i }}</code></h2>
+    <p class="max-w-{{ i }}">
+      One morning, when Gregor Samsa woke from troubled dreams, he found himself
+      transformed in his bed into a horrible vermin.
+    </p>
+    {% endfor %}
+    {% for i in range(11, 16) %}
+    <h2><code>.max-w-{{ i }}</code></h2>
+    <p class="max-w-{{ i }}">
+      One morning, when Gregor Samsa woke from troubled dreams, he found himself
+      transformed in his bed into a horrible vermin. He lay on his armour-like
+      back, and if he lifted his head a little he could see his brown belly,
+      slightly domed and divided by arches into stiff sections. The bedding was
+      hardly able to cover it and seemed ready to slide off any moment. His many
+      legs, pitifully thin compared with the size of the rest of him, waved
+      about helplessly as he looked. "What's happened to me?" he thought. It
+      wasn't a dream. His room, a proper human room although a little too small,
+      lay peacefully between its four familiar walls. A collection of textile
+      samples lay spread out on the table - Samsa was a travelling salesman -
+      and above it there hung a picture that he had recently cut out of an
+      illustrated magazine and housed in a nice, gilded frame. It showed a lady
+      fitted out with a fur hat and fur boa who sat upright, raising a heavy fur
+      muff that covered the whole of her lower arm towards the viewer. Gregor
+      then turned to look out the window at the dull weather.
+    </p>
+    {% endfor %}
+  </section>
 </section>

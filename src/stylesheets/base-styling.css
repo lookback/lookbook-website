@@ -4,17 +4,13 @@ body {
 }
 
 body {
-  @apply flex;
+  display: grid;
+  grid-template-columns: 300px 1fr;
   position: relative;
-
-  @media (max-width: 960px) {
-    @apply flex-col overflow-y-auto;
-  }
 }
 
 .sidebar {
   @apply py-3 pl-3 pr-0 bg-white;
-  flex-basis: 300px;
   transition: transform 0.1s ease-out;
 
   &.visible {
