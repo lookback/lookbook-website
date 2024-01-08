@@ -23,24 +23,6 @@ pre[class*='language-'] {
   counter-reset: line;
 }
 
-.highlight-line {
-  /* &::before {
-    min-width: 1.5em;
-    text-align: right;
-    counter-increment: line;
-    content: counter(line);
-    display: inline-block;
-    border-right: 1px solid rgba(#a0a5bd, 0.1);
-    padding: 0 0.5em;
-    margin-right: 2em;
-    color: rgba(#a0a5bd, 0.6);
-
-    @screen sm {
-      margin-right: 1em;
-    }
-  } */
-}
-
 .token.comment,
 .token.prolog,
 .token.doctype,
@@ -156,10 +138,10 @@ pre > code.highlight {
  * http://prismjs.com/plugins/line-highlight/
  */
 .line-highlight {
-  background: rgba(107, 115, 148, 0.2);
+  background: rgb(107 115 148 / 20%);
   background: linear-gradient(
     to right,
-    rgba(107, 115, 148, 0.2) 70%,
-    rgba(107, 115, 148, 0)
+    rgb(107 115 148 / 20%) 70%,
+    rgb(107 115 148 / 0%)
   );
 }

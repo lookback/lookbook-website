@@ -54,7 +54,7 @@
   &__cell {
     @apply rounded-lg p-2 font-bold;
     text-indent: -999em;
-    box-shadow: inset rgba(#000, 0.15) 0 1px 4px;
+    box-shadow: inset rgb(0 0 0 / 15%) 0 1px 4px;
   }
 }
 

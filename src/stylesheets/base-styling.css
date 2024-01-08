@@ -16,7 +16,7 @@ body {
   &.visible {
     transform: none;
     width: 75%;
-    box-shadow: rgba(theme('colors.grey-50'), 0.6) 2px 0 30px;
+    box-shadow: rgb(0 0 0 / 20%) 2px 0 30px;
   }
 
   @media (max-width: 960px) {
@@ -96,10 +96,7 @@ main {
     @apply list-decimal;
   }
 
-  p,
-  pre,
-  ul,
-  ol {
+  :where(p, pre, ul, ol, figure) {
     @apply mb-3;
   }
 
@@ -133,10 +130,14 @@ main {
 }
 
 .toggle-menu {
-  @apply hidden pr-3 pt-3 text-right;
+  @apply pr-3 pt-3;
+  display: none;
+  text-align: right;
 
   a {
-    @apply font-bold inline-block rounded-lg border px-2 py-1;
+    @apply rounded-lg border px-2 py-1;
+    font-weight: bold;
+    display: inline-block;
     border-color: var(--grey-40);
     color: var(--blue-70);
     -webkit-tap-highlight-color: transparent;
@@ -156,6 +157,6 @@ main {
 
 @media (max-width: 960px) {
   .toggle-menu {
-    @apply block;
+    display: block;
   }
 }

@@ -270,6 +270,17 @@ layout: layout.njk
 <button class="btn text-f3">Huge</button>
   {% endhighlight %}
 
+  <p>
+     <button class="btn" onclick="window.demoModal.showModal()">Show modal</button>
+  </p>
+
+  <dialog id="demoModal" class="p-3 rounded">
+    <h1>Hi there</h1>
+    <form method="dialog" class="text-center">
+        <button class="btn">Close</button>
+    </form>
+  </dialog>
+
   <aside class="callout">
     <h3 class="callout__title">Read more</h3>
     <ul>

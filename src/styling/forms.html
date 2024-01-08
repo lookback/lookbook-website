@@ -8,7 +8,7 @@ layout: layout.njk
   <form class="bg-white p-3 rounded-huge shadow-huge mb-4">
       <p>
         <label for="select" class="block">Product Delta team, January 2019</label>
-    
+
         <select id="select" class="w-8">
           <option>Martin</option>
           <option>Drew</option>
@@ -21,7 +21,17 @@ layout: layout.njk
           <option>A really really really really really really really long text</option>
         </select>
       </p>
-    
+
+      <p>
+        <label for="prog">Progress</label>
+        <progress id="prog" value="0.5">50%</progress>
+      </p>
+
+      <p>
+        <label for="prog-done">Progress done</label>
+        <progress id="prog-done" value="1">100%</progress>
+      </p>
+
       <p>
         <label class="block" for="name">Name</label>
         <input id="name" type="text" placeholder="Placeholder" />
@@ -36,7 +46,7 @@ layout: layout.njk
         <label class="block" for="email">Email</label>
         <input id="email" type="email" placeholder="Email" required />
       </p>
-    
+
       <p>
         <label class="block" for="text">Text</label>
         <textarea id="text" placeholder="Placeholder">Some text</textarea>
