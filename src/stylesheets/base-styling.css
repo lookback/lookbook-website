@@ -112,7 +112,7 @@ main {
     }
 
     > h2 {
-      @apply mb-2 mt-4 pb-1 border-b-2;
+      @apply mb-2 mt-4 pb-1 border-b-1;
     }
 
     > h3 {

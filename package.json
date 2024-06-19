@@ -23,7 +23,7 @@
   "dependencies": {
     "@11ty/eleventy": "^0.7.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^2",
-    "@lookback/lookbook": "^6.0.5",
+    "@lookback/lookbook": "^6.0.6",
     "dotenv": "^6",
     "postcss": "^8",
     "postcss-cli": "^10",
