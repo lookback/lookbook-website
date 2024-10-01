@@ -21,6 +21,22 @@ layout: layout.njk
           <option>A really really really really really really really long text</option>
         </select>
       </p>
+      
+      <p>
+        <label for="select-disabled" class="block">Disabled select</label>
+
+        <select id="select-disabled" class="w-8" disabled>
+          <option>Martin</option>
+          <option>Drew</option>
+          <option>Johan</option>
+          <option>Nevyn</option>
+          <option>Tabanitha</option>
+          <option>Andoma</option>
+          <option>Forrest</option>
+          <option>Carl</option>
+          <option>A really really really really really really really long text</option>
+        </select>
+      </p>
 
       <p>
         <label for="prog">Progress</label>
@@ -35,6 +51,11 @@ layout: layout.njk
       <p>
         <label class="block" for="name">Name</label>
         <input id="name" type="text" placeholder="Placeholder" />
+      </p>
+      
+      <p>
+        <label class="block" for="name-disabled">Name, disabled</label>
+        <input id="name" type="text" placeholder="Placeholder" disabled />
       </p>
 
       <p>
