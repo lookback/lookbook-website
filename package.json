@@ -26,7 +26,7 @@
     "@lookback/lookbook": "^6.0.6",
     "dotenv": "^6",
     "postcss": "^8",
-    "postcss-cli": "^10",
+    "postcss-cli": "^11",
     "postcss-csso": "^6",
     "postcss-custom-media": "^8"
   }
