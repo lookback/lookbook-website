@@ -18,14 +18,16 @@
   "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://lookback.github.io/lookbook-website",
   "devDependencies": {
-    "prettier": "=2.0.5"
+    "@tailwindcss/postcss": "^4.1.10",
+    "postcss": "^8.5.6",
+    "prettier": "=2.0.5",
+    "tailwindcss": "^4.1.10"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.7.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^2",
     "@lookback/lookbook": "^6.0.6",
     "dotenv": "^6",
-    "postcss": "^8",
     "postcss-cli": "^11",
     "postcss-csso": "^6",
     "postcss-custom-media": "^8"

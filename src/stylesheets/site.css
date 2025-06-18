@@ -1,6 +1,8 @@
 @import '@lookback/lookbook/dist/lookbook.css';
 
-@import 'inter.css';
-@import 'utils.css';
-@import 'base-styling.css';
-@import 'prism.css';
+@import 'tailwindcss';
+
+@import './inter.css';
+@import './utils.css';
+@import './base-styling.css';
+@import './prism.css';
