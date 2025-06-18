@@ -1,9 +1,6 @@
 .preview-block {
-  @apply border-1 border-b-0 rounded-t-lg p-3 bg-white;
-
   & + pre {
     border-radius: 0;
-    @apply rounded-b-lg mb-5;
   }
 
   &--dark {
@@ -18,7 +15,6 @@
   --text: var(--orange-70);
   --link: var(--orange-80);
 
-  @apply rounded-lg p-3;
   background-color: var(--background);
   border: 1px solid var(--border);
   color: var(--text);
@@ -28,12 +24,12 @@
   }
 
   &__title {
-    @apply font-bold text-f5 mb-2;
+    font-weight: bold;
     color: var(--text);
   }
 
   ul {
-    @apply list-disc pl-3 ml-2 mb-0;
+    list-style-type: disc;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -52,7 +48,7 @@
   grid-gap: 2vw 1vw;
 
   &__cell {
-    @apply rounded-lg p-2 font-bold;
+    font-weight: bold;
     text-indent: -999em;
     box-shadow: inset rgb(0 0 0 / 15%) 0 1px 4px;
   }
@@ -60,7 +56,6 @@
 
 .layout-preview {
   &__block {
-    @apply p-2;
     display: flex;
     align-items: center;
     justify-content: center;
