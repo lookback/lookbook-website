@@ -1,6 +1,17 @@
+@config "@lookback/lookbook/tailwind.config.js";
+
+@layer theme, /* Tailwind */
+  base, /* Tailwind */
+  lookbook.base,
+  lookbook.components,
+  utilities, /* Tailwind */
+  lookbook.utils;
+
 @import '@lookback/lookbook/dist/lookbook.css';
 
-@import 'tailwindcss';
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/preflight.css' layer(base);
+@import 'tailwindcss/utilities.css' layer(utilities);
 
 @import './inter.css';
 @import './utils.css';
