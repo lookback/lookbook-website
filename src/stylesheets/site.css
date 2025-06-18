@@ -1,8 +1,7 @@
-@config "@lookback/lookbook/tailwind.config.js";
-
 @layer theme, /* Tailwind */
   base, /* Tailwind */
   lookbook.base,
+  components, /* Tailwind */
   lookbook.components,
   utilities, /* Tailwind */
   lookbook.utils;
