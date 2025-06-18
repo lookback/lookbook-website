@@ -87,12 +87,13 @@ main {
     list-style-type: decimal;
   }
 
+  > h1 {
+    margin-bottom: var(--spacing-8);
+    font-size: var(--text-xl);
+  }
+
   > section {
     max-width: 45em;
-
-    > h2 {
-      border-bottom-width: 1px;
-    }
   }
 
   @media (max-width: 960px) {
