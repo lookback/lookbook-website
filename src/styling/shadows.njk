@@ -2,21 +2,19 @@
 layout: layout.njk
 classes:
   - shadow-none
-  - shadow-tiny
-  - shadow-small
-  - shadow
-  - shadow-large
-  - shadow-huge
+  - shadow-2xs
+  - shadow-xs
+  - shadow-md
+  - shadow-lg
+  - shadow-xl
+  - shadow-2xl
 ---
+<h1>Shadows</h1>
 
-<section>
-  <h1>Shadows</h1>
-
-  <div class="layout-preview grid grid-square grid-square-2 gap-5">
-    {% for cl in classes %}
-    <div class="layout-preview__block rounded {{ cl }}" style="background-color: white;">
-      <code>.{{ cl }}</code>
-    </div>
-    {% endfor %}
+<div class="layout-preview grid grid-square grid-square-2 gap-5">
+  {% for cl in classes %}
+  <div class="layout-preview__block rounded-md bg-white {{ cl }}">
+    <code>.{{ cl }}</code>
   </div>
-</section>
+  {% endfor %}
+</div>

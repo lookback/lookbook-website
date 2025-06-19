@@ -60,7 +60,8 @@
     align-items: center;
     justify-content: center;
     min-height: 2rem;
-    background-color: var(--blue-90);
+    background-color: var(--color-blue-900);
+    border-radius: var(--radius-xs);
 
     code {
       white-space: nowrap;
