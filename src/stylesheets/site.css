@@ -1,16 +1,12 @@
 @import '@lookback/lookbook/dist/lookbook.css';
 
-@import 'tailwindcss/theme.css' layer(theme);
-@import 'tailwindcss/preflight.css' layer(base);
-@import 'tailwindcss/utilities.css' layer(utilities);
-
 /* APP */
-
-/* Explicitly safelist the width utils, since we generate them dynamically in the markup. */
-@source inline("w-{1..20}");
-@source inline("max-w-{1..20}");
 
 @import './inter.css' layer(app);
 @import './utils.css' layer(app);
 @import './base-styling.css' layer(app);
 @import './prism.css' layer(app);
+
+/* Explicitly safelist the width utils, since we generate them dynamically in the markup. */
+@source inline("w-{1..20}");
+@source inline("max-w-{1..20}");
