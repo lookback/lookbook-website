@@ -11,6 +11,9 @@ body {
 
 .sidebar {
   transition: transform 0.1s ease-out;
+  background-color: white;
+  padding: var(--spacing-6);
+  padding-left: var(--spacing-7);
 
   &.visible {
     transform: none;
@@ -29,8 +32,10 @@ body {
 
   h2 {
     text-transform: uppercase;
-    font-weight: bold;
-    color: var(--grey-80);
+    color: var(--color-grey-800);
+    font-size: var(--text-sm);
+    letter-spacing: var(--tracking-wider);
+    margin-bottom: var(--spacing-7);
   }
 
   nav {
@@ -38,19 +43,21 @@ body {
 
     ul {
       margin-left: -1.5rem;
+      margin-bottom: var(--spacing-10);
     }
 
     a {
       display: inline-block;
       padding-top: 0.3em;
       padding-bottom: 0.3em;
+      padding-left: var(--spacing-7);
     }
 
     li.nav-active {
-      background-color: var(--grey-20);
+      background-color: var(--bg-body);
 
       a {
-        color: var(--blue-80);
+        color: var(--text-body);
         font-weight: bold;
 
         &,
@@ -78,6 +85,7 @@ h6 {
 
 main {
   flex: 1;
+  padding: var(--spacing-13) var(--spacing-12);
 
   ul {
     list-style-type: disc;

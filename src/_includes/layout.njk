@@ -28,24 +28,26 @@
     </p>
 
     <aside role="navigation" class="sidebar">
-      <a href="/" class="inline-block w-4 mb-6">
-        {% include "lookback-mark.svg" %}
-      </a>
+      <p class="mb-12">
+        <a href="/" class="inline-block w-10 text-orange-400">
+          {% include "lookback-mark.svg" %}
+        </a>
+      </p>
 
       <a
         href="http://github.com/lookback/lookbook"
-        class="flex items-center mb-2 hover:no-underline text-grey-80"
+        class="flex items-center gap-4 mb-4 hover:no-underline"
       >
-        <div class="mr-2">
+        <div>
           {% include 'github-icon.njk' %}
         </div>
         <div class="leading-none">
-          <span class="block text-f5 text-blue-60">GitHub</span>
-          <small>{{ lookbook.version }}</small>
+          <span class="block text-sm">GitHub</span>
+          <small class="text-grey-800">{{ lookbook.version }}</small>
         </div>
       </a>
 
-      <p class="mb-5 text-f6 text-muted">
+      <p class="mb-12 text-sm text-grey-800">
         Site updated
         <strong title="{{ buildInfo.builtAt }}"
           >{{ buildInfo.builtAt | formatDate }}</strong
