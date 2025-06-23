@@ -14,7 +14,6 @@ pre[class*='language-'] {
   word-break: normal;
   tab-size: 2;
   hyphens: none;
-  color: var(--grey-30);
 }
 
 /* Code blocks */
@@ -27,12 +26,12 @@ pre[class*='language-'] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: var(--grey-50);
+  color: var(--color-grey-500);
   font-style: italic;
 }
 
 .token.punctuation {
-  color: var(--grey-50);
+  color: var(--color-grey-500);
 }
 
 .token.namespace {
@@ -42,35 +41,35 @@ pre[class*='language-'] {
 .token.operator,
 .token.boolean,
 .token.number {
-  color: var(--purple-40);
+  color: var(--color-purple-400);
 }
 
 .token.function,
 .token.attr-name {
-  color: var(--teal-40);
+  color: var(--color-teal-400);
 }
 
 .token.property {
-  color: var(--orange-40);
+  color: var(--color-orange-400);
 }
 
 .token.tag {
-  color: var(--grey-30);
+  color: var(--color-teal-200);
 }
 
 .token.string {
-  color: var(--green-40);
+  color: var(--color-green-400);
 }
 
 .token.selector {
-  color: var(--purple-40);
+  color: var(--color-purple-400);
 }
 
 .token.entity,
 .token.url,
 .language-css .token.string,
 .style .token.string {
-  color: var(--blue-40);
+  color: var(--color-blue-400);
 }
 
 .token.attr-value,
@@ -78,7 +77,7 @@ pre[class*='language-'] {
 .token.control,
 .token.directive,
 .token.unit {
-  color: var(--red-40);
+  color: var(--color-red-300);
 }
 
 .token.statement,

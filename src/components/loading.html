@@ -9,29 +9,14 @@ layout: layout.njk
 
   <p>A versatile, text-less spinner in dark (default) and light variants.</p>
   
-  <div class="preview-block flex justify-center">
+  <div class="preview-block flex justify-center mb-8">
     <div class="flex-1 text-center p-3">
       <div class="Spinner">Spinning</div>
     </div>
-    <div class="bg-blue-900 flex-1 text-center p-3 rounded">
+    <div class="bg-blue-900 flex-1 text-center p-3 rounded-none">
       <div class="Spinner Spinner--light">Spinning</div>
     </div>
   </div>
-  {% highlight "html" %}
-<div class="Spinner">Spinning</div>
-<div class="Spinner Spinner--light">Spinning</div>
-  {% endhighlight %}
-
-  <p>Use the type scale helpers to size the spinner:</p>
-
-  <div class="preview-block">
-    <div class="Spinner text-f7 mr-4">Spinning</div>
-    <div class="Spinner text-f2">Spinning</div>
-  </div>
-  {% highlight "html" %}
-<div class="Spinner text-f7">Spinning</div>
-<div class="Spinner text-f2">Spinning</div>
-  {% endhighlight %}
 
   <h2>Loading Dots</h2>
 
@@ -45,7 +30,4 @@ layout: layout.njk
       <p class="mb-0 LoadingDots text-white">Loading</p>
     </div>
   </div>
-  {% highlight "html" %}
-<p class="LoadingDots">Loading</p>
-  {% endhighlight %}
 </section>
