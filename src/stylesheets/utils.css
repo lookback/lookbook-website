@@ -52,14 +52,25 @@
 
 .color-grid {
   display: grid;
-  grid-template-columns: repeat(10, 4vw);
-  grid-template-rows: repeat(10, 4vw);
-  grid-gap: 2vw 1vw;
+  grid-template-columns: repeat(11, 100px);
+  grid-template-rows: repeat(8, 75px);
+  grid-gap: 1vw;
+  font-weight: var(--font-weight-bold);
 
   &__cell {
-    font-weight: bold;
-    text-indent: -999em;
-    box-shadow: inset rgb(0 0 0 / 15%) 0 1px 4px;
+    border-radius: var(--radius-sm);
+    place-content: center;
+    text-align: center;
+    background-color: var(--bg);
+    color: contrast-color(var(--bg));
+  }
+  
+  @media (max-width: 1510px) {
+    grid-template-columns: repeat(11, 75px);
+
+    .color-grid__cell {
+      text-indent: -9999px;
+    }
   }
 }
 
@@ -89,5 +100,21 @@
 
   &-2 {
     grid-template-columns: repeat(2, 300px);
+  }
+}
+
+.icon {
+  display: inline-block;
+  /* Will be inherited from parent's 'color' property. */
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  /* Prevent flickering in Safari (yes, this still happens as of 2022...) */
+  transform: translate3d(0, 0, 0);
+
+  &--stroke {
+    /* In case the icon is of paths only */
+    stroke: currentColor;
   }
 }

@@ -7,8 +7,9 @@
     "css": "postcss src/stylesheets/site.css --dir build/assets --verbose",
     "start": "eleventy --serve & npm run css -- --watch",
     "build": "npm run css && eleventy",
-    "prebuild": "npm run clean",
-    "prestart": "npm run clean"
+    "copy-vars": "./script/copy-vars.sh",
+    "prebuild": "npm run clean && npm run copy-vars",
+    "prestart": "npm run clean && npm run copy-vars"
   },
   "repository": {
     "type": "git",
