@@ -1,0 +1,46 @@
+---
+layout: layout.njk
+---
+{% import "icon.njk" as icon %}
+
+<h1>Buttons</h1>
+
+<section>
+
+  <h2 class="mb-5">Regular button</h2>
+
+  <div class="preview-block mb-6">
+    <button class="btn">Button</button>
+    <button class="btn" disabled>Button</button>
+  </div>
+
+  <h2 class="mb-5">Success button</h2>
+
+  <div class="preview-block mb-6">
+    <button class="btn btn-success">Button</button>
+    <button class="btn btn-success" disabled>Button</button><br>
+  </div>
+
+  <h2 class="mb-5">Secondary button</h2>
+
+  <div class="preview-block mb-6">
+    <button class="btn btn-secondary">Button</button>
+    <button class="btn btn-secondary" disabled>Button</button><br>
+  </div>
+  
+  <h2 class="mb-5">Tertiary button</h2>
+
+  <div class="preview-block mb-6">
+    <button class="btn btn-tertiary">{{ icon.icon("pencil") }} Button</button>
+    <button class="btn btn-tertiary" disabled>{{ icon.icon("pencil") }} Button</button><br>
+  </div>
+
+  <h2 class="mb-5">Destructive button</h2>
+
+  <div class="preview-block mb-6">
+    <button class="btn btn-destructive">Button</button>
+    <button class="btn btn-destructive" disabled>Button</button><br>
+  </div>
+</section>
+
+{{ icon.pencil() }}
