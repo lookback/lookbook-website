@@ -55,19 +55,16 @@
       </p>
 
       <nav role="navigation">
-        <h2>Tech</h2>
+        <h2>Overview</h2>
         <ul>
           <li class="{% if page.fileSlug == 'intro'%}nav-active{% endif %}">
-            <a href="{{ '/tech/intro' | url }}">Introduction</a>
-          </li>
-          <li class="{% if page.fileSlug == 'classes'%}nav-active{% endif %}">
-            <a href="{{ '/tech/classes' | url }}">Classes</a>
-          </li>
-          <li class="{% if page.fileSlug == 'variables'%}nav-active{% endif %}">
-            <a href="{{ '/tech/variables' | url }}">Variables</a>
+            <a href="{{ '/overview/intro' | url }}">Introduction</a>
           </li>
           <li class="{% if page.fileSlug == 'colors'%}nav-active{% endif %}">
-            <a href="{{ '/tech/colors' | url }}">Colors</a>
+            <a href="{{ '/overview/colors' | url }}">Colors</a>
+          </li>
+          <li class="{% if page.fileSlug == 'variables'%}nav-active{% endif %}">
+            <a href="{{ '/overview/variables' | url }}">Variables</a>
           </li>
         </ul>
 
@@ -81,9 +78,6 @@
           </li>
           <li class="{% if page.fileSlug == 'forms'%}nav-active{% endif %}">
             <a href="{{ '/styling/forms' | url }}">Forms</a>
-          </li>
-          <li class="{% if page.fileSlug == 'utilities'%}nav-active{% endif %}">
-            <a href="{{ '/styling/utilities' | url }}">Utilities</a>
           </li>
           <li class="{% if page.fileSlug == 'widths'%}nav-active{% endif %}">
             <a href="{{ '/styling/widths' | url }}">Widths</a>
