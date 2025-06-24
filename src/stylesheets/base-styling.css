@@ -86,7 +86,7 @@ h6 {
 
 main {
   flex: 1;
-  padding: var(--spacing-13) var(--spacing-12);
+  padding: var(--spacing-13) var(--spacing-9);
   
   :where(p, ul, ol, pre, blockquote) {
     margin-bottom: var(--spacing-5);

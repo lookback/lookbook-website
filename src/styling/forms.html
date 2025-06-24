@@ -1,15 +1,15 @@
 ---
 layout: layout.njk
 ---
+<h1>Forms</h1>
 
 <section>
-  <h1>Forms</h1>
 
-  <form class="bg-white p-3 rounded-huge shadow-huge mb-4">
+  <form class="bg-white p-9 rounded-lg">
       <p>
         <label for="select" class="block">Product Delta team, January 2019</label>
 
-        <select id="select" class="w-8">
+        <select id="select" class="w-15">
           <option>Martin</option>
           <option>Drew</option>
           <option>Johan</option>
@@ -25,7 +25,7 @@ layout: layout.njk
       <p>
         <label for="selectmulti" class="block">Multiple selects</label>
 
-        <select id="selectmulti" class="w-10" multiple>
+        <select id="selectmulti" multiple>
           <option>Martin</option>
           <option>Drew</option>
           <option>Johan</option>
@@ -41,7 +41,7 @@ layout: layout.njk
       <p>
         <label for="select-disabled" class="block">Disabled select</label>
 
-        <select id="select-disabled" class="w-8" disabled>
+        <select id="select-disabled" disabled>
           <option>Martin</option>
           <option>Drew</option>
           <option>Johan</option>
@@ -120,16 +120,4 @@ layout: layout.njk
       </div>
     </form>
 
-</section>
-
-<section>
-  <h1>Outline rings</h1>
-
-  <div class="flex items-center gap-4">
-    <button class="btn ring-2">Test</button>
-    <button class="btn ring-2 ring-blue-50">Test</button>
-
-    <button class="btn ring-2 ring-offset-2 ring-offset-bg">Test</button>
-    <button class="btn ring-2 ring-offset-2 ring-blue-50">Test</button>
-  </div>
 </section>
