@@ -5,6 +5,24 @@ layout: layout.njk
 
 <form class="bg-white p-9 rounded-lg">
   <section>
+    <h2>Controls</h2>
+    <p class="flex items-center gap-4">
+      <input id="check" type="checkbox" />
+      <label for="check">Checkbox</label>
+    </p>
+    
+    <p class="flex items-center gap-4">
+      <input id="radio" type="radio" />
+      <label for="radio">Radio</label>
+    </p>
+    
+    <p class="flex items-center gap-4">
+      <input id="range" type="range" />
+      <label for="range">Range</label>
+    </p>
+  </section>
+  
+  <section>
     <h2>Text inputs</h2>
     <p>
       <label class="block" for="name-placeholder">Name, placeholder</label>
@@ -119,12 +137,12 @@ layout: layout.njk
   <section>
     <h2>Misc</h2>
   
-    <p>
+    <p class="max-w-18">
       <label for="prog">Progress</label>
       <progress id="prog" value="0.5">50%</progress>
     </p>
   
-    <p>
+    <p class="max-w-18">
       <label for="prog-done">Progress done</label>
       <progress id="prog-done" value="1">100%</progress>
     </p>
