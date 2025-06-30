@@ -8,7 +8,7 @@
   app,
   utilities, 
   lookbook-utils;
-/*! lookbook.css v7.0.0-beta.10*/
+/*! lookbook.css v7.0.0-beta.11*/
 @layer theme {
   :root, :host {
     --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif,
@@ -305,6 +305,8 @@
     --input-spacing-block: var(--spacing-5);
     --color-input-label: var(--color-grey-800);
     --color-input-text-disabled: var(--color-disabled-text);
+    --color-control-bg: var(--color-success-bg-strong);
+    --control-height: var(--spacing-6);
     --spacing-0: 0;
   }
 }
@@ -877,7 +879,7 @@ input:where([type='button'], [type='reset'], [type='submit']),
     background-color: var(--color-bg-body);
     letter-spacing: var(--tracking-body);
     color: var(--color-text-body);
-    accent-color: var(--color-accent);
+    accent-color: var(--color-control-bg);
     caret-color: var(--color-caret);
   }
   @media (prefers-reduced-motion: no-preference) {
@@ -997,7 +999,7 @@ input:where([type='button'], [type='reset'], [type='submit']),
   [contenteditable='true'][aria-disabled='true'] {
     pointer-events: none;
   }
-  :where(input, textarea, select, [contenteditable='true']) {
+  :where(input:not([type='radio'], [type='checkbox'], [type='range']), textarea, select, [contenteditable='true']) {
     --border-width: var(--input-border-width);
     --border-color: var(--color-input-border);
     appearance: none;
@@ -1008,31 +1010,31 @@ input:where([type='button'], [type='reset'], [type='submit']),
     padding: var(--input-spacing-block) var(--input-spacing-inline);
     box-shadow: inset 0 0 0 var(--border-width) var(--border-color);
   }
-  :where(input, textarea, select, [contenteditable='true']):where(:not(select[multiple]):focus) {
+  :where(input:not([type='radio'], [type='checkbox'], [type='range']), textarea, select, [contenteditable='true']):where(:not(select[multiple]):focus) {
     --border-width: var(--input-border-width-active);
     --border-color: var(--color-input-border-active);
     background-color: var(--color-input-bg-active);
     color: var(--color-input-text-active);
   }
-  :where(input, textarea, select, [contenteditable='true']):where(:disabled, [aria-disabled='true']) {
+  :where(input:not([type='radio'], [type='checkbox'], [type='range']), textarea, select, [contenteditable='true']):where(:disabled, [aria-disabled='true']) {
     background-color: var(--color-input-bg-disabled);
     color: var(--color-input-text-disabled);
     box-shadow: none;
   }
-  :where(input, textarea, select, [contenteditable='true']):where(:disabled, [aria-disabled='true'])::placeholder {
+  :where(input:not([type='radio'], [type='checkbox'], [type='range']), textarea, select, [contenteditable='true']):where(:disabled, [aria-disabled='true'])::placeholder {
     color: var(--color-input-placeholder-disabled-text);
   }
-  :where(input, textarea, select, [contenteditable='true'])[aria-disabled='true'][aria-placeholder]:empty::before {
+  :where(input:not([type='radio'], [type='checkbox'], [type='range']), textarea, select, [contenteditable='true'])[aria-disabled='true'][aria-placeholder]:empty::before {
     color: var(--color-input-placeholder-disabled-text);
   }
-  :where(input, textarea, select, [contenteditable='true']):where(:user-invalid, :user-invalid:focus) {
+  :where(input:not([type='radio'], [type='checkbox'], [type='range']), textarea, select, [contenteditable='true']):where(:user-invalid, :user-invalid:focus) {
     --border-color: var(--color-warning-stroke);
     --border-width: var(--border-width-warning);
   }
   label:has(+ :user-invalid) {
     color: var(--color-warning-text);
   }
-  :where(input, select) {
+  :where(input:not([type='radio'], [type='checkbox'], [type='range']), select) {
     height: var(--spacing-10);
   }
   :where(textarea, [contenteditable='true']) {
@@ -1080,7 +1082,7 @@ input:where([type='button'], [type='reset'], [type='submit']),
     color: var(--color-white);
   }
   progress {
-    --bg-color: var(--color-input-bg);
+    --bg-color: var(--color-grey-300);
     --filler-color: var(--color-accent);
     --radius: 3em;
     height: var(--spacing-2);
