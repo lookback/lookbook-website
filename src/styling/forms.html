@@ -3,121 +3,164 @@ layout: layout.njk
 ---
 <h1>Forms</h1>
 
-<section>
-
-  <form class="bg-white p-9 rounded-lg">
-      <p>
-        <label for="select" class="block">Product Delta team, January 2019</label>
-
-        <select id="select" class="w-15">
-          <option>Martin</option>
-          <option>Drew</option>
-          <option>Johan</option>
-          <option>Nevyn</option>
-          <option>Tabanitha</option>
-          <option>Andoma</option>
-          <option>Forrest</option>
-          <option>Carl</option>
-          <option>A really really really really really really really long text</option>
-        </select>
-      </p>
-      
-      <p>
-        <label for="selectmulti" class="block">Multiple selects</label>
-
-        <select id="selectmulti" multiple>
-          <option>Martin</option>
-          <option>Drew</option>
-          <option>Johan</option>
-          <option>Nevyn</option>
-          <option>Tabanitha</option>
-          <option>Andoma</option>
-          <option>Forrest</option>
-          <option>Carl</option>
-          <option>A really really really really really really really long text</option>
-        </select>
-      </p>
-      
-      <p>
-        <label for="select-disabled" class="block">Disabled select</label>
-
-        <select id="select-disabled" disabled>
-          <option>Martin</option>
-          <option>Drew</option>
-          <option>Johan</option>
-          <option>Nevyn</option>
-          <option>Tabanitha</option>
-          <option>Andoma</option>
-          <option>Forrest</option>
-          <option>Carl</option>
-          <option>A really really really really really really really long text</option>
-        </select>
-      </p>
-
-      <p>
-        <label for="prog">Progress</label>
-        <progress id="prog" value="0.5">50%</progress>
-      </p>
-
-      <p>
-        <label for="prog-done">Progress done</label>
-        <progress id="prog-done" value="1">100%</progress>
-      </p>
-
-      <p>
-        <label class="block" for="name">Name</label>
-        <input id="name" type="text" placeholder="Placeholder" />
-      </p>
-      
-      <p>
-        <label class="block" for="name-disabled">Name, disabled</label>
-        <input id="name" type="text" placeholder="Placeholder" disabled />
-      </p>
-
-      <p>
-        <label class="block" for="search">Search</label>
-        <input id="search" type="search" placeholder="Placeholder" />
-      </p>
-
-      <p>
-        <label class="block" for="email">Email</label>
-        <input id="email" type="email" placeholder="Email" required />
-      </p>
-
-      <p>
-        <label class="block" for="text">Text</label>
-        <textarea id="text" placeholder="Placeholder">Some text</textarea>
-      </p>
-
-      <p>
-        <label class="block" for="date">Date</label>
-        <input id="date" type="date" />
-      </p>
-
-      <p>
-        <label class="block" for="time">Time</label>
-        <input id="time" type="time" />
-      </p>
-
-      <p>
-        <label class="block" for="color">Color</label>
-        <input id="color" type="color" />
-      </p>
-
-      <div class="mb-3">
-        <label class="block" for="contentEditable">Content editable</label>
-        <div role="textbox" id="contentEditable" contenteditable="true"></div>
-      </div>
-
-      <div class="mb-3">
-        <label class="block" for="contentEditable2">Content editable with placeholder</label>
-        <div role="textbox" id="contentEditable2" contenteditable="true" aria-placeholder="Placeholder here"></div>
-      </div>
-
-      <div class="mb-3">
-        <label class="block" for="contentEditable3">Content editable disabled</label>
-        <div role="textbox" id="contentEditable3" contenteditable="true" aria-placeholder="Placeholder here" aria-disabled="true"></div>
-      </div>
-    </form>
-
-</section>
+<form class="bg-white p-9 rounded-lg">
+  <section>
+    <h2>Text inputs</h2>
+    <p>
+      <label class="block" for="name-placeholder">Name, placeholder</label>
+      <input id="name-placeholder" type="text" placeholder="Placeholder" />
+    </p>
+    
+    <p>
+      <label class="block" for="name">Name</label>
+      <input id="name" type="text" value="Johan" />
+    </p>
+    
+    <p>
+      <label class="block" for="name-disabled">Name, disabled</label>
+      <input id="name-disabled" type="text" placeholder="Placeholder" disabled />
+    </p>
+    
+    <p>
+      <label class="block" for="name-disabled-text">Name, disabled with text</label>
+      <input id="name-disabled-text" type="text" placeholder="Placeholder" value="Johan" disabled />
+    </p>
+  
+    <p>
+      <label class="block" for="search">Search</label>
+      <input id="search" type="search" placeholder="Placeholder" />
+    </p>
+  </section>
+  
+  <section>
+    <h2>Text area</h2>
+  
+    <p>
+      <label class="block" for="text">Text</label>
+      <textarea id="text" placeholder="Placeholder">Some text</textarea>
+    </p>
+    
+    <p>
+      <label class="block" for="text-disabled">Disabled</label>
+      <textarea id="text-disabled" placeholder="Placeholder" disabled>Some text</textarea>
+    </p>
+    
+    <p>
+      <label class="block" for="text-placeholder">Placeholder</label>
+      <textarea id="text-placeholder" placeholder="Placeholder"></textarea>
+    </p>
+  </section>
+  
+  
+  <section>
+    <h2>Select</h2>
+    <p>
+      <label for="select" class="block">Product Delta team, January 2019</label>
+  
+      <select id="select" class="w-15">
+        <option>Martin</option>
+        <option>Drew</option>
+        <option>Johan</option>
+        <option>Nevyn</option>
+        <option>Tabanitha</option>
+        <option>Andoma</option>
+        <option>Forrest</option>
+        <option>Carl</option>
+        <option>A really really really really really really really long text</option>
+      </select>
+    </p>
+    
+    <p>
+      <label for="selectmulti" class="block">Multiple selects</label>
+  
+      <select id="selectmulti" multiple>
+        <option>Martin</option>
+        <option>Drew</option>
+        <option>Johan</option>
+        <option>Nevyn</option>
+        <option>Tabanitha</option>
+        <option>Andoma</option>
+        <option>Forrest</option>
+        <option>Carl</option>
+        <option>A really really really really really really really long text</option>
+      </select>
+    </p>
+    
+    <p>
+      <label for="select-disabled" class="block">Disabled select</label>
+  
+      <select id="select-disabled" disabled>
+        <option>Martin</option>
+        <option>Drew</option>
+        <option>Johan</option>
+        <option>Nevyn</option>
+        <option>Tabanitha</option>
+        <option>Andoma</option>
+        <option>Forrest</option>
+        <option>Carl</option>
+        <option>A really really really really really really really long text</option>
+      </select>
+    </p>
+  </section>
+  
+  <section>
+    <h2>Error state</h2>
+    <p>
+      <label class="block" for="name-err">Want lowercase (edit field to see error styling)</label>
+      <input id="name-err" type="text" pattern="[a-z]+" value="UPPERCASE" />
+    </p>
+    
+    <p>
+      <label class="block" for="text-err">Want lowercase (edit field to see error styling)</label>
+      <textarea id="text-err" required>Erase me</textarea>
+    </p>
+  </section>
+  
+  <section>
+    <h2>Misc</h2>
+  
+    <p>
+      <label for="prog">Progress</label>
+      <progress id="prog" value="0.5">50%</progress>
+    </p>
+  
+    <p>
+      <label for="prog-done">Progress done</label>
+      <progress id="prog-done" value="1">100%</progress>
+    </p>
+  
+    <p>
+      <label class="block" for="date">Date</label>
+      <input id="date" type="date" />
+    </p>
+  
+    <p>
+      <label class="block" for="time">Time</label>
+      <input id="time" type="time" />
+    </p>
+  
+    <p>
+      <label class="block" for="color">Color</label>
+      <input id="color" type="color" />
+    </p>
+  </section>
+  
+  <section>
+    <h2>Content editable (fake textarea)</h2>
+  
+    <div class="mb-8">
+      <label class="block">Content editable</label>
+      <div role="textbox" id="contentEditable" contenteditable="true"></div>
+    </div>
+  
+    <div class="mb-8">
+      <label class="block">Content editable with placeholder</label>
+      <div role="textbox" id="contentEditable2" contenteditable="true" aria-placeholder="Placeholder here"></div>
+    </div>
+  
+    <div class="mb-8">
+      <label class="block">Content editable disabled</label>
+      <div role="textbox" id="contentEditable3" contenteditable="true" aria-placeholder="Placeholder here" aria-disabled="true"></div>
+    </div>
+  </section>
+</form>

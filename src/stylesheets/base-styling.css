@@ -87,7 +87,7 @@ h6 {
 main {
   flex: 1;
   padding: var(--spacing-13) var(--spacing-9);
-  
+
   :where(p, ul, ol, pre, blockquote) {
     margin-bottom: var(--spacing-5);
   }
@@ -143,5 +143,19 @@ main {
 @media (max-width: 960px) {
   .toggle-menu {
     display: block;
+  }
+}
+
+form {
+  p {
+    margin-bottom: var(--spacing-8);
+  }
+
+  > section {
+    margin-bottom: var(--spacing-11);
+
+    > h2 {
+      margin-bottom: var(--spacing-4);
+    }
   }
 }
