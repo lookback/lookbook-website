@@ -8,7 +8,7 @@
   app,
   utilities, 
   lookbook-utils;
-/*! lookbook.css v7.0.0-beta.6*/
+/*! lookbook.css v7.0.0-beta.9*/
 @layer theme {
   :root, :host {
     --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif,
@@ -142,6 +142,12 @@
     --tracking-normal: -0.009em;
     --tracking-wider: 0.1em;
     --tracking-widest: 0.15em;
+    --border-width-4: 2.5px;
+    --radius-2xs: 2px;
+    --opacity-1: 20px;
+    --opacity-2: 40px;
+    --opacity-3: 60px;
+    --opacity-4: 80px;
     --color-warning-text: var(--color-orange-800);
     --color-warning-bg-weak: var(--color-orange-100);
     --color-warning-stroke: var(--color-orange-400);
@@ -156,8 +162,6 @@
     --color-destructive-bg-weak: var(--color-red-100);
     --color-destructive-bg: var(--color-red-500);
     --color-destructive-bg-strong: var(--color-red-700);
-    --color-info-text-2: var(--color-white);
-    --color-info-bg-2: var(--color-blue-900);
     --color-focus-border: var(--color-blue-800);
     --border-width-focus: var(--border-width-3);
     --color-disabled-bg: var(--color-grey-200);
@@ -171,7 +175,7 @@
     --color-selection-text: var(--color-purple-950);
     --color-selection-bg: var(--color-purple-100);
     --color-bg-body: var(--color-grey-50);
-    --color-text-body: var(--color-blue-950);
+    --color-text-body: var(--color-blue-900);
     --font-body: var(--font-inter);
     --tracking-body: var(--tracking-normal);
     --leading-body: var(--leading-normal);
@@ -185,6 +189,15 @@
     --color-info-hover-bg-strong: var(--color-blue-800);
     --color-info-bg: var(--color-blue-500);
     --color-info-text: var(--color-blue-900);
+    --color-container-body: var(--color-white);
+    --color-disabled-bg-dark: var(--color-grey-400);
+    --color-success-stroke: var(--color-green-400);
+    --opacity-light-dark: var(--opacity-4);
+    --opacity-dark-light: var(--opacity-2);
+    --opacity-dark-dark: var(--opacity-1);
+    --color-disabled-bg-light: var(--color-grey-100);
+    --color-border-light: var(--color-grey-300);
+    --color-border-dark: var(--color-grey-500);
     --color-button-primary-bg: var(--color-blue-900);
     --button-radius: 9999px;
     --color-button-primary-text: var(--color-white);
@@ -203,7 +216,7 @@
     --button-padding-inline: var(--spacing-6);
     --color-button-primary-hover-bg: var(--color-blue-800);
     --color-button-cta-hover-text: var(--color-blue-950);
-    --color-button-border: var(--color-grey-400);
+    --color-button-border: var(--color-grey-500);
     --button-border-width: var(--border-width-2);
     --color-button-hover-border: var(--color-grey-600);
     --color-button-tertiary-hover-text: var(--color-blue-900);
@@ -211,26 +224,22 @@
     --color-button-success-hover-bg: var(--color-success-hover-bg-strong);
     --color-button-destructive-hover-bg: var(--color-destructive-hover-bg-strong);
     --modal-size-sm: var(--spacing-17);
-    --modal-padding-block: var(--spacing-8);
-    --modal-padding-inline: var(--spacing-9);
-    --modal-spacing-between-elements: var(--spacing-8);
-    --modal-footer-padding: var(--spacing-9);
-    --color-modal-header-color: var(--color-blue-900);
-    --color-modal-body-text-color: var(--color-grey-800);
+    --color-modal-header: var(--color-text-body);
+    --color-modal-body-text: var(--color-grey-800);
     --modal-body-font-size: var(--text-base);
     --modal-header-font-size: var(--text-lg);
     --modal-header-font-weight: var(--font-weight-bold);
-    --color-modal-bg: var(--color-white);
+    --color-modal-bg: var(--color-container-body);
     --color-button-secondary-hover-text: var(--color-blue-950);
     --color-input-placeholder-text: var(--color-grey-800);
-    --color-input-bg: var(--color-grey-50);
+    --color-input-bg: var(--color-white);
     --color-input-text: var(--color-blue-900);
-    --color-input-bg-active: var(--color-grey-100);
+    --color-input-bg-active: var(--color-white);
     --color-link-text: var(--color-blue-700);
     --color-link-text-hover: var(--color-blue-800);
     --color-spinner-fg: var(--color-blue-800);
     --color-spinner-bg: var(--color-grey-300);
-    --input-radius: var(--radius-sm);
+    --input-radius-sm: var(--radius-sm);
     --color-button-cta-active-bg: var(--color-grey-50);
     --color-button-primary-active-text: var(--color-grey-200);
     --color-button-success-active-text: var(--color-grey-200);
@@ -253,8 +262,6 @@
     --color-button-cta-disabled-bg: var(--color-disabled-bg);
     --color-button-icon-disabled: var(--color-grey-700);
     --color-button-cta-disabled-text-color: var(--color-disabled-text);
-    --color-input-bg-selected: var(--color-grey-900);
-    --color-input-text-selected: var(--color-white);
     --input-spacing-inline: var(--spacing-6);
     --color-button-primary-disabled-bg: var(--color-disabled-bg);
     --color-button-primary-disabled-text: var(--color-disabled-text);
@@ -269,6 +276,22 @@
     --color-button-destructive-disabled-text: var(--color-disabled-text);
     --color-input-text-active: var(--color-blue-900);
     --color-input-option-bg-hover: var(--color-grey-300);
+    --color-input-bg-disabled: var(--color-disabled-bg-light);
+    --color-input-placeholder-disabled-text: var(--color-disabled-text);
+    --color-input-border: var(--color-grey-500);
+    --color-input-border-active: var(--color-blue-400);
+    --input-border-width: var(--border-width-2);
+    --color-modal-backdrop-bg: var(--color-blue-900);
+    --modal-backdrop-opacity: var(--opacity-4);
+    --modal-backdrop-blur: 10px;
+    --input-radius-lg: var(--radius-md);
+    --input-border-width-active: var(--border-width-3);
+    --color-popover-bg: var(--color-container-body);
+    --color-input-bg-selected: var(--color-grey-900);
+    --color-input-bg-filled: var(--color-white);
+    --input-spacing-block: var(--spacing-5);
+    --color-input-label: var(--color-grey-800);
+    --color-input-text-disabled: var(--color-disabled-text);
     --spacing-0: 0;
   }
 }
@@ -740,6 +763,9 @@ input:where([type='button'], [type='reset'], [type='submit']),
   .text-white {
     color: var(--color-white);
   }
+  .lowercase {
+    text-transform: lowercase;
+  }
   .shadow-2xl {
     --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -778,6 +804,7 @@ input:where([type='button'], [type='reset'], [type='submit']),
   @media (resolution: 1x) {
     :root {
       --border-width-2: 2px;
+      --border-width-4: 3px;
     }
   }
 }
@@ -951,9 +978,14 @@ input:where([type='button'], [type='reset'], [type='submit']),
 @layer lookbook-base {
   label {
     font-weight: var(--font-weight-bold);
+    color: var(--color-input-label);
+  }
+  label:has(+ :where(input, textarea, select, [contenteditable='true'])) {
+    margin-bottom: var(--spacing-3);
   }
   :where(input, textarea)::placeholder {
     color: var(--color-input-placeholder-text);
+    font-style: italic;
   }
   [contenteditable='true'][aria-placeholder]:empty::before {
     content: attr(aria-placeholder);
@@ -962,30 +994,50 @@ input:where([type='button'], [type='reset'], [type='submit']),
     pointer-events: none;
   }
   [contenteditable='true'][aria-disabled='true'] {
-    cursor: default;
     pointer-events: none;
   }
   :where(input, textarea, select, [contenteditable='true']) {
+    --border-width: var(--input-border-width);
+    --border-color: var(--color-input-border);
     appearance: none;
-    border-radius: var(--input-radius);
+    border-radius: var(--input-radius-sm);
     background-color: var(--color-input-bg);
     color: var(--color-input-text);
     font-weight: var(--font-weight-bold);
-    padding-inline: var(--input-spacing-inline);
+    padding: var(--input-spacing-block) var(--input-spacing-inline);
+    box-shadow: inset 0 0 0 var(--border-width) var(--border-color);
   }
-  :where(input, textarea, select, [contenteditable='true']):enabled:not(select[multiple]):focus {
+  :where(input, textarea, select, [contenteditable='true']):where(:not(select[multiple]):focus) {
+    --border-width: var(--input-border-width-active);
+    --border-color: var(--color-input-border-active);
     background-color: var(--color-input-bg-active);
     color: var(--color-input-text-active);
   }
   :where(input, textarea, select, [contenteditable='true']):where(:disabled, [aria-disabled='true']) {
-    background-color: var(--color-disabled-bg);
-    color: var(--color-disabled-text);
+    background-color: var(--color-input-bg-disabled);
+    color: var(--color-input-text-disabled);
+    box-shadow: none;
+  }
+  :where(input, textarea, select, [contenteditable='true']):where(:disabled, [aria-disabled='true'])::placeholder {
+    color: var(--color-input-placeholder-disabled-text);
+  }
+  :where(input, textarea, select, [contenteditable='true'])[aria-disabled='true'][aria-placeholder]:empty::before {
+    color: var(--color-input-placeholder-disabled-text);
+  }
+  :where(input, textarea, select, [contenteditable='true']):where(:user-invalid, :user-invalid:focus) {
+    --border-color: var(--color-warning-stroke);
+    --border-width: var(--border-width-warning);
+  }
+  label:has(+ :user-invalid) {
+    color: var(--color-warning-text);
   }
   :where(input, select) {
     height: var(--spacing-10);
   }
   :where(textarea, [contenteditable='true']) {
     padding: var(--input-spacing-inline);
+    border-radius: var(--input-radius-lg);
+    font-weight: var(--font-weight-normal);
   }
   input:where([type='search']) {
     border-radius: 4em;
@@ -1000,6 +1052,7 @@ input:where([type='button'], [type='reset'], [type='submit']),
   }
   select:not([multiple]) {
     padding-right: var(--spacing-8);
+    line-height: 1;
     background-repeat: no-repeat;
     background-size: 0.75em;
     background-position: right var(--spacing-4) center;
@@ -1013,7 +1066,7 @@ input:where([type='button'], [type='reset'], [type='submit']),
   }
   select[multiple] option {
     padding: var(--spacing-2) var(--spacing-3);
-    border-radius: calc(var(--input-radius) - var(--padding) / 2);
+    border-radius: calc(var(--input-radius-sm) - var(--padding) / 2);
   }
   select[multiple] option:hover:not(:checked):enabled {
     background-color: var(--color-input-option-bg-hover);
@@ -1023,7 +1076,7 @@ input:where([type='button'], [type='reset'], [type='submit']),
   }
   select[multiple] option:checked {
     background-color: var(--color-input-bg-selected);
-    color: var(--color-input-text-selected);
+    color: var(--color-white);
   }
   progress {
     --bg-color: var(--color-input-bg);
@@ -1074,6 +1127,7 @@ input:where([type='button'], [type='reset'], [type='submit']),
     display: inline-flex;
     gap: var(--spacing-3);
     align-items: center;
+    justify-content: center;
     -webkit-tap-highlight-color: transparent;
     text-decoration: none;
     user-select: none;
@@ -1082,6 +1136,7 @@ input:where([type='button'], [type='reset'], [type='submit']),
     font-weight: var(--button-font-weight);
     border-radius: var(--button-radius);
     height: var(--button-height);
+    line-height: 1;
     padding-inline: var(--button-padding-inline);
     font-family: var(--button-font-family);
     background-color: var(--bg);
@@ -1175,6 +1230,43 @@ input:where([type='button'], [type='reset'], [type='submit']),
       transform: rotate(360deg);
     }
   }
+  .Spinner {
+    --size: var(--spacing-8);
+    --bg: var(--color-spinner-bg);
+    --fg: var(--color-spinner-fg);
+  }
+  .Spinner--light {
+    --bg: var(--color-spinner-fg);
+    --fg: var(--color-spinner-bg);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .Spinner {
+      display: inline-block;
+      font-size: var(--size);
+      position: relative;
+      aspect-ratio: 1;
+      height: calc(sqrt(2) * 1em);
+      text-indent: -9999em;
+    }
+    .Spinner::after {
+      content: ' ';
+      display: inline-block;
+      position: absolute;
+      border-radius: 50%;
+      width: 1em;
+      height: 1em;
+      left: calc(50% - 0.5em);
+      top: calc(50% - 0.5em);
+      text-indent: -9999em;
+      overflow: hidden;
+      border: 2px solid var(--bg);
+      border-left-color: var(--fg);
+      transform: translateZ(0);
+      animation: spinner 0.8s infinite linear;
+    }
+  }
+}
+@layer lookbook-utils {
   @keyframes dots {
     0%,
   20% {
@@ -1193,39 +1285,6 @@ input:where([type='button'], [type='reset'], [type='submit']),
       text-shadow: 0.25em 0 0 currentColor, 0.5em 0 0 currentColor;
     }
   }
-  .Spinner {
-    --size: 2rem;
-    --bg: var(--color-spinner-bg);
-    --fg: var(--color-spinner-fg);
-    text-indent: -9999em;
-    display: inline-block;
-    font-size: var(--size);
-    position: relative;
-    aspect-ratio: 1;
-    height: calc(sqrt(2) * 1em);
-  }
-  .Spinner::after {
-    content: ' ';
-    display: inline-block;
-    position: absolute;
-    border-radius: 50%;
-    width: 1em;
-    height: 1em;
-    left: calc(50% - 0.5em);
-    top: calc(50% - 0.5em);
-    text-indent: -9999em;
-    overflow: hidden;
-    border: 2px solid var(--bg);
-    border-left-color: var(--fg);
-    transform: translateZ(0);
-    animation: spinner 0.8s infinite linear;
-  }
-  .Spinner--light {
-    --bg: var(--color-spinner-fg);
-    --fg: var(--color-spinner-bg);
-  }
-}
-@layer lookbook-utils {
   .LoadingDots::after {
     content: '.';
     animation: dots 1.5s steps(5, end) infinite;
@@ -1485,6 +1544,15 @@ body {
     .toggle-menu {
       display: block;
     }
+  }
+  form p {
+    margin-bottom: var(--spacing-8);
+  }
+  form > section {
+    margin-bottom: var(--spacing-11);
+  }
+  form > section > h2 {
+    margin-bottom: var(--spacing-4);
   }
 }
 @layer app {
