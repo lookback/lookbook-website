@@ -8,7 +8,7 @@
   app,
   utilities, 
   lookbook-utils;
-/*! lookbook.css v7.0.0-beta.12*/
+/*! lookbook.css v7.0.0-beta.13*/
 @layer theme {
   :root, :host {
     --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif,
@@ -911,13 +911,14 @@ input:where([type='button'], [type='reset'], [type='submit']),
     border-radius: var(--radius-md);
     font-size: var(--text-sm);
     padding: var(--spacing-5);
-    background-color: var(--color-info-bg);
-    color: var(--color-info-text);
+    background-color: var(--color-info-bg-strong);
+    color: var(--color-white);
   }
   :where(code, kbd, mark) {
     border-radius: var(--radius-xs);
-    padding: 0.1em 0.2em;
+    padding-inline: 0.2em;
     background-color: var(--color-grey-200);
+    white-space: nowrap;
   }
   code {
     font-size: 0.875em;
@@ -932,11 +933,11 @@ input:where([type='button'], [type='reset'], [type='submit']),
   kbd {
     --border: var(--color-grey-600);
     font-family: var(--font-sans);
-    font-weight: bold;
+    font-weight: var(--font-weight-bold);
     background-color: #fefefe;
+    color: var(--color-text-body);
     border: 1px solid var(--border);
     box-shadow: 0 2px 0 var(--border);
-    padding-block: 1px;
   }
   mark {
     background-color: var(--color-callout-bg);
