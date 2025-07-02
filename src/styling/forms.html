@@ -48,6 +48,44 @@ layout: layout.njk
       <label class="block" for="search">Search</label>
       <input id="search" type="search" placeholder="Placeholder" />
     </p>
+    
+    <h3>Inline</h3>
+    <p>Use as <code>.mode-inline</code>.</p>
+    
+    <p>
+      <input class="mode-inline" type="text" placeholder="Input here" />
+    </p>
+    
+    <p>
+      <input class="mode-inline" type="text" placeholder="Input here" value="Disabled text" disabled />
+    </p>
+    
+    <p>
+      <input class="mode-inline" type="text" placeholder="Error" pattern="[a-z]+" value="UPPERCASE (edit to trigger)" />
+    </p>
+    
+    <h3>With background</h3>
+    <p>Use as <code>.mode-bg</code>.</p>
+    
+    <p>
+      <input class="mode-bg" type="text" placeholder="Input here" />
+    </p>
+    
+    <p>
+      <input class="mode-bg" type="text" placeholder="Input here" value="Disabled text" disabled />
+    </p>
+    
+    <p>
+      <input class="mode-bg" type="text" placeholder="Error" pattern="[a-z]+" value="UPPERCASE (edit to trigger)" />
+    </p>
+    
+    <h3 class="mb-5">Input group</h3>
+    
+    <label for="group">My group</label>
+    <p class="input-group">
+      <input id="group" type="text" placeholder="Input here" />
+      <button class="btn">Submit</button>
+    </p>
   </section>
   
   <section>

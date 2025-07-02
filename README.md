@@ -16,8 +16,16 @@ Visit site at `localhost:8080`. The site will rebuild on changes.
 If you'd like to test local changes in the Lookbook in the website:
 
 ```bash
-$ npm link ../lookbook # or whatever path to your local Lookbook folder
+$ npm link ../lookbook
 ```
+
+In another shell:
+
+```bash
+cd lookbook && npm start
+```
+
+Now changes made in `lookbook/src` will be reflected immediately when reloading the Lookbook website window.
 
 ## Deploy
 
