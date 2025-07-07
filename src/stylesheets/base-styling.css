@@ -151,11 +151,19 @@ form {
     margin-bottom: var(--spacing-8);
   }
 
-  > section {
-    margin-bottom: var(--spacing-11);
+  section {
+    margin-bottom: var(--spacing-12);
 
     > h2 {
-      margin-bottom: var(--spacing-4);
+      margin-bottom: var(--spacing-7);
+      padding-bottom: var(--spacing-2);
+      font-size: var(--text-lg);
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    > h3 {
+      font-size: var(--text-base);
+      margin-block: var(--spacing-7);
     }
   }
 }

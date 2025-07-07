@@ -49,43 +49,41 @@ layout: layout.njk
       <input id="search" type="search" placeholder="Placeholder" />
     </p>
     
-    <h3>Inline</h3>
-    <p>Use as <code>.mode-inline</code>.</p>
+    <section>
+      <h3>Inline</h3>
+      <p>Use as <code>.mode-inline</code>. Ideally used on <code>grey</code> backgrounds.</p>
+      
+      <div class="bg-grey-50 p-5 pb-7 rounded-md margin-trim-end">
+        <p>
+          <input class="mode-inline" type="text" placeholder="Input here" />
+        </p>
+        
+        <p>
+          <input class="mode-inline" type="text" placeholder="Input here" value="Disabled text" disabled />
+        </p>
+        
+        <p>
+          <input class="mode-inline" type="text" placeholder="Error" pattern="[a-z]+" value="UPPERCASE (edit to trigger)" />
+        </p>
+      </div>
+    </section>
     
-    <p>
-      <input class="mode-inline" type="text" placeholder="Input here" />
-    </p>
-    
-    <p>
-      <input class="mode-inline" type="text" placeholder="Input here" value="Disabled text" disabled />
-    </p>
-    
-    <p>
-      <input class="mode-inline" type="text" placeholder="Error" pattern="[a-z]+" value="UPPERCASE (edit to trigger)" />
-    </p>
-    
-    <h3>With background</h3>
-    <p>Use as <code>.mode-bg</code>.</p>
-    
-    <p>
-      <input class="mode-bg" type="text" placeholder="Input here" />
-    </p>
-    
-    <p>
-      <input class="mode-bg" type="text" placeholder="Input here" value="Disabled text" disabled />
-    </p>
-    
-    <p>
-      <input class="mode-bg" type="text" placeholder="Error" pattern="[a-z]+" value="UPPERCASE (edit to trigger)" />
-    </p>
-    
-    <h3 class="mb-5">Input group</h3>
-    
-    <label for="group">My group</label>
-    <p class="input-group">
-      <input id="group" type="text" placeholder="Input here" />
-      <button class="btn">Submit</button>
-    </p>
+    <section>
+      <h3>Input group</h3>
+      
+      <label for="group">My group</label>
+      <p class="input-group w-16 mb-8">
+        <input id="group" type="text" placeholder="Input here" />
+        <button class="btn">Submit</button>
+      </p>
+      
+      <label for="group">My group with more buttons</label>
+      <p class="input-group w-16">
+        <input id="group" type="text" placeholder="Input here" />
+        <button class="btn btn-secondary">Other</button>
+        <button class="btn">Submit</button>
+      </p>
+    </section>
   </section>
   
   <section>
