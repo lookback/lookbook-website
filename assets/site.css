@@ -8,7 +8,7 @@
   app,
   utilities, 
   lookbook-utils;
-/*! lookbook.css v7.0.0-beta.14*/
+/*! lookbook.css v7.0.0-beta.16*/
 @layer theme {
   :root, :host {
     --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif,
@@ -65,13 +65,13 @@
     --color-green-950: oklch(0.26267812849242383 0.040491645093017836 181.78607749414385);
     --color-green-900: oklch(0.36908122122554965 0.0553377236988369 177.24971933151028);
     --color-green-800: oklch(0.41660941048909605 0.0673302584587661 176.45061585268638);
-    --color-green-700: oklch(0.4899654442782103 0.09354903978640819 167.9255434611221);
+    --color-green-700: oklch(0.4919398654616786 0.08856942302023314 173.57337295464282);
     --color-green-600: oklch(0.5547074400335019 0.10396520668635736 167.91311539190616);
     --color-green-500: oklch(0.6480341867211402 0.12591789060909053 165.17234148482976);
-    --color-green-400: oklch(0.7379828205067956 0.11780731685495621 160.4365651986363);
-    --color-green-300: oklch(0.8409574944344255 0.08516958759236462 156.25370593101198);
-    --color-green-200: oklch(0.8980102956353234 0.06895117111055506 159.0290841832634);
-    --color-green-100: oklch(0.9437958020790783 0.03869522508401024 160.8551683396551);
+    --color-green-400: oklch(0.7427318346943275 0.10379188287990472 171.35819701208771);
+    --color-green-300: oklch(0.8439430507549325 0.07553361345211922 165.06931515986324);
+    --color-green-200: oklch(0.9015687085022864 0.05941757721694069 172.5386272921462);
+    --color-green-100: oklch(0.9421297351441882 0.03716408045602811 178.04243219359785);
     --color-green-50: oklch(0.982212296452249 0.012421764569750544 165.03350070529);
     --color-orange-950: oklch(0.26934990357033844 0.05563104646700414 50.32988383581561);
     --color-orange-900: oklch(0.36607123832536415 0.07094400998341119 53.20425866407521);
@@ -212,7 +212,7 @@
     --color-border-dark: var(--color-grey-500);
     --color-destructive-text-dark: var(--color-red-900);
     --color-muted: var(--color-grey-800);
-    --color-disabled-text-light: var(--color-grey-800);
+    --color-disabled-text-light: var(--color-grey-700);
     --color-button-primary-bg: var(--color-blue-900);
     --button-radius: 9999px;
     --color-button-primary-text: var(--color-white);
@@ -292,7 +292,7 @@
     --color-input-text-active: var(--color-blue-900);
     --color-input-option-bg-hover: var(--color-grey-300);
     --color-input-bg-disabled: var(--color-disabled-bg-light);
-    --color-input-placeholder-disabled-text: var(--color-disabled-text-dark);
+    --color-input-placeholder-disabled-text: var(--color-disabled-text-light);
     --color-input-border: var(--color-grey-500);
     --color-input-border-active: var(--color-blue-400);
     --input-border-width: var(--border-width-1);
@@ -317,7 +317,13 @@
     --color-button-input-success-hover-text: var(--color-white);
     --color-button-input-success-active-text: var(--color-grey-200);
     --color-button-input-success-disabled-text: var(--color-disabled-text-dark);
-    --color-input-bg-filled-dark: var(--color-grey-100);
+    --color-input-bg-filled-dark: var(--color-grey-50);
+    --modal-border-radius: var(--radius-md);
+    --color-input-icon: var(--color-grey-900);
+    --color-input-icon-active: var(--color-input-border-active);
+    --color-input-border-warning: var(--color-warning-stroke);
+    --color-input-icon-warning: var(--color-input-border-warning);
+    --color-input-icon-disabled: var(--color-disabled-icon);
     --spacing-0: 0;
   }
 }
@@ -730,6 +736,9 @@ input:where([type='button'], [type='reset'], [type='submit']),
   .bg-blue-900 {
     background-color: var(--color-blue-900);
   }
+  .bg-grey-50 {
+    background-color: var(--color-grey-50);
+  }
   .bg-white {
     background-color: var(--color-white);
   }
@@ -739,8 +748,14 @@ input:where([type='button'], [type='reset'], [type='submit']),
   .p-3 {
     padding: var(--spacing-3);
   }
+  .p-5 {
+    padding: var(--spacing-5);
+  }
   .p-9 {
     padding: var(--spacing-9);
+  }
+  .pb-7 {
+    padding-bottom: var(--spacing-7);
   }
   .pl-3 {
     padding-left: var(--spacing-3);
@@ -810,6 +825,14 @@ input:where([type='button'], [type='reset'], [type='submit']),
   .shadow-sm {
     --tw-shadow: 0 var(--shadow-sm-y) var(--shadow-sm-blur) var(--color-shadow-sm);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .margin-trim-end {
+    margin-trim: block-end;
+  }
+  @supports not (margin-trim: block-end) {
+    .margin-trim-end > :last-child {
+      margin-block-end: 0;
+    }
   }
   @media (hover: hover) {
     .hover\:no-underline:hover {
@@ -998,9 +1021,9 @@ input:where([type='button'], [type='reset'], [type='submit']),
 }
 @layer lookbook-base {
   :root {
-    --input-icon-pencil: url('data:image/svg+xml;utf8,<svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.018 2.08266C13.23 1.87073 13.4816 1.70261 13.7585 1.58792C14.0354 1.47322 14.3322 1.41418 14.6319 1.41418C14.9316 1.41418 15.2284 1.47322 15.5053 1.58792C15.7822 1.70261 16.0338 1.87073 16.2457 2.08266C16.4577 2.29459 16.6258 2.5462 16.7405 2.8231C16.8552 3.1 16.9142 3.39679 16.9142 3.69651C16.9142 3.99622 16.8552 4.29301 16.7405 4.56991C16.6258 4.84682 16.4577 5.09842 16.2457 5.31035L5.35229 16.2038L0.914215 17.4142L2.1246 12.9761L13.018 2.08266Z" stroke="oklch(0.7339257262016716 0.03164836056507093 62.42273383732768)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    --input-icon-pencil: url('data:image/svg+xml;utf8,<svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.018 2.08266C13.23 1.87073 13.4816 1.70261 13.7585 1.58792C14.0354 1.47322 14.3322 1.41418 14.6319 1.41418C14.9316 1.41418 15.2284 1.47322 15.5053 1.58792C15.7822 1.70261 16.0338 1.87073 16.2457 2.08266C16.4577 2.29459 16.6258 2.5462 16.7405 2.8231C16.8552 3.1 16.9142 3.39679 16.9142 3.69651C16.9142 3.99622 16.8552 4.29301 16.7405 4.56991C16.6258 4.84682 16.4577 5.09842 16.2457 5.31035L5.35229 16.2038L0.914215 17.4142L2.1246 12.9761L13.018 2.08266Z" stroke="oklch(0.42055464277250465 0.017629829299455804 57.20727998394045)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
     --input-icon-pencil-warning: url('data:image/svg+xml;utf8,<svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.018 2.08266C13.23 1.87073 13.4816 1.70261 13.7585 1.58792C14.0354 1.47322 14.3322 1.41418 14.6319 1.41418C14.9316 1.41418 15.2284 1.47322 15.5053 1.58792C15.7822 1.70261 16.0338 1.87073 16.2457 2.08266C16.4577 2.29459 16.6258 2.5462 16.7405 2.8231C16.8552 3.1 16.9142 3.39679 16.9142 3.69651C16.9142 3.99622 16.8552 4.29301 16.7405 4.56991C16.6258 4.84682 16.4577 5.09842 16.2457 5.31035L5.35229 16.2038L0.914215 17.4142L2.1246 12.9761L13.018 2.08266Z" stroke="oklch(0.4520689571827139 0.0961148162691226 57.06845838474611)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
-    --input-icon-pencil-active: url('data:image/svg+xml;utf8,<svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.018 2.08266C13.23 1.87073 13.4816 1.70261 13.7585 1.58792C14.0354 1.47322 14.3322 1.41418 14.6319 1.41418C14.9316 1.41418 15.2284 1.47322 15.5053 1.58792C15.7822 1.70261 16.0338 1.87073 16.2457 2.08266C16.4577 2.29459 16.6258 2.5462 16.7405 2.8231C16.8552 3.1 16.9142 3.39679 16.9142 3.69651C16.9142 3.99622 16.8552 4.29301 16.7405 4.56991C16.6258 4.84682 16.4577 5.09842 16.2457 5.31035L5.35229 16.2038L0.914215 17.4142L2.1246 12.9761L13.018 2.08266Z" stroke="oklch(0.3992558242730704 0.10787932215196669 255.99294911345658)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    --input-icon-pencil-active: url('data:image/svg+xml;utf8,<svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.018 2.08266C13.23 1.87073 13.4816 1.70261 13.7585 1.58792C14.0354 1.47322 14.3322 1.41418 14.6319 1.41418C14.9316 1.41418 15.2284 1.47322 15.5053 1.58792C15.7822 1.70261 16.0338 1.87073 16.2457 2.08266C16.4577 2.29459 16.6258 2.5462 16.7405 2.8231C16.8552 3.1 16.9142 3.39679 16.9142 3.69651C16.9142 3.99622 16.8552 4.29301 16.7405 4.56991C16.6258 4.84682 16.4577 5.09842 16.2457 5.31035L5.35229 16.2038L0.914215 17.4142L2.1246 12.9761L13.018 2.08266Z" stroke="oklch(0.49520078456250793 0.14479214891924955 256.96105608148923)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
     --input-icon-pencil-disabled: url('data:image/svg+xml;utf8,<svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.018 2.08266C13.23 1.87073 13.4816 1.70261 13.7585 1.58792C14.0354 1.47322 14.3322 1.41418 14.6319 1.41418C14.9316 1.41418 15.2284 1.47322 15.5053 1.58792C15.7822 1.70261 16.0338 1.87073 16.2457 2.08266C16.4577 2.29459 16.6258 2.5462 16.7405 2.8231C16.8552 3.1 16.9142 3.39679 16.9142 3.69651C16.9142 3.99622 16.8552 4.29301 16.7405 4.56991C16.6258 4.84682 16.4577 5.09842 16.2457 5.31035L5.35229 16.2038L0.914215 17.4142L2.1246 12.9761L13.018 2.08266Z" stroke="oklch(0.6445190811447986 0.025161898688078468 56.7458039076113)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
     --input-icon-search: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.08338 2.05691C2.33463 4.92505 -0.811209 12.7211 2.05694 19.4698C4.92508 26.2186 12.7211 29.3644 19.4699 26.4963C20.4385 26.0846 21.3328 25.5715 22.1459 24.9745L29.5824 32.412C30.3634 33.1931 31.6297 33.1932 32.4108 32.4122C33.1919 31.6312 33.192 30.3649 32.411 29.5838L24.9737 22.1454C27.656 18.4917 28.3977 13.5574 26.4963 9.08335C23.6281 2.3346 15.8321 -0.811239 9.08338 2.05691ZM20.9137 20.7623C23.4505 18.1642 24.324 14.1986 22.815 10.6479C20.8109 5.93228 15.3635 3.73416 10.6479 5.73824C5.93231 7.74232 3.73419 13.1897 5.73827 17.9053C7.74235 22.6209 13.1897 24.819 17.9053 22.8149C19.0001 22.3496 19.9593 21.6987 20.7616 20.9145C20.7856 20.8878 20.8104 20.8616 20.8361 20.8359C20.8615 20.8105 20.8874 20.786 20.9137 20.7623Z" fill="oklch(0.7339257262016716 0.03164836056507093 62.42273383732768)" /></svg>');
   }
@@ -1066,16 +1089,14 @@ input:where([type='button'], [type='reset'], [type='submit']),
   }
   :where(input:not([type='radio'], [type='checkbox'], [type='range']), select:not([multiple])).mode-inline {
     font-weight: normal;
-    border-radius: 0;
-    padding: 0;
-    box-shadow: none;
-    border-bottom: var(--border-width) solid var(--border-color);
+    border-radius: revert-layer;
+    padding: revert-layer;
+    box-shadow: inset 0 calc(var(--border-width) * -1) 0 0 var(--border-color);
     font-size: var(--text-lg);
-    background-repeat: no-repeat;
+    background: transparent var(--input-icon-pencil) no-repeat right
+      var(--spacing-4) center;
     background-size: 0.8em;
-    background-position: right var(--spacing-4) center;
     padding-right: 2.5em;
-    background-image: var(--input-icon-pencil);
   }
   :where(input:not([type='radio'], [type='checkbox'], [type='range']), select:not([multiple])).mode-inline:focus {
     background-image: var(--input-icon-pencil-active);
@@ -1086,12 +1107,8 @@ input:where([type='button'], [type='reset'], [type='submit']),
   :where(input:not([type='radio'], [type='checkbox'], [type='range']), select:not([multiple])).mode-inline:is(:user-invalid, :user-invalid:focus) {
     background-image: var(--input-icon-pencil-warning);
   }
-  :where(input:not([type='radio'], [type='checkbox'], [type='range']), select:not([multiple])).mode-bg {
-    background-color: var(--color-input-bg-filled-dark);
-    font-weight: normal;
-  }
   :where(textarea, [contenteditable='true']) {
-    padding: var(--input-spacing-inline);
+    padding: var(--input-spacing-block) var(--input-spacing-inline);
     border-radius: var(--input-radius-lg);
     font-weight: var(--font-weight-normal);
   }
@@ -1325,6 +1342,9 @@ input:where([type='button'], [type='reset'], [type='submit']),
     display: flex;
     gap: var(--spacing-3);
     align-items: center;
+  }
+  .input-group > :where(input:not([type='range'], [type='radio'], [type='checkbox']), .input-group__input) {
+    flex: 1;
   }
   .input-group .btn {
     border-radius: var(--radius-sm);
@@ -1617,11 +1637,18 @@ body {
   form p {
     margin-bottom: var(--spacing-8);
   }
-  form > section {
-    margin-bottom: var(--spacing-11);
+  form section {
+    margin-bottom: var(--spacing-12);
   }
-  form > section > h2 {
-    margin-bottom: var(--spacing-4);
+  form section > h2 {
+    margin-bottom: var(--spacing-7);
+    padding-bottom: var(--spacing-2);
+    font-size: var(--text-lg);
+    border-bottom: 1px solid var(--color-border-light);
+  }
+  form section > h3 {
+    font-size: var(--text-base);
+    margin-block: var(--spacing-7);
   }
 }
 @layer app {
