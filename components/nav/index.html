@@ -68,7 +68,7 @@
       <nav role="navigation">
         <h2>Overview</h2>
         <ul>
-          <li class="nav-active">
+          <li class="">
             <a href="/lookbook-website/overview/intro">Introduction</a>
           </li>
           <li class="">
@@ -120,7 +120,7 @@
             <a href="/lookbook-website/components/box">Box</a>
           </li>
           
-          <li class="">
+          <li class="nav-active">
             <a href="/lookbook-website/components/nav">Navigation</a>
           </li>
         </ul>
@@ -128,14 +128,54 @@
     </aside>
 
     <main role="main">
-      <h1>Introduction</h1>
-<p>Welcome to the tech section of the Lookbook! In here, we go through some must-know things when working with the Lookbook.</p>
-<p>We're using <strong>Tailwind CSS</strong> as the foundation for writing <em>functional CSS</em>.</p>
-<p>Some hands links are:</p>
-<ul>
-<li><a href="https://tailwindcss.com/docs/theme">Theme variables</a></li>
-<li><a href="https://tailwindcss.com/docs/styling-with-utility-classes">Styling with utility classes</a></li>
-</ul>
+      <h1>Navigation</h1>
+
+<section>
+  <h2 class="mb-5 text-lg">Tab list</h2>
+  
+  <div class="Box mb-8">
+    <nav role="tablist" aria-label="Participant profile navigation" class="TabList mb-5">
+      <button role="tab" id="t-sessions" aria-controls="p-sessions" aria-selected="true">Sessions</button>
+      
+      <button role="tab" id="t-profile" aria-controls="p-profile" aria-selected="false">Profile</button>
+      
+      <button role="tab" id="t-screener" aria-controls="p-screener" aria-selected="false">Screener answers</button>
+    </nav>
+  </div>
+  
+  <h2 class="mb-5 text-lg">As links</h2>
+  
+  <div class="Box mb-8">
+    <nav role="tablist" aria-label="Participant profile navigation" class="TabList mb-5">
+      <a href="#" role="tab" id="t-sessions" aria-controls="p-sessions" aria-selected="true">Sessions</a>
+      
+      <a href="#" role="tab" id="t-profile" aria-controls="p-profile" aria-selected="false">Profile</a>
+      
+      <a href="#" role="tab" id="t-screener" aria-controls="p-screener" aria-selected="false">Screener answers</a>
+    </nav>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const $navs = document.querySelectorAll('[role="tablist"]');
+    
+    for (const $nav of $navs) {
+      const updateSelected = ($btn) => {
+        for (const $tab of $nav.querySelectorAll('[role="tab"]')) {
+          $tab.ariaSelected = false;
+        }
+        
+        $btn.ariaSelected = true;
+      }
+  
+      $nav.addEventListener('click', (evt) => {
+        evt.preventDefault();
+        updateSelected(evt.target);
+      });
+    }
+  });
+</script>
 
     </main>
 

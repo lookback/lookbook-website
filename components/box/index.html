@@ -68,7 +68,7 @@
       <nav role="navigation">
         <h2>Overview</h2>
         <ul>
-          <li class="nav-active">
+          <li class="">
             <a href="/lookbook-website/overview/intro">Introduction</a>
           </li>
           <li class="">
@@ -116,7 +116,7 @@
             <a href="/lookbook-website/components/badges">Badges</a>
           </li>
           
-          <li class="">
+          <li class="nav-active">
             <a href="/lookbook-website/components/box">Box</a>
           </li>
           
@@ -128,14 +128,19 @@
     </aside>
 
     <main role="main">
-      <h1>Introduction</h1>
-<p>Welcome to the tech section of the Lookbook! In here, we go through some must-know things when working with the Lookbook.</p>
-<p>We're using <strong>Tailwind CSS</strong> as the foundation for writing <em>functional CSS</em>.</p>
-<p>Some hands links are:</p>
-<ul>
-<li><a href="https://tailwindcss.com/docs/theme">Theme variables</a></li>
-<li><a href="https://tailwindcss.com/docs/styling-with-utility-classes">Styling with utility classes</a></li>
-</ul>
+      <h1>Boxes</h1>
+
+<section>
+  <div class="grid grid-cols-2 gap-5">
+    <div class="Box">
+      <p>This is a plain white box.</p>
+    </div>
+    
+    <div class="Box Box--hoverable">
+      <p>This is a hoverable box.</p>
+    </div>
+  </div>
+</section>
 
     </main>
 
