@@ -11,14 +11,48 @@ layout: layout.njk
       <label for="check">Checkbox</label>
     </p>
     
-    <p class="flex items-center gap-4">
-      <input id="radio" type="radio" />
-      <label for="radio">Radio</label>
-    </p>
+    <ul class="list-none mb-7">
+      <li class="mb-3">
+        <input id="radio-1" name="group" type="radio" checked />
+        <label for="radio-1">Radio 1</label>
+      </li>
+      <li>
+        <input id="radio-2" name="group" type="radio" />
+        <label for="radio-2">Radio 2</label>
+      </li>
+    </ul>
     
     <p class="flex items-center gap-4">
       <input id="range" type="range" />
       <label for="range">Range</label>
+    </p>
+  </section>
+  
+  <section>
+    <h2>Labels</h2>
+    
+    <p>Sometimes, we want the bold, smaller style. Lookbook CSS tries to intelligently apply this style globally. The base case is normally sized label, as seen below. Use <code>.label</code> to manually apply the bolder style.</p>
+    
+    <p>
+      <label class="block" for="name-placeholder-label">Label immediately preceeding an input</label>
+      <input id="name-placeholder-label" type="text" placeholder="Placeholder" />
+    </p>
+    
+    <div class="mb-8">
+      <label class="block" for="name-placeholder-deep">Label immediately preceeding an element containing an input</label>
+      <div>
+        <input id="name-placeholder-deep" type="text" placeholder="Placeholder" />
+      </div>
+    </div>
+    
+    <p class="flex items-center gap-4">
+      <input id="check-normal" type="checkbox" />
+      <label for="check-normal">Label for a checkbox is normal</label>
+    </p>
+    
+    <p class="flex items-center gap-4">
+      <input id="check-label" type="checkbox" />
+      <label for="check-label" class="label">Label with <code>.label</code></label>
     </p>
   </section>
   
@@ -159,15 +193,31 @@ layout: layout.njk
   
   <section>
     <h2>Error state</h2>
-    <p>
-      <label class="block" for="name-err">Want lowercase (edit field to see error styling)</label>
-      <input id="name-err" type="text" pattern="[a-z]+" value="UPPERCASE" />
-    </p>
     
-    <p>
-      <label class="block" for="text-err">Want lowercase (edit field to see error styling)</label>
-      <textarea id="text-err" required>Erase me</textarea>
-    </p>
+    <section>
+      <h3>Validation API</h3>
+      <p>
+        <label class="block" for="name-err">Want lowercase (edit field to see error styling)</label>
+        <input id="name-err" type="text" pattern="[a-z]+" value="UPPERCASE" />
+      </p>
+      
+      <p>
+        <label class="block" for="text-err">Want lowercase (edit field to see error styling)</label>
+        <textarea id="text-err" required>Erase me</textarea>
+      </p>
+    </section>
+    
+    <section>
+      <h3>Applying <code>.input-invalid</code></h3>
+      
+      <p class="mb-1">
+        <label class="block" for="name-err-manual">Manually applied</label>
+        <input id="name-err-manual" type="text" class="input-invalid" value="John Jones" />
+      </p>
+      <p>
+        <span class="input-warning">Some description with <code>.input-warning</code></span>
+      </p>
+    </section>
   </section>
   
   <section>
