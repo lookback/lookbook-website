@@ -54,14 +54,14 @@
         </div>
         <div class="leading-none">
           <span class="block text-sm">GitHub</span>
-          <small class="text-grey-800">7.0.0-beta.22</small>
+          <small class="text-grey-800">7.0.0-beta.28</small>
         </div>
       </a>
 
       <p class="mb-12 text-sm text-grey-800">
         Site updated
-        <strong title="Wed Jul 09 2025 08:52:55 GMT+0000 (Coordinated Universal Time)"
-          >Jul 9, 2025</strong
+        <strong title="Tue Jul 15 2025 14:18:34 GMT+0000 (Coordinated Universal Time)"
+          >Jul 15, 2025</strong
         >
       </p>
 
@@ -139,20 +139,53 @@
   <div class="preview-block mb-6">
     <button class="btn">Button</button>
     <button class="btn" disabled>Button</button>
+    <a href="#" class="btn">Link</a>
+    <button class="btn" aria-label="Only icon">
+  <svg
+      role="img"
+      aria-hidden="true"
+      focusable="false"
+      tabIndex={-1}
+      class="icon">
+      <use href="#pencil" />
+  </svg>
+</button>
   </div>
 
   <h2 class="mb-5">Success button</h2>
 
   <div class="preview-block mb-6">
     <button class="btn btn-success">Button</button>
-    <button class="btn btn-success" disabled>Button</button><br>
+    <button class="btn btn-success" disabled>Button</button>
+    <a href="#" class="btn btn-success">Link</a>
+    <button class="btn btn-success" aria-label="Only icon">
+  <svg
+      role="img"
+      aria-hidden="true"
+      focusable="false"
+      tabIndex={-1}
+      class="icon">
+      <use href="#pencil" />
+  </svg>
+</button>
   </div>
 
   <h2 class="mb-5">Secondary button</h2>
 
   <div class="preview-block mb-6">
     <button class="btn btn-secondary">Button</button>
-    <button class="btn btn-secondary" disabled>Button</button><br>
+    <button class="btn btn-secondary" disabled>Button</button>
+    <a href="#" class="btn btn-secondary">Link</a>
+    <button class="btn btn-secondary" aria-label="Only icon">
+  <svg
+      role="img"
+      aria-hidden="true"
+      focusable="false"
+      tabIndex={-1}
+      class="icon">
+      <use href="#pencil" />
+  </svg>
+</button>
   </div>
   
   <h2 class="mb-5">Tertiary button</h2>
@@ -177,14 +210,62 @@
       class="icon">
       <use href="#pencil" />
   </svg>
- Button</button><br>
+ Button</button>
+    <button class="btn btn-tertiary" aria-label="Only icon" title="This markup uses aria-label">
+  <svg
+      role="img"
+      aria-hidden="true"
+      focusable="false"
+      tabIndex={-1}
+      class="icon">
+      <use href="#pencil" />
+  </svg>
+</button>
+    <button class="btn btn-tertiary" title="This markup uses .sr-only">
+  <svg
+      role="img"
+      aria-hidden="true"
+      focusable="false"
+      tabIndex={-1}
+      class="icon">
+      <use href="#pencil" />
+  </svg>
+<span class="sr-only">Only icon</span></button>
+    
+    <button class="btn btn-tertiary" aria-label="Only icon" title="This markup uses aria-label" disabled>
+  <svg
+      role="img"
+      aria-hidden="true"
+      focusable="false"
+      tabIndex={-1}
+      class="icon">
+      <use href="#pencil" />
+  </svg>
+</button>
   </div>
+  <p>
+    <strong>Note:</strong> The two icon-only buttons are styled as squares. They use the following markup to achieve that:
+  </p>
+  <ol class="list-inside">
+    <li>Uses <code>aria-label="Text"</code> attribute on the <code>.btn</code>.</li>
+    <li>Uses a sibling <code>&lt;span class="sr-only"&gt;Text&lt;span&gt;</code> element.</li>
+  </ol>
 
   <h2 class="mb-5">Destructive button</h2>
 
   <div class="preview-block mb-6">
     <button class="btn btn-destructive">Button</button>
-    <button class="btn btn-destructive" disabled>Button</button><br>
+    <button class="btn btn-destructive" disabled>Button</button>
+    <button class="btn btn-destructive" aria-label="Only icon">
+  <svg
+      role="img"
+      aria-hidden="true"
+      focusable="false"
+      tabIndex={-1}
+      class="icon">
+      <use href="#pencil" />
+  </svg>
+</button>
   </div>
 </section>
 
