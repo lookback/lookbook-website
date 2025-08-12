@@ -36,7 +36,7 @@ layout: layout.njk
   
   <h2 class="mb-5">Tertiary button</h2>
 
-  <div class="preview-block mb-6">
+  <div class="preview-block mb-3">
     <button class="btn btn-tertiary">{{ icon.icon("pencil") }} Button</button>
     <button class="btn btn-tertiary" disabled>{{ icon.icon("pencil") }} Button</button>
     <button class="btn btn-tertiary" aria-label="Only icon" title="This markup uses aria-label">{{ icon.icon("pencil") }}</button>
@@ -44,6 +44,11 @@ layout: layout.njk
     
     <button class="btn btn-tertiary" aria-label="Only icon" title="This markup uses aria-label" disabled>{{ icon.icon("pencil") }}</button>
   </div>
+  
+  <div class="preview-block mb-6">
+    <button class="btn btn-tertiary btn-tertiary--destructive">{{ icon.icon("pencil") }} Button</button>
+  </div>
+  
   <p>
     <strong>Note:</strong> The two icon-only buttons are styled as squares. They use the following markup to achieve that:
   </p>
