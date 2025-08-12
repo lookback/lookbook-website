@@ -58,7 +58,7 @@ body {
       background-color: var(--color-bg-body);
 
       a {
-        color: var(--text-body);
+        color: var(--color-text-primary);
         font-weight: bold;
 
         &,
@@ -123,8 +123,8 @@ main {
   a {
     font-weight: bold;
     display: inline-block;
-    border-color: var(--grey-40);
-    color: var(--blue-70);
+    border-color: var(--color-grey-400);
+    color: var(--color-blue-700);
     -webkit-tap-highlight-color: transparent;
 
     &:hover,
@@ -134,8 +134,8 @@ main {
 
     &.active {
       color: #fff;
-      background-color: var(--blue-70);
-      border-color: var(--blue-70);
+      background-color: var(--color-blue-700);
+      border-color: var(--color-blue-700);
     }
   }
 }

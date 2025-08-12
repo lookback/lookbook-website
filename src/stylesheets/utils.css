@@ -19,10 +19,10 @@
 }
 
 .callout {
-  --background: var(--orange-10);
-  --border: var(--orange-30);
-  --text: var(--orange-70);
-  --link: var(--orange-80);
+  --background: var(--color-orange-100);
+  --border: var(--color-orange-300);
+  --text: var(--color-orange-700);
+  --link: var(--color-orange-800);
 
   background-color: var(--background);
   border: 1px solid var(--border);
@@ -42,11 +42,11 @@
   }
 
   @media (prefers-color-scheme: dark) {
-    --background: var(--orange-100);
-    --border: var(--orange-70);
-    --text: var(--orange-40);
-    --link: var(--orange-30);
-    box-shadow: var(--grey-90) 0 2px 4px;
+    --background: var(--color-orange-900);
+    --border: var(--color-orange-700);
+    --text: var(--color-orange-400);
+    --link: var(--color-orange-300);
+    box-shadow: var(--color-grey-900) 0 2px 4px;
   }
 }
 
@@ -64,7 +64,7 @@
     background-color: var(--bg);
     color: contrast-color(var(--bg));
   }
-  
+
   @media (max-width: 1510px) {
     grid-template-columns: repeat(11, 75px);
 
