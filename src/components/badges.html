@@ -8,34 +8,57 @@ layout: layout.njk
   <p>Good for highlighting piece of information.</p>
 
   <div class="grid grid-cols-2 mb-8">
-    <section>
-      <ul class="list-none flex flex-col gap-4">
-        <li><span class="Badge">Normal</span></li>
-        <li><span class="Badge Badge--purple">Purple</span></li>
-        <li><span class="Badge Badge--grey">Grey</span></li>
-        <li><span class="Badge Badge--negative">Negative</span></li>
-        <li><span class="Badge Badge--orange">Orange</span></li>
-        <li><span class="Badge Badge--custom" style="--hue: 500">Custom hue</span></li>
-      </ul>
-    </section>
-    
-    <section>
-      <ul class="list-none flex flex-col gap-4">
-        <li><span class="Badge Badge--invert">Normal</span></li>
-        <li><span class="Badge Badge--invert Badge--purple">Purple</span></li>
-        <li><span class="Badge Badge--invert Badge--grey">Grey</span></li>
-        <li><span class="Badge Badge--invert Badge--negative">Negative</span></li>
-        <li><span class="Badge Badge--invert Badge--orange">Orange</span></li>
-        <li><span class="Badge Badge--invert Badge--custom" style="--hue: 500">Custom hue</span></li>
-      </ul>
-    </section>
+    <ul class="list-none flex flex-col gap-4">
+      <li><span class="Badge">Normal</span></li>
+      <li><span class="Badge Badge--purple">Purple</span></li>
+      <li><span class="Badge Badge--grey">Grey</span></li>
+      <li><span class="Badge Badge--negative">Negative</span></li>
+      <li><span class="Badge Badge--orange">Orange</span></li>
+      <li><span class="Badge Badge--custom" style="--hue: 500">Custom hue</span></li>
+    </ul>
+  
+    <ul class="list-none flex flex-col gap-4">
+      <li><span class="Badge Badge--invert">Normal</span></li>
+      <li><span class="Badge Badge--invert Badge--purple">Purple</span></li>
+      <li><span class="Badge Badge--invert Badge--grey">Grey</span></li>
+      <li><span class="Badge Badge--invert Badge--negative">Negative</span></li>
+      <li><span class="Badge Badge--invert Badge--orange">Orange</span></li>
+      <li><span class="Badge Badge--invert Badge--custom" style="--hue: 500">Custom hue</span></li>
+    </ul>
   </div>
   
-  <h2 class="mb-5 text-lg">Status badge</h2>
-  <p>Good for strings such as "Enabled", "Disabled", etc.</p>
-  
-  <ul class="list-none flex flex-col gap-4">
-    <li><span class="StatusBadge">Normal</span></li>
-    <li><span class="StatusBadge StatusBadge--negative">Negative</span></li>
-  </ul>
+  <section>
+    <h3 class="mb-5">Interactive</h3>
+    <p>When used on a <code>button</code> or <code>a</code>.</p>
+
+    <div class="grid grid-cols-2 mb-8">
+      <ul class="list-none flex flex-col gap-4">
+        <li><button class="Badge">Normal</button></li>
+        <li><button class="Badge Badge--purple">Purple</button></li>
+        <li><button class="Badge Badge--grey">Grey</button></li>
+        <li><button class="Badge Badge--negative">Negative</button></li>
+        <li><button class="Badge Badge--orange">Orange</button></li>
+        <li><button class="Badge Badge--custom" style="--hue: 500">Custom hue</button></li>
+      </ul>
+      
+      <ul class="list-none flex flex-col gap-4">
+        <li><button class="Badge Badge--invert">Normal</button></li>
+        <li><button class="Badge Badge--invert Badge--purple">Purple</button></li>
+        <li><button class="Badge Badge--invert Badge--grey">Grey</button></li>
+        <li><button class="Badge Badge--invert Badge--negative">Negative</button></li>
+        <li><button class="Badge Badge--invert Badge--orange">Orange</button></li>
+        <li><button class="Badge Badge--invert Badge--custom" style="--hue: 500">Custom hue</button></li>
+      </ul>
+    </div>
+  </section>
+ 
+  <section>
+    <h2 class="mb-5">Status badge</h2>
+    <p>Good for strings such as "Enabled", "Disabled", etc.</p>
+    
+    <ul class="list-none flex flex-col gap-4">
+      <li><span class="StatusBadge">Normal</span></li>
+      <li><span class="StatusBadge StatusBadge--negative">Negative</span></li>
+    </ul>
+  </section>
 </section>

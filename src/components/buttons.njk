@@ -13,6 +13,7 @@ layout: layout.njk
     <button class="btn">Button</button>
     <button class="btn" disabled>Button</button>
     <a href="#" class="btn">Link</a>
+    <button class="btn" aria-pressed="true">Button (pressed)</button>
     <button class="btn" aria-label="Only icon">{{ icon.icon("pencil") }}</button>
   </div>
 
@@ -22,6 +23,7 @@ layout: layout.njk
     <button class="btn btn-success">Button</button>
     <button class="btn btn-success" disabled>Button</button>
     <a href="#" class="btn btn-success">Link</a>
+    <button class="btn btn-success" aria-pressed="true">Button (pressed)</button>
     <button class="btn btn-success" aria-label="Only icon">{{ icon.icon("pencil") }}</button>
   </div>
 
@@ -31,6 +33,7 @@ layout: layout.njk
     <button class="btn btn-secondary">Button</button>
     <button class="btn btn-secondary" disabled>Button</button>
     <a href="#" class="btn btn-secondary">Link</a>
+    <button class="btn btn-secondary" aria-pressed="true">Button (pressed)</button>
     <button class="btn btn-secondary" aria-label="Only icon">{{ icon.icon("pencil") }}</button>
   </div>
   
@@ -39,14 +42,23 @@ layout: layout.njk
   <div class="preview-block mb-3">
     <button class="btn btn-tertiary">{{ icon.icon("pencil") }} Button</button>
     <button class="btn btn-tertiary" disabled>{{ icon.icon("pencil") }} Button</button>
+    <button class="btn btn-tertiary" aria-pressed="true">{{ icon.icon("pencil") }} Button (pressed)</button>
     <button class="btn btn-tertiary" aria-label="Only icon" title="This markup uses aria-label">{{ icon.icon("pencil") }}</button>
     <button class="btn btn-tertiary" title="This markup uses .sr-only">{{ icon.icon("pencil") }}<span class="sr-only">Only icon</span></button>
     
     <button class="btn btn-tertiary" aria-label="Only icon" title="This markup uses aria-label" disabled>{{ icon.icon("pencil") }}</button>
+    
+    <button class="btn btn-tertiary" aria-label="Pressed" aria-pressed="true">{{ icon.icon("pencil") }}</button>
   </div>
   
   <div class="preview-block mb-6">
     <button class="btn btn-tertiary btn-tertiary--destructive">{{ icon.icon("pencil") }} Button</button>
+    
+    <button class="btn btn-tertiary btn-tertiary--destructive" disabled>{{ icon.icon("pencil") }} Button</button>
+    
+    <button class="btn btn-tertiary btn-tertiary--destructive" aria-label="Remove">{{ icon.icon("pencil") }}</button>
+    
+    <button class="btn btn-tertiary btn-tertiary--destructive" aria-label="Remove" aria-pressed="true">{{ icon.icon("pencil") }}</button>
   </div>
   
   <p>
@@ -62,6 +74,7 @@ layout: layout.njk
   <div class="preview-block mb-6">
     <button class="btn btn-destructive">Button</button>
     <button class="btn btn-destructive" disabled>Button</button>
+    <button class="btn btn-destructive" aria-pressed="true">Button (pressed)</button>
     <button class="btn btn-destructive" aria-label="Only icon">{{ icon.icon("pencil") }}</button>
   </div>
 </section>
