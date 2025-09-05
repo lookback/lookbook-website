@@ -77,6 +77,15 @@ layout: layout.njk
     <button class="btn btn-destructive" aria-pressed="true">Button (pressed)</button>
     <button class="btn btn-destructive" aria-label="Only icon">{{ icon.icon("pencil") }}</button>
   </div>
+  
+  <h2 class="mb-5">Warning button</h2>
+
+  <div class="preview-block mb-6">
+    <button class="btn btn-warning">Button</button>
+    <button class="btn btn-warning" disabled>Button</button>
+    <button class="btn btn-warning" aria-pressed="true">Button (pressed)</button>
+    <button class="btn btn-warning" aria-label="Only icon">{{ icon.icon("pencil") }}</button>
+  </div>
 </section>
 
 {{ icon.pencil() }}

@@ -4,9 +4,15 @@
   "description": "The styleguide of Lookback",
   "scripts": {
     "clean": "rm -rf build",
-    "css": "postcss src/stylesheets/site.css --dir build/assets --verbose",
-    "start": "eleventy --serve & npm run css -- --watch",
-    "build": "npm run css && eleventy",
+    "build": "concurrently npm:build:*",
+    "build:css": "concurrently npm:css:*",
+    "css:default": "./build-css.sh",
+    "css:partici": "LOOKBOOK_MODE=participate ./build-css.sh",
+    "build:site": "eleventy",
+    "start": "concurrently npm:watch:*",
+    "watch:css:default": "./build-css.sh -w",
+    "watch:css:partici": "LOOKBOOK_MODE=participate ./build-css.sh -w",
+    "watch:site": "eleventy --serve",
     "copy-vars": "./script/copy-vars.sh",
     "prebuild": "npm run clean && npm run copy-vars",
     "prestart": "npm run clean && npm run copy-vars"
@@ -19,6 +25,7 @@
   "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://lookback.github.io/lookbook-website",
   "devDependencies": {
+    "concurrently": "^9.2.1",
     "postcss-cli": "^11.0.1",
     "prettier": "=2.0.5"
   },

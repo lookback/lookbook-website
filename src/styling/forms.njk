@@ -1,9 +1,26 @@
 ---
 layout: layout.njk
+input_types:
+  - tel
+  - datetime-local
+  - date
+  - time
+  - color
+  - file
+  - image
+  - month
+  - week
+  - number
+  - password
+  - reset
+  - button
+  - search
+  - submit
+  - url
 ---
 <h1>Forms</h1>
 
-<form class="bg-white p-9 rounded-lg">
+<form>
   <section>
     <h2>Controls</h2>
     <p class="flex items-center gap-4">
@@ -76,6 +93,11 @@ layout: layout.njk
     <p>
       <label class="block" for="name-disabled-text">Name, disabled with text</label>
       <input id="name-disabled-text" type="text" placeholder="Placeholder" value="Johan" disabled />
+    </p>
+    
+    <p>
+      <label class="block" for="name-readonly">Name, read only</label>
+      <input id="name-readonly" type="text" value="Johan" readonly />
     </p>
   
     <p>
@@ -233,20 +255,12 @@ layout: layout.njk
       <progress id="prog-done" value="1">100%</progress>
     </p>
   
+    {% for type in input_types %}
     <p>
-      <label class="block" for="date">Date</label>
-      <input id="date" type="date" />
+      <label for="inp-{{ type }}">{{ type }}</label>
+      <input type="{{ type }}" id="inp-{{ type }}" />
     </p>
-  
-    <p>
-      <label class="block" for="time">Time</label>
-      <input id="time" type="time" />
-    </p>
-  
-    <p>
-      <label class="block" for="color">Color</label>
-      <input id="color" type="color" />
-    </p>
+    {% endfor %}
   </section>
   
   <section>

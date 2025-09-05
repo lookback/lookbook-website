@@ -19,7 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Site CSS -->
-    <link rel="stylesheet" href="{{ '/assets/site.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/assets/site-dashboard.css' | url }}" id="main-sheet" />
     <link rel="shortcut icon" href="https://lookback.com/favicon.ico" />
   </head>
   <body>
@@ -47,12 +47,26 @@
         </div>
       </a>
 
-      <p class="mb-12 text-sm text-grey-800">
+      <p class="mb-5 text-sm text-grey-800">
         Site updated
         <strong title="{{ buildInfo.builtAt }}"
           >{{ buildInfo.builtAt | formatDate }}</strong
         >
       </p>
+      
+      <mode-switch class="sticky top-7 z-2">
+        <div class="SegmentSwitch mb-12">
+          <label>
+            Dashboard
+            <input type="radio" value="dashboard" name="mode" />
+          </label>
+          
+          <label>
+            Participate
+            <input type="radio" value="participate" name="mode" />
+          </label>
+        </div>
+      </mode-switch>
 
       <nav role="navigation">
         <h2>Overview</h2>
@@ -116,7 +130,7 @@
       </nav>
     </aside>
 
-    <main role="main">
+    <main role="main" class="Box">
       {{ content | safe }}
     </main>
 
@@ -168,5 +182,6 @@
         }
       });
     </script>
+    <script type="module" src="/assets/mode-switch.js"></script>
   </body>
 </html>
