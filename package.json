@@ -13,7 +13,7 @@
     "watch:css:default": "./build-css.sh -w",
     "watch:css:partici": "LOOKBOOK_MODE=participate ./build-css.sh -w",
     "watch:site": "eleventy --serve",
-    "copy-vars": "./script/copy-vars.sh",
+    "copy-vars": "cp node_modules/@lookback/lookbook/dist/vars src/_data/vars",
     "prebuild": "npm run clean && npm run copy-vars",
     "prestart": "npm run clean && npm run copy-vars"
   },
