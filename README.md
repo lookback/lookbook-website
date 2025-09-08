@@ -29,4 +29,15 @@ Now changes made in `lookbook/src` will be reflected immediately when reloading 
 
 ## Deploy
 
-Just git push to `main` and a [GitHub Action](https://github.com/lookback/lookbook-website/actions) will trigger and deploy the site from the `gh-pages` branch.
+```bash
+./script/deploy.sh
+```
+
+This script will:
+
+1. Switch (or create) a local `gh-pages` branch.
+2. Install deps and build site.
+3. Force push to remote.
+4. Switch back to current branch.
+
+The reason for building locally is that we're using private npm registries, which I can't be bothered setting up on GitHub at the moment.
