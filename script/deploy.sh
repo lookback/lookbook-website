@@ -1,6 +1,5 @@
-#!/bin/bash
-
-set -e  # Exit on any error
+#!/usr/bin/env bash
+set -euo pipefail
 
 echo "🚀 Starting GitHub Pages deployment..."
 
