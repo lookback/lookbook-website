@@ -38,7 +38,8 @@ class ModeSwitch extends HTMLElement {
   }
 
   setMode(mode) {
-    this.stylesheet.href = `/assets/site-${mode}.css`;
+    const [root] = this.stylesheet.href.split('/assets');
+    this.stylesheet.href = root + `/assets/site-${mode}.css`;
     this.storage.setItem(this.STORE_KEY, mode);
   }
 
