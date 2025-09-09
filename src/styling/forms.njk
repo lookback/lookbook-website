@@ -1,6 +1,9 @@
 ---
 layout: layout.njk
 input_types:
+  - checkbox
+  - range
+  - radio
   - tel
   - datetime-local
   - date
@@ -20,31 +23,9 @@ input_types:
 ---
 <h1>Forms</h1>
 
+<p>Default Lookbook styling for a bunch of form inputs.</p>
+
 <form>
-  <section>
-    <h2>Controls</h2>
-    <p class="flex items-center gap-4">
-      <input id="check" type="checkbox" />
-      <label for="check">Checkbox</label>
-    </p>
-    
-    <ul class="list-none mb-7">
-      <li class="mb-3">
-        <input id="radio-1" name="group" type="radio" checked />
-        <label for="radio-1">Radio 1</label>
-      </li>
-      <li>
-        <input id="radio-2" name="group" type="radio" />
-        <label for="radio-2">Radio 2</label>
-      </li>
-    </ul>
-    
-    <p class="flex items-center gap-4">
-      <input id="range" type="range" />
-      <label for="range">Range</label>
-    </p>
-  </section>
-  
   <section>
     <h2>Labels</h2>
     
@@ -245,15 +226,40 @@ input_types:
   <section>
     <h2>Misc</h2>
   
-    <p class="max-w-18">
-      <label for="prog">Progress</label>
-      <progress id="prog" value="0.5">50%</progress>
-    </p>
+    <section>
+      <h3><code>&lt;progress&gt;</code></h3>
+      
+      <p class="max-w-18">
+        <label for="prog">Progress</label>
+        <progress id="prog" value="0.5">50%</progress>
+      </p>
+    
+      <p class="max-w-18">
+        <label for="prog-done">Progress done</label>
+        <progress id="prog-done" value="1">100%</progress>
+      </p>
+    </section>
+    
+    <section>
+      <h3><code>&lt;meter&gt;</code></h3>
+    
+      <div class="flex items-center gap-4 mb-7">
+        <label for="fuel-optimum">Fuel optimum</label>
+        <meter id="fuel-optimum" min="0" max="100" low="33" high="66" optimum="80" value="80">
+          at 80/100
+        </meter>
   
-    <p class="max-w-18">
-      <label for="prog-done">Progress done</label>
-      <progress id="prog-done" value="1">100%</progress>
-    </p>
+        <label for="fuel-mid">Fuel sub-optimal</label>
+        <meter id="fuel-mid" min="0" max="100" low="33" high="66" optimum="80" value="50">
+          at 50/100
+        </meter>
+        
+        <label for="fuel-low">Fuel not very good</label>
+        <meter id="fuel-low" min="0" max="100" low="33" high="66" optimum="80" value="30">
+          at 30/100
+        </meter>
+      </div>
+    </section>
   
     {% for type in input_types %}
     <p>
