@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Lookbook by Lookback</title>
+    <meta name="author" content="Lookback" />
+
+    <meta
+      name="keywords"
+      content="styleguide, design system, brand, colors, css"
+    />
+    <meta
+      name="description"
+      content="The Lookbook is the main source of visual design language at Lookback. It includes the traditional color schemes we use in our products, as well as CSS resources for building scalable web frontends."
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="/lookbook-website/assets/site-dashboard.css" id="main-sheet" />
+    <link rel="shortcut icon" href="https://lookback.com/favicon.ico" />
+  </head>
+  <body>
+    <p class="toggle-menu">
+      <a href="#" data-toggle-menu>Pages</a>
+    </p>
+
+    <aside role="navigation" class="sidebar">
+      <p class="mb-12">
+        <a href="/" class="inline-block w-10 text-orange-400">
+          <svg viewBox="0 0 1012 1129" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M809.256 85.874C617.282 -43.119 349.395 -25.1278 172.603 128.645C121.652 173.894 80.234 228.959 50.7957 290.586C21.3573 352.214 4.49628 419.154 1.20905 487.45C-8.93927 650.674 45.1074 811.368 151.685 934.852C295.75 1098.47 467.481 1126.3 474.566 1127.66H478.615C485.773 1127.66 492.639 1124.8 497.7 1119.71C502.762 1114.62 505.606 1107.71 505.606 1100.51C505.57 1096.41 504.645 1092.38 502.897 1088.69C501.148 1084.99 498.618 1081.73 495.484 1079.12C392.243 996.632 336.237 917.2 336.237 855.758C397.958 897.774 470.565 920.669 545.081 921.613C707.702 921.613 765.396 853.382 765.396 794.656C765.396 726.426 678.687 682.976 545.081 682.976C443.526 682.976 363.565 720.316 319.705 769.197C287.719 735.864 269.406 691.619 268.421 645.296C267.784 608.622 277.117 572.47 295.413 540.744C311.116 554.786 328.449 566.867 347.033 576.726C461.745 638.168 644.948 638.168 733.006 576.726C746.419 568.427 757.414 556.711 764.879 542.762C772.344 528.813 776.014 513.128 775.517 497.294C771.469 421.935 650.683 373.732 540.357 374.75C437.116 376.108 355.805 402.925 298.449 454.183C292.75 439.956 289.995 424.709 290.352 409.375C290.352 374.072 313.294 338.768 353.443 309.914C412.824 267.143 526.524 232.519 658.106 268.161L636.513 279.703C631.921 282.284 628.508 286.562 626.997 291.631C625.486 296.7 625.994 302.161 628.416 306.859C630.216 310.038 632.816 312.684 635.955 314.531C639.094 316.378 642.661 317.362 646.297 317.382C649.687 317.279 653.019 316.47 656.082 315.006L727.608 275.629C732.132 272.982 735.485 268.704 736.989 263.661C738.492 258.618 738.034 253.188 735.706 248.473L696.568 176.509C695.372 174.101 693.716 171.955 691.695 170.191C689.675 168.428 687.328 167.082 684.791 166.231C682.253 165.38 679.574 165.04 676.905 165.231C674.237 165.422 671.632 166.14 669.24 167.343C666.847 168.547 664.714 170.213 662.961 172.246C661.209 174.279 659.871 176.64 659.025 179.193C658.179 181.746 657.841 184.442 658.031 187.127C658.221 189.811 658.934 192.432 660.13 194.839C660.468 195.179 660.468 195.518 660.805 195.858L671.264 215.206C546.093 181.94 411.474 200.61 321.729 265.446C267.409 304.483 237.044 355.401 236.032 408.356C235.531 439.742 243.707 470.651 259.649 497.633C229.595 541.01 213.786 592.763 214.439 645.636C214.942 677.902 221.892 709.737 234.876 739.246C247.859 768.754 266.611 795.333 290.014 817.4C285.19 829.729 282.674 842.849 282.592 856.098C282.592 910.75 311.607 970.155 366.939 1033.29C300.874 1000.42 241.667 955.138 192.509 899.888C95.1401 786.829 45.8243 639.805 55.1913 490.505C58.0912 429.477 73.1088 369.651 99.3584 314.557C125.608 259.463 162.558 210.215 208.029 169.719C366.602 31.9006 606.823 15.6068 778.891 131.361C927.005 230.821 988.41 412.09 942.862 615.764C905.412 783.454 804.196 948.43 658.443 1080.48C655.636 1082.83 653.326 1085.72 651.65 1088.98C649.974 1092.24 648.966 1095.81 648.686 1099.47C648.407 1103.13 648.861 1106.81 650.022 1110.3C651.183 1113.78 653.028 1116.99 655.446 1119.74C657.864 1122.49 660.807 1124.73 664.099 1126.31C667.392 1127.9 670.968 1128.8 674.614 1128.97C678.261 1129.14 681.904 1128.57 685.327 1127.3C688.751 1126.02 691.885 1124.07 694.544 1121.55V1121.55C848.731 981.696 956.021 806.537 995.833 627.305C1046.44 400.888 976.601 198.573 809.256 85.874ZM545.418 737.289C658.781 737.289 711.751 771.234 711.751 794.317C711.751 829.281 659.793 866.621 545.418 866.621C478.831 865.675 414.153 844.102 360.191 804.84C392.581 769.197 457.359 737.289 545.418 737.289ZM541.707 428.724C638.875 427.027 720.523 470.816 721.873 500.009C721.873 504.422 722.885 517.661 702.641 531.918C632.127 581.139 468.831 579.442 373.012 528.524C357.591 520.502 343.295 510.457 330.501 498.652C383.134 449.77 463.77 429.742 541.707 428.724V428.724Z" fill="currentColor" />
+</svg>
+
+        </a>
+      </p>
+
+      <a
+        href="http://github.com/lookback/lookbook"
+        class="flex items-center gap-4 mb-4 hover:no-underline"
+      >
+        <div>
+          <svg
+  width="30"
+  height="30"
+  viewBox="0 0 30 30"
+  class="fill-current"
+  xmlns="http://www.w3.org/2000/svg">
+  <path d="M15 2.24269e-05C11.436 -0.00256047 7.98753 1.26394 5.2724 3.57262C2.55726 5.8813 0.752857 9.08131 0.182461 12.5993C-0.387935 16.1174 0.312943 19.7236 2.15953 22.7719C4.00612 25.8202 6.87776 28.1114 10.26 29.235C11.01 29.385 11.28 28.905 11.28 28.515L11.265 25.965C7.09498 26.865 6.20998 23.955 6.20998 23.955C5.51998 22.215 4.54498 21.75 4.54498 21.75C3.19498 20.82 4.64998 20.85 4.64998 20.85C6.14998 20.955 6.94498 22.395 6.94498 22.395C8.29498 24.675 10.455 24.015 11.31 23.64C11.46 22.665 11.835 22.005 12.255 21.63C8.92498 21.255 5.42998 19.965 5.42998 14.22C5.42998 12.57 6.01498 11.235 6.97498 10.185C6.52132 8.89371 6.57494 7.47831 7.12498 6.22502C7.12498 6.22502 8.38498 5.82002 11.25 7.75502C13.7059 7.09112 16.2941 7.09112 18.75 7.75502C21.615 5.80502 22.875 6.22502 22.875 6.22502C23.7 8.28002 23.175 9.82502 23.025 10.185C23.985 11.235 24.57 12.585 24.57 14.22C24.57 19.98 21.06 21.24 17.715 21.615C18.255 22.08 18.735 22.995 18.735 24.39L18.72 28.515C18.72 28.905 18.99 29.385 19.755 29.235C23.1384 28.111 26.0109 25.8185 27.8574 22.7687C29.7039 19.7188 30.4037 16.111 29.8314 12.5919C29.259 9.07289 27.4519 5.87278 24.734 3.5653C22.0162 1.25782 18.5653 -0.00613991 15 2.24269e-05" />
+</svg>
+
+        </div>
+        <div class="leading-none">
+          <span class="block text-sm">GitHub</span>
+          <small class="text-grey-800">7.1.2</small>
+        </div>
+      </a>
+
+      <p class="mb-5 text-sm text-grey-800">
+        Site updated
+        <strong title="Thu Oct 30 2025 09:09:11 GMT+0100 (Central European Standard Time)"
+          >Oct 30, 2025</strong
+        >
+      </p>
+      
+      <mode-switch class="sticky top-7 z-2">
+        <div class="SegmentSwitch mb-12">
+          <label>
+            Dashboard
+            <input type="radio" value="dashboard" name="mode" />
+          </label>
+          
+          <label>
+            Participate
+            <input type="radio" value="participate" name="mode" />
+          </label>
+        </div>
+      </mode-switch>
+
+      <nav role="navigation">
+        <h2>Overview</h2>
+        <ul>
+          <li class="">
+            <a href="/lookbook-website/overview/intro">Introduction</a>
+          </li>
+          <li class="">
+            <a href="/lookbook-website/overview/colors">Colors</a>
+          </li>
+          <li class="">
+            <a href="/lookbook-website/overview/variables">Variables</a>
+          </li>
+        </ul>
+
+        <h2>Styling</h2>
+
+        <ul>
+          <li
+            class=""
+          >
+            <a href="/lookbook-website/styling/typography">Typography</a>
+          </li>
+          <li class="">
+            <a href="/lookbook-website/styling/forms">Forms</a>
+          </li>
+          <li class="">
+            <a href="/lookbook-website/styling/widths">Widths</a>
+          </li>
+          <li class="">
+            <a href="/lookbook-website/styling/radii">Border radius</a>
+          </li>
+          <li class="">
+            <a href="/lookbook-website/styling/shadows">Shadows</a>
+          </li>
+        </ul>
+
+        <h2>Components</h2>
+
+        <ul>
+          <li class="nav-active">
+            <a href="/lookbook-website/components/buttons">Buttons</a>
+          </li>
+
+          <li class="">
+            <a href="/lookbook-website/components/loading">Loading indicators</a>
+          </li>
+          
+          <li class="">
+            <a href="/lookbook-website/components/badges">Badges</a>
+          </li>
+          
+          <li class="">
+            <a href="/lookbook-website/components/box">Box</a>
+          </li>
+          
+          <li class="">
+            <a href="/lookbook-website/components/nav">Navigation</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main role="main" class="Box">
+      
+
+<h1>Buttons</h1>
+
+<section>
+
+  <h2 class="mb-5">Regular button</h2>
+
+  <div class="preview-block mb-6">
+    <button class="btn">Button</button>
+    <button class="btn" disabled>Button</button>
+    <a href="#" class="btn">Link</a>
+    <button class="btn" aria-pressed="true">Button (pressed)</button>
+    <button class="btn" aria-label="Only icon">
+  <svg
+      role="img"
+      aria-hidden="true"
+      focusable="false"
+      tabIndex={-1}
+      class="icon">
+      <use href="#pencil" />
+  </svg>
+</button>
+  </div>
+
+  <h2 class="mb-5">Success button</h2>
+
+  <div class="preview-block mb-6">
+    <button class="btn btn-success">Button</button>
+    <button class="btn btn-success" disabled>Button</button>
+    <a href="#" class="btn btn-success">Link</a>
+    <button class="btn btn-success" aria-pressed="true">Button (pressed)</button>
+    <button class="btn btn-success" aria-label="Only icon">
+  <svg
+      role="img"
+      aria-hidden="true"
+      focusable="false"
+      tabIndex={-1}
+      class="icon">
+      <use href="#pencil" />
+  </svg>
+</button>
+  </div>
+
+  <h2 class="mb-5">Secondary button</h2>
+
+  <div class="preview-block mb-6">
+    <button class="btn btn-secondary">Button</button>
+    <button class="btn btn-secondary" disabled>Button</button>
+    <a href="#" class="btn btn-secondary">Link</a>
+    <button class="btn btn-secondary" aria-pressed="true">Button (pressed)</button>
+    <button class="btn btn-secondary" aria-label="Only icon">
+  <svg
+      role="img"
+      aria-hidden="true"
+      focusable="false"
+      tabIndex={-1}
+      class="icon">
+      <use href="#pencil" />
+  </svg>
+</button>
+  </div>
+  
+  <h2 class="mb-5">Tertiary button</h2>
+
+  <div class="preview-block mb-3">
+    <button class="btn btn-tertiary">
+  <svg
+      role="img"
+      aria-hidden="true"
+      focusable="false"
+      tabIndex={-1}
+      class="icon">
+      <use href="#pencil" />
+  </svg>
+ Button</button>
+    <button class="btn btn-tertiary" disabled>
+  <svg
+      role="img"
+      aria-hidden="true"
+      focusable="false"
+      tabIndex={-1}
+      class="icon">
+      <use href="#pencil" />
+  </svg>
+ Button</button>
+    <button class="btn btn-tertiary" aria-pressed="true">
+  <svg
+      role="img"
+      aria-hidden="true"
+      focusable="false"
+      tabIndex={-1}
+      class="icon">
+      <use href="#pencil" />
+  </svg>
+ Button (pressed)</button>
+    <button class="btn btn-tertiary" aria-label="Only icon" title="This markup uses aria-label">
+  <svg
+      role="img"
+      aria-hidden="true"
+      focusable="false"
+      tabIndex={-1}
+      class="icon">
+      <use href="#pencil" />
+  </svg>
+</button>
+    <button class="btn btn-tertiary" title="This markup uses .sr-only">
+  <svg
+      role="img"
+      aria-hidden="true"
+      focusable="false"
+      tabIndex={-1}
+      class="icon">
+      <use href="#pencil" />
+  </svg>
+<span class="sr-only">Only icon</span></button>
+    
+    <button class="btn btn-tertiary" aria-label="Only icon" title="This markup uses aria-label" disabled>
+  <svg
+      role="img"
+      aria-hidden="true"
+      focusable="false"
+      tabIndex={-1}
+      class="icon">
+      <use href="#pencil" />
+  </svg>
+</button>
+    
+    <button class="btn btn-tertiary" aria-label="Pressed" aria-pressed="true">
+  <svg
+      role="img"
+      aria-hidden="true"
+      focusable="false"
+      tabIndex={-1}
+      class="icon">
+      <use href="#pencil" />
+  </svg>
+</button>
+  </div>
+  
+  <div class="preview-block mb-6">
+    <button class="btn btn-tertiary btn-tertiary--destructive">
+  <svg
+      role="img"
+      aria-hidden="true"
+      focusable="false"
+      tabIndex={-1}
+      class="icon">
+      <use href="#pencil" />
+  </svg>
+ Button</button>
+    
+    <button class="btn btn-tertiary btn-tertiary--destructive" disabled>
+  <svg
+      role="img"
+      aria-hidden="true"
+      focusable="false"
+      tabIndex={-1}
+      class="icon">
+      <use href="#pencil" />
+  </svg>
+ Button</button>
+    
+    <button class="btn btn-tertiary btn-tertiary--destructive" aria-label="Remove">
+  <svg
+      role="img"
+      aria-hidden="true"
+      focusable="false"
+      tabIndex={-1}
+      class="icon">
+      <use href="#pencil" />
+  </svg>
+</button>
+    
+    <button class="btn btn-tertiary btn-tertiary--destructive" aria-label="Remove" aria-pressed="true">
+  <svg
+      role="img"
+      aria-hidden="true"
+      focusable="false"
+      tabIndex={-1}
+      class="icon">
+      <use href="#pencil" />
+  </svg>
+</button>
+  </div>
+  
+  <p>
+    <strong>Note:</strong> The two icon-only buttons are styled as squares. They use the following markup to achieve that:
+  </p>
+  <ol class="list-inside">
+    <li>Uses <code>aria-label="Text"</code> attribute on the <code>.btn</code>.</li>
+    <li>Uses a sibling <code>&lt;span class="sr-only"&gt;Text&lt;span&gt;</code> element.</li>
+  </ol>
+
+  <h2 class="mb-5">Destructive button</h2>
+
+  <div class="preview-block mb-6">
+    <button class="btn btn-destructive">Button</button>
+    <button class="btn btn-destructive" disabled>Button</button>
+    <button class="btn btn-destructive" aria-pressed="true">Button (pressed)</button>
+    <button class="btn btn-destructive" aria-label="Only icon">
+  <svg
+      role="img"
+      aria-hidden="true"
+      focusable="false"
+      tabIndex={-1}
+      class="icon">
+      <use href="#pencil" />
+  </svg>
+</button>
+  </div>
+  
+  <h2 class="mb-5">Warning button</h2>
+
+  <div class="preview-block mb-6">
+    <button class="btn btn-warning">Button</button>
+    <button class="btn btn-warning" disabled>Button</button>
+    <button class="btn btn-warning" aria-pressed="true">Button (pressed)</button>
+    <button class="btn btn-warning" aria-label="Only icon">
+  <svg
+      role="img"
+      aria-hidden="true"
+      focusable="false"
+      tabIndex={-1}
+      class="icon">
+      <use href="#pencil" />
+  </svg>
+</button>
+  </div>
+</section>
+
+
+  <svg aria-hidden="true" style="display: none">
+    <defs>
+      <symbol id="pencil" viewBox="0 0 18 18">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6319 1.66418C14.4307 1.66418 14.2314 1.70382 14.0455 1.78083C13.8596 1.85783 13.6907 1.9707 13.5484 2.11299L2.79575 12.8656L1.98312 15.8453L4.96278 15.0326L15.7154 4.28002C15.8577 4.13773 15.9706 3.96881 16.0476 3.7829C16.1246 3.59699 16.1642 3.39773 16.1642 3.19651C16.1642 2.99528 16.1246 2.79602 16.0476 2.61011C15.9706 2.4242 15.8577 2.25528 15.7154 2.11299C15.5731 1.9707 15.4042 1.85783 15.2183 1.78083C15.0324 1.70382 14.8331 1.66418 14.6319 1.66418ZM13.4715 0.395006C13.8394 0.242618 14.2337 0.164185 14.6319 0.164185C15.0301 0.164185 15.4244 0.242618 15.7923 0.395006C16.1602 0.547394 16.4945 0.770754 16.7761 1.05233C17.0576 1.33391 17.281 1.66819 17.4334 2.03609C17.5858 2.40399 17.6642 2.7983 17.6642 3.19651C17.6642 3.59471 17.5858 3.98902 17.4334 4.35692C17.281 4.72482 17.0576 5.0591 16.7761 5.34068L5.8826 16.2341C5.79031 16.3264 5.67553 16.393 5.54961 16.4274L1.11154 17.6378C0.851881 17.7086 0.574184 17.6348 0.383872 17.4445C0.193559 17.2542 0.119813 16.9765 0.190629 16.7168L1.40101 12.2788C1.43535 12.1529 1.50196 12.0381 1.59426 11.9458L12.4877 1.05233C12.7693 0.770754 13.1036 0.547394 13.4715 0.395006Z" />
+      </symbol>
+    </defs>
+  </svg>
+
+
+    </main>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const SIDEBAR_VISIBLE_CLASS = 'visible';
+
+        const button = document.querySelector('[data-toggle-menu]');
+        const sidebar = document.querySelector('.sidebar');
+
+        const toggleSidebar = () => {
+          const isShown = sidebar.classList.toggle(SIDEBAR_VISIBLE_CLASS);
+          button.classList.toggle('active', isShown);
+
+          return isShown;
+        };
+
+        if (button && sidebar) {
+          const handleClickOutside = (evt) => {
+            if (
+              !sidebar.contains(evt.target) &&
+              sidebar.classList.contains(SIDEBAR_VISIBLE_CLASS)
+            ) {
+              toggleSidebar();
+              removeClickOutside();
+            }
+          };
+
+          const handleMenuToggle = (evt) => {
+            evt.preventDefault();
+            evt.stopPropagation();
+
+            toggleSidebar();
+            addClickOutside();
+          };
+
+          const addClickOutside = () => {
+            document.addEventListener('click', handleClickOutside);
+            document.addEventListener('touchstart', handleClickOutside);
+          };
+
+          const removeClickOutside = () => {
+            document.removeEventListener('click', handleClickOutside);
+            document.removeEventListener('touchstart', handleClickOutside);
+          };
+
+          button.addEventListener('click', handleMenuToggle);
+          button.addEventListener('touchstart', handleMenuToggle);
+        }
+      });
+    </script>
+    <script type="module" src="/lookbook-website/assets/mode-switch.js"></script>
+  </body>
+</html>
