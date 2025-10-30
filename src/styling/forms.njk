@@ -36,22 +36,39 @@ input_types:
       <input id="name-placeholder-label" type="text" placeholder="Placeholder" />
     </p>
     
-    <div class="mb-8">
-      <label class="block" for="name-placeholder-deep">Label immediately preceeding an element containing an input</label>
-      <div>
-        <input id="name-placeholder-deep" type="text" placeholder="Placeholder" />
-      </div>
-    </div>
-    
     <p class="flex items-center gap-4">
       <input id="check-normal" type="checkbox" />
-      <label for="check-normal">Label for a checkbox is normal</label>
+      <label for="check-normal">Label for a checkbox is normal unless explicitly wrapped or styled with <code>.label</code>.</label>
     </p>
     
     <p class="flex items-center gap-4">
       <input id="check-label" type="checkbox" />
       <label for="check-label" class="label">Label with <code>.label</code></label>
     </p>
+    
+    <p>
+      <label>
+        Label wrapping text input
+        <input type="text" placeholder="Text…" />
+      </label>
+    </p>
+    
+    <div class="flex items-center gap-5">
+      <label class="flex items-center gap-2">
+        <input type="checkbox" />
+        <span>Wrapped label 1</span>
+      </label>
+      
+      <label class="flex items-center gap-2">
+        <input type="checkbox" />
+        <span>Wrapped label 2</span>
+      </label>
+      
+      <label class="flex items-center gap-2">
+        <input type="checkbox" />
+        <span>Wrapped label 3</span>
+      </label>
+    </div>
   </section>
   
   <section>
